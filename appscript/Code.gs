@@ -1,5 +1,5 @@
 /** Sống vui mỗi ngày - Apps Script: lấy nội dung từ Google Sheet, đặt lịch 4 tin/ngày, gọi GitHub Actions dựng và đăng Reel.
- *  Script Properties: GH_TOKEN (thầy tự nhập), PAGE_ID, SHEET_ID (tự tạo bởi SETUP_SHEET).
+ *  Script Properties: GH_TOKEN (thầy tự nhập), PAGE_ID. Script gắn trực tiếp trong Google Sheet dữ liệu.
  *  Google Sheet: tab CAU_NOI (câu nói vui) và CAU_DO (câu đố). Thêm/sửa/xoá dòng thoải mái;
  *  cột "Dùng" bỏ tích = tạm không đăng; bot luôn chọn dòng có "Số lần đã đăng" thấp nhất (ngẫu nhiên khi bằng nhau). */
 var CFG = {
@@ -18,22 +18,23 @@ function _log(msg) {
   Logger.log(msg);
 }
 function _ss() {
+  var a = SpreadsheetApp.getActiveSpreadsheet();
+  if (a) return a;
   var id = _props().getProperty('SHEET_ID');
-  if (!id) throw new Error('Chưa có SHEET_ID: hãy chạy SETUP_SHEET một lần');
+  if (!id) throw new Error('Script chưa gắn Sheet');
   return SpreadsheetApp.openById(id);
 }
 
 /** Chạy 1 lần: tạo Google Sheet dữ liệu và nạp sẵn nội dung từ kho GitHub. */
 function SETUP_SHEET() {
-  var p = _props();
-  if (p.getProperty('SHEET_ID')) { Logger.log('Đã có Sheet: ' + SpreadsheetApp.openById(p.getProperty('SHEET_ID')).getUrl()); return; }
+  var p = _props(), ss = _ss(), old = ss.getSheetByName(SH_Q);
+  if (old && old.getLastRow() > 1) { Logger.log('Sheet đã có dữ liệu: ' + ss.getUrl()); return; }
   var d = JSON.parse(UrlFetchApp.fetch('https://raw.githubusercontent.com/' + CFG.GH_REPO + '/main/data/content.json').getContentText());
-  var ss = SpreadsheetApp.create('Sống vui mỗi ngày - Dữ liệu');
-  var a = ss.getSheets()[0]; a.setName(SH_Q);
+  var a = old || ss.getSheets()[0]; a.setName(SH_Q); a.clear();
   var qa = [['Mã', 'Câu nói (Tiếng Việt)', 'Quote (English)', 'Dùng', 'Số lần đã đăng']];
   d.quotes.forEach(function (x) { qa.push([x.id, x.vi, x.en, true, 0]); });
   a.getRange(1, 1, qa.length, 5).setValues(qa);
-  var b = ss.insertSheet(SH_R);
+  var b = ss.getSheetByName(SH_R) || ss.insertSheet(SH_R); b.clear();
   var ra = [['Mã', 'Câu đố (Tiếng Việt)', 'Đáp án (Tiếng Việt)', 'Riddle (English)', 'Answer (English)', 'Dùng', 'Số lần đã đăng']];
   d.riddles.forEach(function (x) { ra.push([x.id, x.vi_q, x.vi_a, x.en_q, x.en_a, true, 0]); });
   b.getRange(1, 1, ra.length, 7).setValues(ra);
@@ -44,7 +45,6 @@ function SETUP_SHEET() {
     s.getRange(2, 2, s.getLastRow(), 4).setWrap(true);
   });
   a.setColumnWidth(2, 420); a.setColumnWidth(3, 420); b.setColumnWidth(2, 340); b.setColumnWidth(3, 220); b.setColumnWidth(4, 340); b.setColumnWidth(5, 220);
-  p.setProperty('SHEET_ID', ss.getId());
   _log('Đã tạo Sheet ' + ss.getUrl());
   Logger.log(ss.getUrl());
 }
