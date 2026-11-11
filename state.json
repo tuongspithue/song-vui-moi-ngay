@@ -1,1 +1,22 @@
-{"counter":0,"last_time":0,"pending":[],"history":[]}
+{
+ "counter": 1,
+ "last_time": 1794420933.1015003,
+ "pending": [
+  {
+   "post": "1113632551659329",
+   "video": "4677648412483127",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì mọc ngược từ trên xuống?\n👉 Cột băng (nhũ đá).\n\n❓ What grows downward, from top to bottom?\n👉 An icicle.",
+   "tries": 0
+  }
+ ],
+ "history": [
+  {
+   "n": 0,
+   "q": "Q127",
+   "r": "R133",
+   "post": "1113632551659329",
+   "video": "4677648412483127",
+   "t": "2026-11-11 18:15"
+  }
+ ]
+}
