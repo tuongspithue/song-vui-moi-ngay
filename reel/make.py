@@ -421,11 +421,14 @@ def main():
     fetch_laughs(laugh_dir)
     custom = [os.path.join(laugh_dir, f) for f in sorted(os.listdir(laugh_dir))] if os.path.isdir(laugh_dir) else []
     custom = [f for f in custom if f.lower().endswith(('.mp3', '.wav', '.m4a', '.ogg'))]
-    if custom:
-        src = custom[c % len(custom)]; to_wav(src, f'{WORK}/laugh.wav'); laugh = read_wav(f'{WORK}/laugh.wav')[:int(SR * 4.5)]
-        laugh = laugh / (np.max(np.abs(laugh)) + 1e-9) * 0.9
-    else:
-        laugh = synth_laugh(c + 5)
+    def get_laugh(k, maxsec):
+        if custom:
+            src = custom[k % len(custom)]; to_wav(src, f'{WORK}/laugh{k}.wav'); lg = read_wav(f'{WORK}/laugh{k}.wav')[:int(SR * maxsec)]
+            n = min(len(lg), int(SR * 0.15)); lg = lg.copy(); lg[-n:] *= np.linspace(1, 0, n)
+            return lg / (np.max(np.abs(lg)) + 1e-9) * 0.9
+        return synth_laugh(k + 5)
+    laugh1 = get_laugh(c, 3.5)       # cười sau câu nói tiếng Việt
+    laugh2 = get_laugh(c + 3, 4.5)   # cười sau câu nói tiếng Anh
     for tag, text, voice, rate in [
         ('rv', 'Đố vui nhé! ' + riddle['vi_q'], vi_voice, '+0%'),
         ('re', 'Riddle time! ' + riddle['en_q'], en_voice, '+0%'),
@@ -436,8 +439,8 @@ def main():
     def add(x, name=None):
         nonlocal t
         parts.append(x); t += len(x) / SR
-    add(silence(0.35)); add(wavs['qv']); add(silence(0.35)); add(wavs['qe']); add(silence(0.3))
-    add(laugh); add(silence(0.35))
+    add(silence(0.35)); add(wavs['qv']); add(silence(0.25)); add(laugh1); add(silence(0.3))
+    add(wavs['qe']); add(silence(0.25)); add(laugh2); add(silence(0.35))
     t_riddle = t
     add(wavs['rv']); add(silence(0.3)); add(wavs['re']); add(silence(0.25))
     add(synth_ticks(2.6))
