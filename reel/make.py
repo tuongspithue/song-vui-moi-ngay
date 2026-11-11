@@ -334,6 +334,8 @@ EN_VOICES = ['en-US-AriaNeural', 'en-US-GuyNeural', 'en-US-JennyNeural', 'en-US-
 
 def tts(text, voice, rate, out_wav, tag):
     text = ' '.join(text.replace('…', '...').split())
+    if not text or text in ('Riddle time!',):
+        write_wav(out_wav, np.zeros(int(SR * 0.1))); return
     if DRY_TTS:
         n = max(1.2, len(text) / 14.0)
         write_wav(out_wav, np.zeros(int(SR * n))); return
@@ -374,8 +376,14 @@ def main():
     now = time.time()
     if not PREVIEW and not FORCE and now - float(st.get('last_time', 0)) < 40 * 60:
         print('Vừa đăng cách đây dưới 40 phút, bỏ qua (dùng force để ép).'); return
-    quote = pick(data['quotes'], c, 11)
-    riddle = pick(data['riddles'], c, 29)
+    if P.get('quote_vi') and P.get('r_vq'):  # nội dung do Apps Script chọn từ Google Sheet
+        ids = str(P.get('ids') or 'sheet/sheet').split('/')
+        quote = {'id': ids[0], 'vi': str(P['quote_vi']).strip(), 'en': str(P.get('quote_en') or '').strip()}
+        riddle = {'id': ids[-1], 'vi_q': str(P['r_vq']).strip(), 'vi_a': str(P.get('r_va') or '').strip(),
+                  'en_q': str(P.get('r_eq') or '').strip(), 'en_a': str(P.get('r_ea') or '').strip()}
+    else:
+        quote = pick(data['quotes'], c, 11)
+        riddle = pick(data['riddles'], c, 29)
     th = THEMES[(c * 5) % len(THEMES)]
     vi_voice = VI_VOICES[c % 2]
     en_voice = EN_VOICES[(c * 5 + 1) % len(EN_VOICES)]
