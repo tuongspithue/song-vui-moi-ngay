@@ -1,0 +1,4 @@
+edge-tts>=6.1.9
+requests>=2.31
+pillow>=10.0
+numpy>=1.26
