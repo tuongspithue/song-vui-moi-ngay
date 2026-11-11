@@ -4,7 +4,7 @@
  *  cột "Dùng" bỏ tích = tạm không đăng; bot luôn chọn dòng có "Số lần đã đăng" thấp nhất (ngẫu nhiên khi bằng nhau). */
 var CFG = {
   GH_REPO: 'tuongspithue/song-vui-moi-ngay',
-  TIMES: [[7, 30], [11, 45], [17, 0], [20, 30]],
+  TIMES: [[6, 30], [11, 45], [17, 0], [19, 30]],
   EVENT: 'dang_tin'
 };
 var SH_Q = 'CAU_NOI', SH_R = 'CAU_DO';
