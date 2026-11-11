@@ -261,6 +261,29 @@ def write_wav(path, x):
         w.writeframes((x * 32767).astype(np.int16).tobytes())
 
 
+# Tiếng cười THẬT của trẻ em (BigSoundBank, giấy phép CC0 - miễn phí, không cần ghi nguồn).
+LAUGH_IDS = ['1660', '0980', '1418', '1419', '1420', '1421', '1422']
+def fetch_laughs(dest):
+    """Tải mẫu tiếng cười thật (chạy được trên GitHub Actions). Lỗi mạng -> bỏ qua, dùng tiếng cười tổng hợp."""
+    try:
+        import requests
+        os.makedirs(dest, exist_ok=True)
+        for i in LAUGH_IDS:
+            f = os.path.join(dest, f'bsb_{i}.mp3')
+            if os.path.exists(f) and os.path.getsize(f) > 5000:
+                continue
+            try:
+                r = requests.get(f'https://bigsoundbank.com/UPLOAD/mp3/{i}.mp3', timeout=25,
+                                 headers={'User-Agent': 'Mozilla/5.0', 'Referer': 'https://bigsoundbank.com/'})
+                if r.status_code == 200 and len(r.content) > 5000 and r.content[:3] in (b'ID3', b'\xff\xfb', b'\xff\xf3', b'\xff\xf2'):
+                    open(f, 'wb').write(r.content)
+                else:
+                    print('laugh', i, 'bỏ qua', r.status_code, len(r.content))
+            except Exception as e:
+                print('laugh', i, 'lỗi', e)
+    except Exception as e:
+        print('fetch_laughs lỗi', e)
+
 def synth_laugh(seed):
     """Tiếng cười 'ha ha ha' tổng hợp (không dính bản quyền): nhiều đợt hơi, cao độ giảm dần, lọc nguyên âm /a/."""
     rng = np.random.default_rng(seed)
@@ -395,10 +418,11 @@ def main():
     for tag, text, voice, rate in segs:
         p = f'{WORK}/{tag}.wav'; tts(text, voice, rate, p, tag); wavs[tag] = read_wav(p)
     laugh_dir = os.path.join(ROOT, 'assets', 'laugh')
+    fetch_laughs(laugh_dir)
     custom = [os.path.join(laugh_dir, f) for f in sorted(os.listdir(laugh_dir))] if os.path.isdir(laugh_dir) else []
     custom = [f for f in custom if f.lower().endswith(('.mp3', '.wav', '.m4a', '.ogg'))]
     if custom:
-        src = custom[c % len(custom)]; to_wav(src, f'{WORK}/laugh.wav'); laugh = read_wav(f'{WORK}/laugh.wav')[:int(SR * 4)]
+        src = custom[c % len(custom)]; to_wav(src, f'{WORK}/laugh.wav'); laugh = read_wav(f'{WORK}/laugh.wav')[:int(SR * 4.5)]
         laugh = laugh / (np.max(np.abs(laugh)) + 1e-9) * 0.9
     else:
         laugh = synth_laugh(c + 5)
