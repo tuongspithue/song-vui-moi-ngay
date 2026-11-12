@@ -1,11 +1,11 @@
 {
- "counter": 4,
- "last_time": 1794477752.113061,
+ "counter": 5,
+ "last_time": 1794490371.0949895,
  "pending": [
   {
-   "post": "1114293374926580",
-   "video": "1469614881944079",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì có thể đi qua thủy tinh mà không làm vỡ nó?\n👉 Ánh sáng.\n\n❓ What passes through glass without breaking it?\n👉 Light.",
+   "post": "1114470771575507",
+   "video": "2204149103865396",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Tôi có mắt nhưng không nhìn thấy gì, tôi là ai?\n👉 Củ khoai tây.\n\n❓ I have an eye but cannot see. What am I?\n👉 A potato.",
    "tries": 0
   }
  ],
@@ -41,6 +41,14 @@
    "post": "1114293374926580",
    "video": "1469614881944079",
    "t": "2026-11-12 10:02"
+  },
+  {
+   "n": 4,
+   "q": "Q171",
+   "r": "R024",
+   "post": "1114470771575507",
+   "video": "2204149103865396",
+   "t": "2026-11-12 13:32"
   }
  ]
 }
