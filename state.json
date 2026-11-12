@@ -1,11 +1,11 @@
 {
- "counter": 2,
- "last_time": 1794443614.8573823,
+ "counter": 3,
+ "last_time": 1794459098.394573,
  "pending": [
   {
-   "post": "1113893168299934",
-   "video": "976044365131612",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Bạn có thể cầm cái gì bằng tay trái nhưng không thể cầm bằng tay phải?\n👉 Khuỷu tay phải của bạn.\n\n❓ What can you hold in your left hand but not your right?\n👉 Your right elbow.",
+   "post": "1114071011615483",
+   "video": "1770446744186511",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì có thể đo được nhưng không có chiều dài?\n👉 Nhiệt độ.\n\n❓ What can be measured but has no physical length?\n👉 Temperature.",
    "tries": 0
   }
  ],
@@ -25,6 +25,14 @@
    "post": "1113893168299934",
    "video": "976044365131612",
    "t": "2026-11-12 00:33"
+  },
+  {
+   "n": 2,
+   "q": "Q010",
+   "r": "R170",
+   "post": "1114071011615483",
+   "video": "1770446744186511",
+   "t": "2026-11-12 04:51"
   }
  ]
 }
