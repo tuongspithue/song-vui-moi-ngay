@@ -1,11 +1,11 @@
 {
- "counter": 1,
- "last_time": 1794420933.1015003,
+ "counter": 2,
+ "last_time": 1794443614.8573823,
  "pending": [
   {
-   "post": "1113632551659329",
-   "video": "4677648412483127",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì mọc ngược từ trên xuống?\n👉 Cột băng (nhũ đá).\n\n❓ What grows downward, from top to bottom?\n👉 An icicle.",
+   "post": "1113893168299934",
+   "video": "976044365131612",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Bạn có thể cầm cái gì bằng tay trái nhưng không thể cầm bằng tay phải?\n👉 Khuỷu tay phải của bạn.\n\n❓ What can you hold in your left hand but not your right?\n👉 Your right elbow.",
    "tries": 0
   }
  ],
@@ -17,6 +17,14 @@
    "post": "1113632551659329",
    "video": "4677648412483127",
    "t": "2026-11-11 18:15"
+  },
+  {
+   "n": 1,
+   "q": "Q134",
+   "r": "R141",
+   "post": "1113893168299934",
+   "video": "976044365131612",
+   "t": "2026-11-12 00:33"
   }
  ]
 }
