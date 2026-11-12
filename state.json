@@ -1,11 +1,11 @@
 {
- "counter": 3,
- "last_time": 1794459098.394573,
+ "counter": 4,
+ "last_time": 1794477752.113061,
  "pending": [
   {
-   "post": "1114071011615483",
-   "video": "1770446744186511",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì có thể đo được nhưng không có chiều dài?\n👉 Nhiệt độ.\n\n❓ What can be measured but has no physical length?\n👉 Temperature.",
+   "post": "1114293374926580",
+   "video": "1469614881944079",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì có thể đi qua thủy tinh mà không làm vỡ nó?\n👉 Ánh sáng.\n\n❓ What passes through glass without breaking it?\n👉 Light.",
    "tries": 0
   }
  ],
@@ -33,6 +33,14 @@
    "post": "1114071011615483",
    "video": "1770446744186511",
    "t": "2026-11-12 04:51"
+  },
+  {
+   "n": 3,
+   "q": "Q105",
+   "r": "R131",
+   "post": "1114293374926580",
+   "video": "1469614881944079",
+   "t": "2026-11-12 10:02"
   }
  ]
 }
