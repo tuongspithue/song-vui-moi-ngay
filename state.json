@@ -1,11 +1,11 @@
 {
- "counter": 6,
- "last_time": 1794530001.1751466,
+ "counter": 7,
+ "last_time": 1794545517.0986557,
  "pending": [
   {
-   "post": "1114925254863392",
-   "video": "2717842792009944",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì phá vỡ ngay khi bạn gọi tên nó?\n👉 Sự im lặng.\n\n❓ What breaks the moment you say its name?\n👉 Silence.",
+   "post": "1115092784846639",
+   "video": "1011440707923970",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì có tai nhưng không nghe được?\n👉 Cái tách (cốc) có quai.\n\n❓ What has ears but cannot hear?\n👉 A mug with a handle.",
    "tries": 0
   }
  ],
@@ -57,6 +57,14 @@
    "post": "1114925254863392",
    "video": "2717842792009944",
    "t": "2026-11-13 00:33"
+  },
+  {
+   "n": 6,
+   "q": "Q118",
+   "r": "R053",
+   "post": "1115092784846639",
+   "video": "1011440707923970",
+   "t": "2026-11-13 04:51"
   }
  ]
 }
