@@ -1,11 +1,11 @@
 {
- "counter": 8,
- "last_time": 1794564147.242879,
+ "counter": 9,
+ "last_time": 1794576739.71957,
  "pending": [
   {
-   "post": "1115301678159083",
-   "video": "1746138199807646",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Làm sao để chia 3 quả táo cho 4 người bằng nhau?\n👉 Ép thành sinh tố táo.\n\n❓ How do you divide 3 apples equally among 4 people?\n👉 Blend them into juice.",
+   "post": "1115473448141906",
+   "video": "1840731637250074",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì chỉ thuộc về một người nhưng lại chia sẻ cho tất cả?\n👉 Bí mật (khi đã kể ra).\n\n❓ What belongs to one person until shared with everyone?\n👉 A secret.",
    "tries": 0
   }
  ],
@@ -73,6 +73,14 @@
    "post": "1115301678159083",
    "video": "1746138199807646",
    "t": "2026-11-13 10:02"
+  },
+  {
+   "n": 8,
+   "q": "Q075",
+   "r": "R061",
+   "post": "1115473448141906",
+   "video": "1840731637250074",
+   "t": "2026-11-13 13:32"
   }
  ]
 }
