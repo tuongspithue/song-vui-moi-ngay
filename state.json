@@ -1,11 +1,11 @@
 {
- "counter": 5,
- "last_time": 1794490371.0949895,
+ "counter": 6,
+ "last_time": 1794530001.1751466,
  "pending": [
   {
-   "post": "1114470771575507",
-   "video": "2204149103865396",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Tôi có mắt nhưng không nhìn thấy gì, tôi là ai?\n👉 Củ khoai tây.\n\n❓ I have an eye but cannot see. What am I?\n👉 A potato.",
+   "post": "1114925254863392",
+   "video": "2717842792009944",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì phá vỡ ngay khi bạn gọi tên nó?\n👉 Sự im lặng.\n\n❓ What breaks the moment you say its name?\n👉 Silence.",
    "tries": 0
   }
  ],
@@ -49,6 +49,14 @@
    "post": "1114470771575507",
    "video": "2204149103865396",
    "t": "2026-11-12 13:32"
+  },
+  {
+   "n": 5,
+   "q": "Q182",
+   "r": "R062",
+   "post": "1114925254863392",
+   "video": "2717842792009944",
+   "t": "2026-11-13 00:33"
   }
  ]
 }
