@@ -473,11 +473,24 @@ def main():
                            '-c:v', 'copy', '-c:a', 'aac', '-b:a', '160k', '-shortest', out])
     print('Đã dựng', out, os.path.getsize(out) // 1024, 'KB')
 
-    caption = (f"😂 {quote['vi']}\n{quote['en']}\n\n"
+    hooks = [
+        ("😂 Chỉ 1% người trả lời đúng câu này trong 5 giây! Bạn có nằm trong số đó không?",
+         "Only 1% of people get this right in 5 seconds! Are you one of them?"),
+        ("🤔 Bạn có đoán được trong 5 giây không? Thử xem nào!",
+         "Can you guess it in 5 seconds? Give it a try!"),
+        ("😄 Câu đố này nghe thì dễ mà nhiều người lại nghĩ mãi! Bạn thì sao?",
+         "Sounds easy, yet many people get stuck! How about you?"),
+        ("🔥 Ai đoán đúng nhanh nhất? Gõ đáp án vào bình luận nào!",
+         "Who can guess it first? Type your answer in the comments!"),
+        ("🧠 Thử thách trí thông minh 5 giây! Bạn có đủ nhanh không?",
+         "A 5-second brain challenge! Are you quick enough?"),
+    ]
+    h_vi, h_en = hooks[c % len(hooks)]
+    caption = (f"{h_vi}\n{h_en}\n\n"
                f"🧩 ĐỐ VUI / RIDDLE:\n{riddle['vi_q']}\n{riddle['en_q']}\n\n"
-               f"💬 Bình luận đáp án của bạn nhé! Đáp án ở bình luận khi tin tiếp theo lên sóng.\n"
-               f"💬 Comment your answer! The answer will be posted when the next one goes live.\n\n"
-               f"#SongVuiMoiNgay #CauDoVui #CauNoiVui #Riddle #FunnyQuotes #BilingualVietnameseEnglish")
+               f"💬 Bình luận đáp án ngay nhé! Đáp án sẽ có ở video tiếp theo.\n"
+               f"💬 Comment your answer below! The answer will be in the next video.\n\n"
+               f"#SongVuiMoiNgay #CauDoVui #Riddle #FunnyQuotes #BilingualVietnameseEnglish")
     open(f'{WORK}/caption.txt', 'w', encoding='utf8').write(caption)
     if PREVIEW:
         print('PREVIEW: không đăng, không đổi trạng thái.'); return
