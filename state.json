@@ -1,11 +1,11 @@
 {
- "counter": 7,
- "last_time": 1794545517.0986557,
+ "counter": 8,
+ "last_time": 1794564147.242879,
  "pending": [
   {
-   "post": "1115092784846639",
-   "video": "1011440707923970",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì có tai nhưng không nghe được?\n👉 Cái tách (cốc) có quai.\n\n❓ What has ears but cannot hear?\n👉 A mug with a handle.",
+   "post": "1115301678159083",
+   "video": "1746138199807646",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Làm sao để chia 3 quả táo cho 4 người bằng nhau?\n👉 Ép thành sinh tố táo.\n\n❓ How do you divide 3 apples equally among 4 people?\n👉 Blend them into juice.",
    "tries": 0
   }
  ],
@@ -65,6 +65,14 @@
    "post": "1115092784846639",
    "video": "1011440707923970",
    "t": "2026-11-13 04:51"
+  },
+  {
+   "n": 7,
+   "q": "Q126",
+   "r": "R032",
+   "post": "1115301678159083",
+   "video": "1746138199807646",
+   "t": "2026-11-13 10:02"
   }
  ]
 }
