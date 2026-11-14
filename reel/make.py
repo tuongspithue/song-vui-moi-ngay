@@ -445,10 +445,10 @@ def main():
     laugh1 = get_laugh(c, 3.0)       # cười sau câu nói tiếng Việt
     laugh2 = get_laugh(c + 3, 2.5, 3.0 if custom and len(custom) == 1 else 0.0)   # cười sau câu nói tiếng Anh
     for tag, text, voice, rate in [
-        ('rv', 'Đố vui năm giây! ' + riddle['vi_q'], vi_voice, '+0%'),
-        ('re', 'Five second riddle! ' + riddle['en_q'], en_voice, '+0%'),
-        ('cv', 'Bạn đoán ra chưa? Bình luận đáp án nhé! Đáp án có ở video sau.', vi_voice, '+5%'),
-        ('ce', 'Did you get it? Comment your answer! The answer is in the next video.', en_voice, '+5%')]:
+        ('rv', riddle['vi_q'], vi_voice, '+0%'),
+        ('re', riddle['en_q'], en_voice, '+0%'),
+        ('cv', 'Bình luận đáp án nhé!', vi_voice, '+5%'),
+        ('ce', 'Comment your answer!', en_voice, '+5%')]:
         p = f'{WORK}/{tag}.wav'; tts(text, voice, rate, p, tag); wavs[tag] = read_wav(p)
     parts, t = [], 0.0
     def add(x, name=None):
