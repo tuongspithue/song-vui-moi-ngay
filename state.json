@@ -1,11 +1,11 @@
 {
- "counter": 12,
- "last_time": 1794650598.2504997,
+ "counter": 13,
+ "last_time": 1794659536.0490704,
  "pending": [
   {
-   "post": "1116300478059203",
-   "video": "1435447355468094",
-   "text": "🔎 Cùng xem đáp án nhé! / Let us check the answer!\n❓ Xã nào đông nhất?\n👉 Xã hội.\n\n❓ Which \"commune\" has the biggest population? (In Vietnamese, \"xa hoi\" means society.)\n👉 Society.",
+   "post": "1116411068048144",
+   "video": "1670709858167489",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Làm thế nào để thả một quả trứng xuống sàn bê tông mà không làm vỡ nó?\n👉 Sàn bê tông rất khó vỡ!\n\n❓ How to drop an egg onto a concrete floor without cracking it?\n👉 Concrete floors don't crack easily!",
    "tries": 0
   }
  ],
@@ -105,6 +105,14 @@
    "post": "1116300478059203",
    "video": "1435447355468094",
    "t": "2026-11-14 10:03"
+  },
+  {
+   "n": 12,
+   "q": "Q110",
+   "r": "R090",
+   "post": "1116411068048144",
+   "video": "1670709858167489",
+   "t": "2026-11-14 12:32"
   }
  ]
 }
