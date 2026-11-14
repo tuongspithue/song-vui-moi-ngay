@@ -1,11 +1,11 @@
 {
- "counter": 9,
- "last_time": 1794576739.71957,
+ "counter": 10,
+ "last_time": 1794614919.7899194,
  "pending": [
   {
-   "post": "1115473448141906",
-   "video": "1840731637250074",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Cái gì chỉ thuộc về một người nhưng lại chia sẻ cho tất cả?\n👉 Bí mật (khi đã kể ra).\n\n❓ What belongs to one person until shared with everyone?\n👉 A secret.",
+   "post": "1115915604764357",
+   "video": "1426844169480847",
+   "text": "💡 Đáp án đây rồi! / Here is the answer!\n❓ Quần rộng nhất là quần gì?\n👉 Quần đảo.\n\n❓ Which \"pants\" are the widest? (In Vietnamese, \"quan dao\" means archipelago.)\n👉 An archipelago.",
    "tries": 0
   }
  ],
@@ -81,6 +81,14 @@
    "post": "1115473448141906",
    "video": "1840731637250074",
    "t": "2026-11-13 13:32"
+  },
+  {
+   "n": 9,
+   "q": "Q039",
+   "r": "R010",
+   "post": "1115915604764357",
+   "video": "1426844169480847",
+   "t": "2026-11-14 00:08"
   }
  ]
 }
