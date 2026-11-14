@@ -190,7 +190,7 @@ def panel_layer(x, y, w, h, fill, accent, tag_text, tag_emoji, vi, en, th, rng):
     return layer
 
 
-def render_frame(th, quote, riddle, counter, active):
+def render_frame(th, quote, riddle, counter, active, count=None):
     """active: 'quote' | 'riddle' | 'cta' (một slide, chỉ đổi phần nổi bật)."""
     rng = random.Random(counter * 7919 + 13)
     top, bot = hexrgb(th[2]), hexrgb(th[3])
@@ -211,7 +211,7 @@ def render_frame(th, quote, riddle, counter, active):
             paste_emoji(img, e, c * gx + ox + 30, r * gy + 40, 78, rot=((r * 5 + c * 3) % 5 - 2) * 9, alpha=0.20)
     # biểu tượng lớn ngẫu nhiên (cười vui) - chỉ ở vùng trống phía dưới
     spots = [(110, 1835), (970, 1835), (540, 1855)]
-    for (sx, sy) in spots:
+    for (sx, sy) in (spots[:2] if count is not None else spots):
         paste_emoji(img, rng.choice(LAUGH_EMOJI + EXTRA_EMOJI), sx, sy, rng.randint(120, 170), rot=rng.randint(-25, 25))
     d = ImageDraw.Draw(img)
     tcol = (255, 255, 255) if dark else hexrgb(th[5])
@@ -227,10 +227,10 @@ def render_frame(th, quote, riddle, counter, active):
     paste_emoji(img, rng.choice(LAUGH_EMOJI), 975, 150, 110, rot=12)
     # hai khung
     qx, qw = 60, W - 120
-    qlayer = panel_layer(qx, 330, qw, 560, th[4], th[6], 'CÂU NÓI VUI · FUNNY QUOTE', rng.choice(LAUGH_EMOJI),
-                         quote['vi'], quote['en'], th, rng)
-    rlayer = panel_layer(qx, 980, qw, 560, th[4], th[6], 'ĐỐ VUI · RIDDLE', rng.choice(THINK_EMOJI),
+    rlayer = panel_layer(qx, 330, qw, 560, th[4], th[6], 'ĐỐ VUI · RIDDLE', rng.choice(THINK_EMOJI),
                          riddle['vi_q'], riddle['en_q'], th, rng)
+    qlayer = panel_layer(qx, 980, qw, 560, th[4], th[6], 'CÂU NÓI VUI · FUNNY QUOTE', rng.choice(LAUGH_EMOJI),
+                         quote['vi'], quote['en'], th, rng)
     def dim(layer, a):
         if a >= 1: return layer
         l = layer.copy(); l.putalpha(layer.getchannel('A').point(lambda v: int(v * a))); return l
@@ -246,7 +246,18 @@ def render_frame(th, quote, riddle, counter, active):
     bd.text((W / 2 - f1.getlength(t1) / 2 + 30, by + 28), t1, font=f1, fill=(255, 255, 255))
     bd.text((W / 2 - f2.getlength(t2) / 2, by + 90), t2, font=f2, fill=(255, 255, 255))
     paste_emoji(banner, '💬', W / 2 - f1.getlength(t1) / 2 - 18, by + 52, 58)
-    img.alpha_composite(dim(banner, 1.0 if active == 'cta' else 0.55))
+    if count is None:
+        img.alpha_composite(dim(banner, 1.0 if active == 'cta' else 0.55))
+    else:  # đếm ngược 5 → 1 giây: giữ người xem đến hết
+        cl = Image.new('RGBA', (W, H), (0, 0, 0, 0)); cd = ImageDraw.Draw(cl)
+        cx, cy, R = W // 2, 1665, 105
+        cd.ellipse((cx - R - 14, cy - R - 14, cx + R + 14, cy + R + 14), fill=(255, 255, 255, 235))
+        cd.ellipse((cx - R, cy - R, cx + R, cy + R), fill=hexrgb(th[6]) + (255,))
+        fnum = font(th[0], 150, th[1]); ns = str(count)
+        cd.text((cx - fnum.getlength(ns) / 2, cy - lh(fnum) / 2 - 6), ns, font=fnum, fill=(255, 255, 255))
+        fq = font(TAGFONT, 36); tq = 'Đoán nhanh! · Quick, guess!'
+        cd.text((cx - fq.getlength(tq) / 2, cy + R + 28), tq, font=fq, fill=tcol)
+        img.alpha_composite(cl)
     return img.convert('RGB')
 
 
@@ -335,6 +346,10 @@ def synth_ticks(sec):
         c = np.sin(2 * np.pi * f * tt) * np.exp(-tt * 90) * 0.5
         s = int(t * SR); out[s:s + L] += c[:len(out) - s]
         t += 0.5; k += 1
+    for sec_i in range(int(sec)):  # nhấn mạnh nhịp mỗi giây
+        s0 = int(sec_i * SR); L = int(SR * 0.09); tt = np.arange(L) / SR
+        b = np.sin(2 * np.pi * 880 * tt) * np.exp(-tt * 45) * 0.45
+        out[s0:s0 + L] += b[:len(out) - s0]
     return out
 
 
@@ -427,36 +442,39 @@ def main():
             n = min(len(lg), int(SR * 0.15)); lg = lg.copy(); lg[-n:] *= np.linspace(1, 0, n); lg[:n] *= np.linspace(0, 1, n)
             return lg / (np.max(np.abs(lg)) + 1e-9) * 0.75
         return synth_laugh(k + 5)
-    laugh1 = get_laugh(c, 3.5)       # cười sau câu nói tiếng Việt
-    laugh2 = get_laugh(c + 3, 3.5, 3.0 if custom and len(custom) == 1 else 0.0)   # cười sau câu nói tiếng Anh
+    laugh1 = get_laugh(c, 3.0)       # cười sau câu nói tiếng Việt
+    laugh2 = get_laugh(c + 3, 2.5, 3.0 if custom and len(custom) == 1 else 0.0)   # cười sau câu nói tiếng Anh
     for tag, text, voice, rate in [
-        ('rv', 'Đố vui nhé! ' + riddle['vi_q'], vi_voice, '+0%'),
-        ('re', 'Riddle time! ' + riddle['en_q'], en_voice, '+0%'),
-        ('cv', 'Bạn đoán được chưa? Hãy bình luận đáp án của bạn nhé! Đáp án sẽ có ở tin sau.', vi_voice, '+5%'),
-        ('ce', 'Can you guess it? Leave your answer in the comments. The answer comes in the next post!', en_voice, '+5%')]:
+        ('rv', 'Đố vui năm giây! ' + riddle['vi_q'], vi_voice, '+0%'),
+        ('re', 'Five second riddle! ' + riddle['en_q'], en_voice, '+0%'),
+        ('cv', 'Bạn đoán ra chưa? Bình luận đáp án nhé! Đáp án có ở video sau.', vi_voice, '+5%'),
+        ('ce', 'Did you get it? Comment your answer! The answer is in the next video.', en_voice, '+5%')]:
         p = f'{WORK}/{tag}.wav'; tts(text, voice, rate, p, tag); wavs[tag] = read_wav(p)
     parts, t = [], 0.0
     def add(x, name=None):
         nonlocal t
         parts.append(x); t += len(x) / SR
-    # câu đố lên trước, rồi tới câu nói vui kèm tiếng cười, cuối cùng là lời kêu gọi bình luận
-    add(silence(0.35)); add(wavs['rv']); add(silence(0.3)); add(wavs['re']); add(silence(0.25))
-    add(synth_ticks(2.6)); add(silence(0.25))
-    t_riddle = t
-    add(wavs['qv']); add(silence(0.25)); add(laugh1); add(silence(0.3))
-    add(wavs['qe']); add(silence(0.25)); add(laugh2); add(silence(0.35))
+    # câu đố lên trước, đếm ngược 5 giây, rồi câu nói vui kèm tiếng cười, cuối cùng là lời kêu gọi bình luận
+    add(silence(0.3)); add(wavs['rv']); add(silence(0.25)); add(wavs['re']); add(silence(0.2))
+    t_read = t
+    add(synth_ticks(5.0))
+    t_count_end = t
+    add(silence(0.2))
+    add(wavs['qv']); add(silence(0.2)); add(laugh1); add(silence(0.25))
+    add(wavs['qe']); add(silence(0.2)); add(laugh2); add(silence(0.3))
     t_cta = t
-    add(wavs['cv']); add(silence(0.3)); add(wavs['ce']); add(silence(1.0))
+    add(wavs['cv']); add(silence(0.25)); add(wavs['ce']); add(silence(0.7))
     audio = np.concatenate(parts)
     write_wav(f'{WORK}/audio.wav', audio)
     total = t
-    durs = [t_riddle, t_cta - t_riddle, total - t_cta]
+    durs = [t_read, 1.0, 1.0, 1.0, 1.0, 1.0, t_cta - t_count_end, total - t_cta]
     print('Thời lượng', [round(x, 1) for x in durs], 'tổng', round(total, 1))
 
     # 2) khung hình: một slide, ba trạng thái nhấn
     imgs = []
-    for i, act in enumerate(('riddle', 'quote', 'cta')):
-        im = render_frame(th, quote, riddle, c, act); p = f'{WORK}/f{i}.png'; im.save(p); imgs.append(p)
+    plan = [('riddle', None), ('riddle', 5), ('riddle', 4), ('riddle', 3), ('riddle', 2), ('riddle', 1), ('quote', None), ('cta', None)]
+    for i, (act, cn) in enumerate(plan):
+        im = render_frame(th, quote, riddle, c, act, cn); p = f'{WORK}/f{i}.png'; im.save(p); imgs.append(p)
     if os.environ.get('SAVE_FRAMES'):
         for i, p in enumerate(imgs): Image.open(p).save(os.path.join(os.environ['SAVE_FRAMES'], f'frame{i}.png'))
     segs_v = []
@@ -474,16 +492,16 @@ def main():
     print('Đã dựng', out, os.path.getsize(out) // 1024, 'KB')
 
     hooks = [
-        ("😂 Chỉ 1% người trả lời đúng câu này trong 5 giây! Bạn có nằm trong số đó không?",
-         "Only 1% of people get this right in 5 seconds! Are you one of them?"),
-        ("🤔 Bạn có đoán được trong 5 giây không? Thử xem nào!",
-         "Can you guess it in 5 seconds? Give it a try!"),
-        ("😄 Câu đố này nghe thì dễ mà nhiều người lại nghĩ mãi! Bạn thì sao?",
-         "Sounds easy, yet many people get stuck! How about you?"),
-        ("🔥 Ai đoán đúng nhanh nhất? Gõ đáp án vào bình luận nào!",
-         "Who can guess it first? Type your answer in the comments!"),
-        ("🧠 Thử thách trí thông minh 5 giây! Bạn có đủ nhanh không?",
-         "A 5-second brain challenge! Are you quick enough?"),
+        ("⏱️ Thử thách 5 giây: bạn đoán ra câu đố này không?",
+         "5-second challenge: can you solve this riddle?"),
+        ("🤔 Nghe thì dễ, nhưng nhiều người nghĩ mãi! Bạn thì sao?",
+         "Sounds easy, but it trips up a lot of people! How about you?"),
+        ("😄 Bạn đoán nhanh cỡ nào? Thử ngay trong 5 giây!",
+         "How fast can you guess? Try it in 5 seconds!"),
+        ("🧠 Đố bạn trả lời được ngay! Gõ đáp án xuống bình luận nhé.",
+         "Bet you can solve it! Type your answer in the comments."),
+        ("🔥 Ai đoán đúng đầu tiên nào? Đáp án bên dưới video sau!",
+         "Who gets it right first? The answer comes in the next video!"),
     ]
     h_vi, h_en = hooks[c % len(hooks)]
     caption = (f"{h_vi}\n{h_en}\n\n"
@@ -516,7 +534,9 @@ def main():
         time.sleep(10)
 
     # 4) cập nhật trạng thái NGAY (tránh đăng trùng nếu bước sau lỗi), rồi bình luận đáp án của tin trước
-    answer_text = ('✅ ĐÁP ÁN / ANSWER\n'
+    heads = ['✅ ĐÁP ÁN / ANSWER', '💡 Đáp án đây rồi! / Here is the answer!', '🎯 Bạn đoán đúng chưa? / Did you get it?',
+             '🔎 Cùng xem đáp án nhé! / Let us check the answer!']
+    answer_text = (heads[c % len(heads)] + '\n'
                    f"❓ {riddle['vi_q']}\n👉 {riddle['vi_a']}\n\n"
                    f"❓ {riddle['en_q']}\n👉 {riddle['en_a']}")
     pend = list(st.get('pending', []))
