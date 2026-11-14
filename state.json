@@ -1,11 +1,11 @@
 {
- "counter": 13,
- "last_time": 1794659536.0490704,
+ "counter": 14,
+ "last_time": 1794699014.5005684,
  "pending": [
   {
-   "post": "1116411068048144",
-   "video": "1670709858167489",
-   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Làm thế nào để thả một quả trứng xuống sàn bê tông mà không làm vỡ nó?\n👉 Sàn bê tông rất khó vỡ!\n\n❓ How to drop an egg onto a concrete floor without cracking it?\n👉 Concrete floors don't crack easily!",
+   "post": "1116874554668462",
+   "video": "1844560726870381",
+   "text": "💡 Đáp án đây rồi! / Here is the answer!\n❓ Chuột nào đi bằng hai chân?\n👉 Chuột Mickey.\n\n❓ Which mouse walks on two legs?\n👉 Mickey Mouse.",
    "tries": 0
   }
  ],
@@ -113,6 +113,14 @@
    "post": "1116411068048144",
    "video": "1670709858167489",
    "t": "2026-11-14 12:32"
+  },
+  {
+   "n": 13,
+   "q": "Q084",
+   "r": "R037",
+   "post": "1116874554668462",
+   "video": "1844560726870381",
+   "t": "2026-11-14 23:30"
   }
  ]
 }
