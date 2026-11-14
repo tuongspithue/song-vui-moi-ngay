@@ -1,11 +1,11 @@
 {
- "counter": 10,
- "last_time": 1794614919.7899194,
+ "counter": 11,
+ "last_time": 1794631260.0295875,
  "pending": [
   {
-   "post": "1115915604764357",
-   "video": "1426844169480847",
-   "text": "💡 Đáp án đây rồi! / Here is the answer!\n❓ Quần rộng nhất là quần gì?\n👉 Quần đảo.\n\n❓ Which \"pants\" are the widest? (In Vietnamese, \"quan dao\" means archipelago.)\n👉 An archipelago.",
+   "post": "1116093734746544",
+   "video": "1843399770192904",
+   "text": "🎯 Bạn đoán đúng chưa? / Did you get it?\n❓ Cái gì càng nhiều lại càng khó thấy?\n👉 Bóng tối.\n\n❓ The more of this there is, the less you see. What is it?\n👉 Darkness.",
    "tries": 0
   }
  ],
@@ -89,6 +89,14 @@
    "post": "1115915604764357",
    "video": "1426844169480847",
    "t": "2026-11-14 00:08"
+  },
+  {
+   "n": 10,
+   "q": "Q098",
+   "r": "R115",
+   "post": "1116093734746544",
+   "video": "1843399770192904",
+   "t": "2026-11-14 04:41"
   }
  ]
 }
