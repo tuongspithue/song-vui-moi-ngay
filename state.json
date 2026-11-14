@@ -1,11 +1,11 @@
 {
- "counter": 11,
- "last_time": 1794631260.0295875,
+ "counter": 12,
+ "last_time": 1794650598.2504997,
  "pending": [
   {
-   "post": "1116093734746544",
-   "video": "1843399770192904",
-   "text": "🎯 Bạn đoán đúng chưa? / Did you get it?\n❓ Cái gì càng nhiều lại càng khó thấy?\n👉 Bóng tối.\n\n❓ The more of this there is, the less you see. What is it?\n👉 Darkness.",
+   "post": "1116300478059203",
+   "video": "1435447355468094",
+   "text": "🔎 Cùng xem đáp án nhé! / Let us check the answer!\n❓ Xã nào đông nhất?\n👉 Xã hội.\n\n❓ Which \"commune\" has the biggest population? (In Vietnamese, \"xa hoi\" means society.)\n👉 Society.",
    "tries": 0
   }
  ],
@@ -97,6 +97,14 @@
    "post": "1116093734746544",
    "video": "1843399770192904",
    "t": "2026-11-14 04:41"
+  },
+  {
+   "n": 11,
+   "q": "Q050",
+   "r": "R009",
+   "post": "1116300478059203",
+   "video": "1435447355468094",
+   "t": "2026-11-14 10:03"
   }
  ]
 }
