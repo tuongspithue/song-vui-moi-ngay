@@ -1,11 +1,11 @@
 {
- "counter": 16,
- "last_time": 1794745937.221451,
+ "counter": 17,
+ "last_time": 1794785403.81899,
  "pending": [
   {
-   "post": "1117384741284110",
-   "video": "1467444182001384",
-   "text": "🔎 Cùng xem đáp án nhé! / Let us check the answer!\n❓ Xe nào có nhiều bánh nhất?\n👉 Xe chở bánh kẹo!\n\n❓ Which truck carries the most \"banh\"? (In Vietnamese, \"banh\" means both cakes and wheels.)\n👉 A bakery truck!",
+   "post": "1117848197904431",
+   "video": "1162687072844925",
+   "text": "✅ ĐÁP ÁN / ANSWER\n❓ Nơi nào có sông nhưng không có nước, có thành phố nhưng không có nhà?\n👉 Bản đồ.\n\n❓ Where can you find rivers without water and cities without houses?\n👉 On a map.",
    "tries": 0
   }
  ],
@@ -137,6 +137,14 @@
    "post": "1117384741284110",
    "video": "1467444182001384",
    "t": "2026-11-15 12:32"
+  },
+  {
+   "n": 16,
+   "q": "Q009",
+   "r": "R060",
+   "post": "1117848197904431",
+   "video": "1162687072844925",
+   "t": "2026-11-15 23:30"
   }
  ]
 }
