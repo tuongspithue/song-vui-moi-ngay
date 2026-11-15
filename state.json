@@ -1,11 +1,11 @@
 {
- "counter": 15,
- "last_time": 1794717655.5907388,
+ "counter": 16,
+ "last_time": 1794745937.221451,
  "pending": [
   {
-   "post": "1117067857982465",
-   "video": "1678301643916564",
-   "text": "🎯 Bạn đoán đúng chưa? / Did you get it?\n❓ Cái gì có lưỡi nhưng không biết nói?\n👉 Đôi giày.\n\n❓ What has a tongue but cannot speak?\n👉 A shoe.",
+   "post": "1117384741284110",
+   "video": "1467444182001384",
+   "text": "🔎 Cùng xem đáp án nhé! / Let us check the answer!\n❓ Xe nào có nhiều bánh nhất?\n👉 Xe chở bánh kẹo!\n\n❓ Which truck carries the most \"banh\"? (In Vietnamese, \"banh\" means both cakes and wheels.)\n👉 A bakery truck!",
    "tries": 0
   }
  ],
@@ -129,6 +129,14 @@
    "post": "1117067857982465",
    "video": "1678301643916564",
    "t": "2026-11-15 04:40"
+  },
+  {
+   "n": 15,
+   "q": "Q150",
+   "r": "R177",
+   "post": "1117384741284110",
+   "video": "1467444182001384",
+   "t": "2026-11-15 12:32"
   }
  ]
 }
