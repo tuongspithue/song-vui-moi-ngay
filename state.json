@@ -1,11 +1,11 @@
 {
- "counter": 14,
- "last_time": 1794699014.5005684,
+ "counter": 15,
+ "last_time": 1794717655.5907388,
  "pending": [
   {
-   "post": "1116874554668462",
-   "video": "1844560726870381",
-   "text": "💡 Đáp án đây rồi! / Here is the answer!\n❓ Chuột nào đi bằng hai chân?\n👉 Chuột Mickey.\n\n❓ Which mouse walks on two legs?\n👉 Mickey Mouse.",
+   "post": "1117067857982465",
+   "video": "1678301643916564",
+   "text": "🎯 Bạn đoán đúng chưa? / Did you get it?\n❓ Cái gì có lưỡi nhưng không biết nói?\n👉 Đôi giày.\n\n❓ What has a tongue but cannot speak?\n👉 A shoe.",
    "tries": 0
   }
  ],
@@ -121,6 +121,14 @@
    "post": "1116874554668462",
    "video": "1844560726870381",
    "t": "2026-11-14 23:30"
+  },
+  {
+   "n": 14,
+   "q": "Q196",
+   "r": "R054",
+   "post": "1117067857982465",
+   "video": "1678301643916564",
+   "t": "2026-11-15 04:40"
   }
  ]
 }
