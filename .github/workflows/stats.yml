@@ -1,0 +1,15 @@
+name: so-lieu
+on:
+  workflow_dispatch:
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - name: Đọc số liệu Reel
+        env:
+          FB_PAGE_TOKEN_SVMN: ${{ secrets.FB_PAGE_TOKEN_SVMN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+        run: python reel/stats.py
