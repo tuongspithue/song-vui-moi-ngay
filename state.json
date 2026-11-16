@@ -1,11 +1,11 @@
 {
- "counter": 18,
- "last_time": 1794804071.3519676,
+ "counter": 19,
+ "last_time": 1794823424.1499174,
  "pending": [
   {
-   "post": "1118035797885671",
-   "video": "1139895575458479",
-   "text": "💡 Đáp án đây rồi! / Here is the answer!\n❓ Cá gì không bao giờ biết bơi?\n👉 Cá khô / Cá gỗ.\n\n❓ Which fish can never swim?\n👉 Dried fish.",
+   "post": "1118242111198373",
+   "video": "886967517807023",
+   "text": "🎯 Bạn đoán đúng chưa? / Did you get it?\n❓ Cái gì có thể lấp đầy cả căn phòng mà không chiếm không gian?\n👉 Ánh sáng.\n\n❓ What can fill an entire room without taking up space?\n👉 Light.",
    "tries": 0
   }
  ],
@@ -153,6 +153,14 @@
    "post": "1118035797885671",
    "video": "1139895575458479",
    "t": "2026-11-16 04:41"
+  },
+  {
+   "n": 18,
+   "q": "Q091",
+   "r": "R049",
+   "post": "1118242111198373",
+   "video": "886967517807023",
+   "t": "2026-11-16 10:03"
   }
  ]
 }
