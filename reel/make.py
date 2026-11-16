@@ -414,6 +414,20 @@ def main():
     now = time.time()
     if not PREVIEW and not FORCE and now - float(st.get('last_time', 0)) < 40 * 60:
         print('Vừa đăng cách đây dưới 40 phút, bỏ qua (dùng force để ép).'); return
+    kind = str(P.get('kind') or os.environ.get('IN_KIND') or '').strip().lower()
+    if kind in ('meo', 'odd', 'emoji'):  # BẢN MỚI: gameshow Mèo Vui + Robot Tây (reel/show.py)
+        import show
+        D = P.get('data') or {}
+        if isinstance(D, str): D = json.loads(D or '{}')
+        out, caption, cid = show.build(kind, c, D)
+        open(f'{WORK}/caption.txt', 'w', encoding='utf8').write(caption)
+        print('Tin số', c, 'loạt', kind, cid); print(caption)
+        if PREVIEW:
+            print('PREVIEW: không đăng, không đổi trạng thái.'); return
+        if not (PAGE_ID and TOKEN):
+            sys.exit('Thiếu page_id hoặc secret FB_PAGE_TOKEN_SVMN')
+        publish(st, c, now, out, caption, {'kind': kind, 'id': cid}, None)
+        return
     if P.get('quote_vi') and P.get('r_vq'):  # nội dung do Apps Script chọn từ Google Sheet
         ids = str(P.get('ids') or 'sheet/sheet').split('/')
         quote = {'id': ids[0], 'vi': str(P['quote_vi']).strip(), 'en': str(P.get('quote_en') or '').strip()}
@@ -515,6 +529,16 @@ def main():
     if not (PAGE_ID and TOKEN):
         sys.exit('Thiếu page_id hoặc secret FB_PAGE_TOKEN_SVMN')
 
+    heads = ['✅ ĐÁP ÁN / ANSWER', '💡 Đáp án đây rồi! / Here is the answer!', '🎯 Bạn đoán đúng chưa? / Did you get it?',
+             '🔎 Cùng xem đáp án nhé! / Let us check the answer!']
+    answer_text = (heads[c % len(heads)] + '\n'
+                   f"❓ {riddle['vi_q']}\n👉 {riddle['vi_a']}\n\n"
+                   f"❓ {riddle['en_q']}\n👉 {riddle['en_a']}")
+    publish(st, c, now, out, caption, {'q': quote['id'], 'r': riddle['id']}, answer_text)
+
+
+def publish(st, c, now, out, caption, hist, answer_text):
+    """Đăng Reel, ghi trạng thái, bình luận các đáp án còn chờ của bản cũ."""
     # 3) đăng Reel
     r = requests.post(f'{GV}/{PAGE_ID}/video_reels', data={'upload_phase': 'start', 'access_token': TOKEN}, timeout=60)
     print(r.status_code, r.text[:300]); r.raise_for_status()
@@ -534,15 +558,10 @@ def main():
         time.sleep(10)
 
     # 4) cập nhật trạng thái NGAY (tránh đăng trùng nếu bước sau lỗi), rồi bình luận đáp án của tin trước
-    heads = ['✅ ĐÁP ÁN / ANSWER', '💡 Đáp án đây rồi! / Here is the answer!', '🎯 Bạn đoán đúng chưa? / Did you get it?',
-             '🔎 Cùng xem đáp án nhé! / Let us check the answer!']
-    answer_text = (heads[c % len(heads)] + '\n'
-                   f"❓ {riddle['vi_q']}\n👉 {riddle['vi_a']}\n\n"
-                   f"❓ {riddle['en_q']}\n👉 {riddle['en_a']}")
     pend = list(st.get('pending', []))
     st['counter'] = c + 1; st['last_time'] = now
-    st['history'] = (st.get('history', []) + [{'n': c, 'q': quote['id'], 'r': riddle['id'], 'post': post_id, 'video': vid,
-                                               't': time.strftime('%Y-%m-%d %H:%M', time.gmtime(now))}])[-60:]
+    st['history'] = (st.get('history', []) + [dict(hist, n=c, post=post_id, video=vid,
+                                               t=time.strftime('%Y-%m-%d %H:%M', time.gmtime(now)))])[-120:]
     st['pending'] = pend
     save_state(st)
     new_pending = []
@@ -558,7 +577,7 @@ def main():
         if not ok:
             item['tries'] = item.get('tries', 0) + 1
             if item['tries'] < 6: new_pending.append(item)
-    new_pending.append({'post': post_id, 'video': vid, 'text': answer_text, 'tries': 0})
+    if answer_text: new_pending.append({'post': post_id, 'video': vid, 'text': answer_text, 'tries': 0})
     st['pending'] = new_pending[-8:]
     save_state(st)
     print('Xong tin', c)

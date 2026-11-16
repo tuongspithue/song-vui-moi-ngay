@@ -12,7 +12,7 @@ print('PAGE', get(P, fields='name,followers_count,fan_count'))
 st = json.load(open('state.json'))
 rows = []
 for h in st.get('history', []):
-    v = h['video']; row = {'n': h['n'], 'q': h['q'], 'r': h['r'], 't': h['t']}
+    v = h['video']; row = {'n': h['n'], 'kind': h.get('kind', 'cu'), 'id': h.get('id') or h.get('r'), 't': h['t']}
     c, d = get(v, fields='length,likes.summary(true).limit(0),comments.summary(true).limit(0)')
     if c == 200:
         row['len'] = round(d.get('length', 0), 1)

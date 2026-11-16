@@ -10,6 +10,9 @@ on:
       force:
         description: 'Ép đăng dù vừa đăng cách đây dưới 40 phút (true/false)'
         default: 'false'
+      kind:
+        description: 'Loạt: meo | odd | emoji (để trống = bản cũ)'
+        default: 'meo'
 permissions:
   contents: write
 concurrency:
@@ -30,6 +33,7 @@ jobs:
           PAYLOAD: ${{ toJson(github.event.client_payload) }}
           IN_PREVIEW: ${{ github.event.inputs.preview }}
           IN_FORCE: ${{ github.event.inputs.force }}
+          IN_KIND: ${{ github.event.inputs.kind }}
           FB_PAGE_TOKEN_SVMN: ${{ secrets.FB_PAGE_TOKEN_SVMN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           WORK_DIR: /tmp/svmn

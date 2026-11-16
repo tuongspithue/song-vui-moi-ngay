@@ -16,22 +16,27 @@ BOT_VOICES = ['en-US-GuyNeural', 'en-US-AndrewNeural', 'en-GB-SoniaNeural']
 BOT_FONT = 'ChakraPetch-Bold.ttf'
 BOT_FILL, BOT_FG, BOT_SUB = '#10243E', '#E6FBFF', '#7FE9FF'
 
-# dữ liệu mẫu cho bản xem thử (sau khi duyệt sẽ chuyển vào Google Sheet)
-GUESS = {  # câu Robot đoán sai cho từng câu đố
-    'default': ('Hmm... is it a banana?', 'Hừm… là quả chuối hả?'),
-    'R122': ('Is it... my nose?', 'Là… cái mũi của tôi hả?'),
-    'R072': ('Is it... a fish?', 'Là… con cá hả?'),
-    'R050': ('Is it... a ghost?', 'Là… con ma hả?'),
+GUESS_DEFAULT = ('Hmm... is it a banana?', 'Hừm… là quả chuối hả?')
+KINDS = {  # mã: (tên Việt, tên Anh, câu Mèo hỏi)
+    'TN': ('Thành ngữ', 'Vietnamese idiom', 'Đây là thành ngữ gì?'), 'TU': ('Tục ngữ', 'Vietnamese proverb', 'Đây là câu tục ngữ nào?'),
+    'MA': ('Món ăn', 'Vietnamese food', 'Đây là món gì?'), 'DD': ('Địa danh', 'Place in Vietnam', 'Đây là nơi nào?'),
+    'VH': ('Văn hoá', 'Vietnamese culture', 'Đây là gì?'), 'GC': ('Ghép chữ', 'Word puzzle', 'Ghép lại thành từ gì?'),
 }
-EMOJI_QUIZ = [
-    {'emoji': ['🐸', '🪑', '🕳️'], 'kind_vi': 'Thành ngữ · 4 tiếng', 'kind_en': 'Vietnamese idiom', 'vi': 'Ếch ngồi đáy giếng',
-     'en': 'A frog sitting in a well', 'mean': 'someone who sees only a tiny part of the world',
-     'guess_en': 'Frog... chair... hole?', 'guess_vi': 'Ếch… ghế… lỗ?'},
-    {'emoji': ['🐘', '🕳️', '🪡'], 'kind_vi': 'Thành ngữ · 4 tiếng', 'kind_en': 'Vietnamese idiom', 'vi': 'Voi chui lỗ kim',
-     'en': 'An elephant through the eye of a needle', 'mean': 'something impossible',
-     'guess_en': 'Elephant... hole... needle?', 'guess_vi': 'Voi… lỗ… kim?'},
+KIND_BY_NAME = {v[0].lower(): k for k, v in KINDS.items()}
+ODD_PAIRS = [
+    [('🍎', '🍅'), ('🌕', '🌝'), ('🍊', '🍑'), ('🐶', '🐺'), ('🐱', '🐯'), ('⚽', '🏐'), ('🌹', '🌷'), ('🍓', '🍒'), ('🐸', '🐢'), ('🌞', '🌻'),
+     ('🐰', '🐭'), ('🦁', '🐯'), ('🍩', '🍪'), ('⭐', '🌟'), ('🐔', '🐤'), ('🍉', '🍈'), ('🚗', '🚕'), ('🎈', '🍎')],
+    [('😄', '😁'), ('🙂', '🙃'), ('🐵', '🙈'), ('😉', '😜'), ('😎', '🤓'), ('😺', '😸'), ('🙈', '🙉'), ('😇', '😊'), ('😋', '😛'), ('😴', '😪'),
+     ('🌛', '🌜'), ('🐼', '🐨'), ('😻', '😽'), ('😢', '😥'), ('🤗', '😊'), ('🐻', '🐹'), ('🍋', '🍐'), ('🌼', '🌻')],
+    [('😮', '😯'), ('😀', '😃'), ('🕐', '🕑'), ('😃', '😄'), ('🌑', '🌚'), ('😐', '😑'), ('🙁', '😕'), ('😦', '😧'), ('🕒', '🕓'), ('😬', '😁'),
+     ('😌', '😔'), ('😆', '😝'), ('🌓', '🌔'), ('😲', '😮'), ('🕕', '🕖'), ('😗', '😙'), ('🌖', '🌕'), ('😊', '☺')],
 ]
-ODD_PAIRS = [[('🍎', '🍅'), ('🌕', '🌝'), ('🍊', '🍑')], [('😄', '😁'), ('🙂', '🙃'), ('🐵', '🙈')], [('😮', '😯'), ('😀', '😃'), ('🕐', '🕑')]]
+
+
+def load_v2(): return json.load(open(os.path.join(M.ROOT, 'data', 'content_v2.json'), encoding='utf8'))
+
+
+def truthy(v): return str(v).strip().lower() in ('1', 'true', 'yes', 'x', 'có')
 
 
 # ------------------------------------------------------------------ âm thanh
@@ -302,17 +307,21 @@ def encode(draw, total, audio, out, shots=()):
 
 
 # ------------------------------------------------------------------ Loạt 1: Mèo đố, Robot đoán sai
-def make_meo(th, out):
-    data = json.load(open(os.path.join(M.ROOT, 'data', 'content.json'), encoding='utf8'))['riddles']
-    rid = os.environ.get('RID'); r = next((x for x in data if x['id'] == rid), None) or M.pick(data, C, 29)
-    g_en, g_vi = GUESS.get(r['id'], GUESS['default'])
-    if os.environ.get('GUESS_EN'): g_en, g_vi = os.environ['GUESS_EN'], os.environ.get('GUESS_VI', '')
+def make_meo(th, out, D):
+    if D.get('vq'):
+        r = dict(id=D.get('id', 'sheet'), vi_q=str(D['vq']).strip(), vi_a=str(D.get('va', '')).strip(), en_q=str(D.get('eq', '')).strip(),
+                 en_a=str(D.get('ea', '')).strip(), g_en=str(D.get('g_en', '')).strip(), g_vi=str(D.get('g_vi', '')).strip(), vi_only=truthy(D.get('vi_only', '')))
+    else:
+        data = load_v2()['riddles']; rid = os.environ.get('RID')
+        r = next((x for x in data if x['id'] == rid), None) or M.pick(data, C, 29)
+    g_en, g_vi = (r['g_en'], r.get('g_vi', '')) if r.get('g_en') else GUESS_DEFAULT
+    vo = bool(r.get('vi_only')) or not r.get('en_q')  # câu chơi chữ: chỉ hỏi bằng tiếng Việt
     ans_vi, ans_en = r['vi_a'].rstrip('.'), r['en_a'].rstrip('.')
     tr = Track()
     ask = say(r['vi_q'], CAT_VOICES, 'ask', '+6%', '+22Hz')
     gs = say(g_en, BOT_VOICES, 'guess', '+0%', '-6Hz', robot=True)
     a1 = say('Sai rồi! Đáp án là: ' + ans_vi + '.', CAT_VOICES, 'a1', '+6%', '+22Hz')
-    a2 = say('Oh! ' + ans_en + '!', BOT_VOICES, 'a2', '+0%', '-6Hz', robot=True)
+    a2 = say('Oh! Vietnamese is so tricky!' if vo else 'Oh! ' + ans_en + '!', BOT_VOICES, 'a2', '+0%', '-6Hz', robot=True)
     lg = get_laugh(C, 2.4)
     t_ask = 0.25; tr.put(sfx_pop(), 0.0); e = tr.put(ask, t_ask, 'cat')
     t_cd = e + 0.15; tr.put(M.synth_ticks(5.0), t_cd)
@@ -323,7 +332,7 @@ def make_meo(th, out):
     t_end = e + 0.1; tr.put(lg * 0.9, t_end, 'cat'); total = t_end + 2.5
     audio, env = tr.mix(total)
     st = Stage(th, 'MÈO ĐỐ · 5 GIÂY', '😺', total, env, tr.speak)
-    q_card = card(r['vi_q'], r['en_q'], th[0], th[1], th[4], th[5], th[6], tail='left')
+    q_card = card(r['vi_q'], '' if vo else r['en_q'], th[0], th[1], th[4], th[5], th[6], tail='left')
     g_card = card(g_en, g_vi, BOT_FONT, None, BOT_FILL, BOT_FG, BOT_SUB, tail='right', maxh=480)
     a_card = card(ans_vi, ans_en, th[0], th[1], '#FFFFFF', '#0B6B3A', '#1971C2', header='ĐÁP ÁN · ANSWER', accent='#2BAE66', top=r['vi_q'], maxh=600, max_size=110)
     end_p = pill('Bạn đoán mất mấy giây?', 44, th[6], '#FFFFFF', '⏱️')
@@ -357,12 +366,12 @@ def make_meo(th, out):
         return im
 
     encode(draw, total, audio, out, shots=(0.15, t_ask + 1.0, t_cd + 2.4, t_g + 0.8, t_bz + 0.25, t_rv + 0.5, t_end + 1.2))
-    return (f"😺 Mèo Vui đố, 🤖 Robot Tây đoán sai mất rồi. Còn bạn thì sao?\n\n🧩 {r['vi_q']}\n🧩 {r['en_q']}\n\n"
-            f"⏱️ Bạn đoán mất mấy giây? / How fast were you?\n\n#SongVuiMoiNgay #MeoDo #CauDoVui #Riddle #HocTiengAnh")
+    return (f"😺 Mèo Vui đố, 🤖 Robot Tây đoán sai mất rồi. Còn bạn thì sao?\n\n🧩 {r['vi_q']}\n" + ('' if vo else f"🧩 {r['en_q']}\n") +
+            f"\n⏱️ Bạn đoán mất mấy giây? / How fast were you?\n\n#SongVuiMoiNgay #MeoDo #CauDoVui #Riddle #HocTiengAnh"), r['id']
 
 
 # ------------------------------------------------------------------ Loạt 2: Tìm emoji khác biệt
-def make_odd(th, out):
+def make_odd(th, out, D):
     rng = random.Random(C * 31 + 5)
     levels = []
     for li, (n, dur) in enumerate(((5, 3.6), (6, 4.0), (8, 4.6))):
@@ -425,85 +434,122 @@ def make_odd(th, out):
     L = levels
     encode(draw, total, audio, out, shots=(0.2, L[0]['t0'] + 2, L[0]['t1'] + 0.6, L[1]['t0'] + 2, L[2]['t0'] + 2, L[2]['t1'] + 0.6, t_end + 1.5))
     return ("🔍 Tìm emoji khác biệt trong vài giây! 3 màn khó dần, bạn qua được mấy màn?\n"
-            "Spot the odd emoji! 3 levels, how many can you find?\n\n#SongVuiMoiNgay #TimDiemKhacBiet #OddOneOut #EmojiChallenge #BrainTeaser")
+            "Spot the odd emoji! 3 levels, how many can you find?\n\n#SongVuiMoiNgay #TimDiemKhacBiet #OddOneOut #EmojiChallenge #BrainTeaser"), 'odd-' + '-'.join(lv['a'] for lv in levels)
 
 
 # ------------------------------------------------------------------ Loạt 3: Đuổi hình bắt chữ bằng emoji
-def make_emoji(th, out):
-    q = EMOJI_QUIZ[C % len(EMOJI_QUIZ)]
+def make_emoji(th, out, D):
+    if D.get('emoji'):
+        q = dict(id=D.get('id', 'sheet'), emoji=str(D['emoji']), kind=str(D.get('kind', 'VH')), vi=str(D.get('vi', '')).strip(), en=str(D.get('en', '')).strip(),
+                 mean=str(D.get('mean', '')).strip(), g_en=str(D.get('g_en', '')).strip(), g_vi=str(D.get('g_vi', '')).strip())
+    else:
+        data = load_v2()['emoji']; eid = os.environ.get('EID')
+        q = next((x for x in data if x['id'] == eid), None) or M.pick(data, C, 41)
+    kc = q['kind'].strip(); kc = kc if kc in KINDS else KIND_BY_NAME.get(kc.lower(), 'VH')
+    kv, ke, ask_line = KINDS[kc]
+    ems = [e for e in q['emoji'].split() if M.emoji_img(e, 64) is not None][:5]
     words = q['vi'].split()
+    g_en, g_vi = (q['g_en'], q.get('g_vi', '')) if q.get('g_en') else GUESS_DEFAULT
     tr = Track()
-    ask = say('Đuổi hình bắt chữ! Đây là thành ngữ gì?', CAT_VOICES, 'ask', '+8%', '+22Hz')
-    gs = say(q['guess_en'], BOT_VOICES, 'guess', '-5%', '-6Hz', robot=True)
+    ask = say('Đuổi hình bắt chữ! ' + ask_line, CAT_VOICES, 'ask', '+8%', '+22Hz')
+    gs = say(g_en, BOT_VOICES, 'guess', '+0%', '-6Hz', robot=True)
     a1 = say(q['vi'] + '!', CAT_VOICES, 'a1', '+0%', '+22Hz')
-    a2 = say(q['en'] + '. It means ' + q['mean'] + '.', BOT_VOICES, 'a2', '+6%', '-6Hz', robot=True)
-    for i in range(len(q['emoji'])): tr.put(sfx_pop(), 0.05 + i * 0.3)
+    a2 = say('. '.join(x for x in (q['en'].rstrip('.'), q['mean'].rstrip('.')) if x) + '.', BOT_VOICES, 'a2', '+6%', '-6Hz', robot=True)
+    for i in range(len(ems)): tr.put(sfx_pop(), 0.05 + i * 0.3)
     e = tr.put(ask, 0.2, 'cat'); t_cd = e + 0.1; tr.put(M.synth_ticks(5.0), t_cd)
-    t_gs = t_cd + 0.6; tr.put(gs, t_gs, 'bot'); t_hint = t_cd + 3.0; tr.put(sfx_pop(), t_hint)
+    t_gs = t_cd + 0.5; tr.put(gs, t_gs, 'bot'); t_hint = t_cd + 3.0; tr.put(sfx_pop(), t_hint)
     t_rv = t_cd + 5.0; tr.put(sfx_ting(), t_rv); tr.put(sfx_win(), t_rv + 0.05)
     e = tr.put(a1, t_rv + 0.25, 'cat'); e = tr.put(a2, e + 0.15, 'bot')
     t_end = e; tr.put(get_laugh(C, 1.8) * 0.8, t_end, 'cat'); total = t_end + 1.9
     audio, env = tr.mix(total)
     st = Stage(th, 'ĐUỔI HÌNH BẮT CHỮ', '🧩', total, env, tr.speak)
-    chip = pill(q['kind_vi'] + '  ·  ' + q['kind_en'], 30, '#FFFFFF', th[5])
-    panel = Image.new('RGBA', (940, 330), (0, 0, 0, 0)); ImageDraw.Draw(panel).rounded_rectangle((0, 0, 939, 329), 54, fill=(255, 255, 255, 225))
-    n = len(q['emoji']); ES = 220; gap = 940 / n
-    fw = M.font(th[0], 64, th[1]); bh = 124
-    bw = [max(120, int(fw.getlength(w)) + 56) for w in words]; tw = sum(bw) + 22 * (len(bw) - 1)
-    sc = min(1.0, 940 / tw)
-    g_card = card(q['guess_en'], q['guess_vi'], BOT_FONT, None, BOT_FILL, BOT_FG, BOT_SUB, w=560, maxh=260, tail='right', max_size=50, sub_ratio=0.74)
-    m_card = card(q['en'], '= ' + q['mean'], M.TAGFONT, None, '#FFFFFF', '#0B6B3A', '#1971C2', maxh=285, max_size=46, sub_ratio=0.8)
-    end_p = pill('Bạn đoán ra không?', 29, th[6], '#FFFFFF')
+    chip = pill(f"{kv} · {len(words)} tiếng  ·  {ke}", 30, '#FFFFFF', th[5])
+    PH = 290
+    panel = Image.new('RGBA', (940, PH), (0, 0, 0, 0)); ImageDraw.Draw(panel).rounded_rectangle((0, 0, 939, PH - 1), 54, fill=(255, 255, 255, 225))
+    n = max(1, len(ems)); gap = 940 / n; ES = int(min(200, gap * 0.86))
+    # ô chữ: tự xuống dòng (tối đa 2 dòng), tự thu nhỏ
+    for fs in (58, 50, 44, 38):
+        fw = M.font(th[0], fs, th[1]); bh = int(fs * 1.85); padx = int(fs * 0.48); sp = 16
+        bw = [max(int(fs * 1.7), int(fw.getlength(w)) + 2 * padx) for w in words]
+        lines, cur, cw = [], [], 0
+        for i, w_ in enumerate(bw):
+            if cur and cw + sp + w_ > 920: lines.append(cur); cur, cw = [], 0
+            cw += (sp if cur else 0) + w_; cur.append(i)
+        lines.append(cur)
+        if len(lines) <= 2: break
+    BH = len(lines) * bh + (len(lines) - 1) * 14 + 26
+    hint_n = max(1, len(words) // 4)
 
     def boxes(reveal):  # reveal: số tiếng đã mở
-        im = Image.new('RGBA', (tw + 20, bh + 30), (0, 0, 0, 0)); d = ImageDraw.Draw(im); x = 10
-        for i, w in enumerate(words):
-            on = i < reveal
-            d.rounded_rectangle((x, 10 + 8, x + bw[i], 10 + bh + 8), 30, fill=(0, 0, 0, 50))
-            d.rounded_rectangle((x, 10, x + bw[i], 10 + bh), 30, fill='#2BAE66' if on else '#FFFFFF', outline=th[6], width=5)
-            if on:
-                a, ds = fw.getmetrics(); d.text((x + bw[i] / 2 - fw.getlength(w) / 2, 10 + (bh - a - ds) / 2), w, font=fw, fill='#FFFFFF')
-            else:
-                d.rounded_rectangle((x + 28, 10 + bh - 34, x + bw[i] - 28, 10 + bh - 26), 4, fill=th[6])
-            x += bw[i] + 22
+        im = Image.new('RGBA', (960, BH), (0, 0, 0, 0)); d = ImageDraw.Draw(im); y = 8
+        for ln in lines:
+            lw = sum(bw[i] for i in ln) + sp * (len(ln) - 1); x = (960 - lw) / 2
+            for i in ln:
+                on = i < reveal
+                d.rounded_rectangle((x, y + 7, x + bw[i], y + bh + 7), 26, fill=(0, 0, 0, 50))
+                d.rounded_rectangle((x, y, x + bw[i], y + bh), 26, fill='#2BAE66' if on else '#FFFFFF', outline=th[6], width=5)
+                if on:
+                    a, ds = fw.getmetrics(); d.text((x + bw[i] / 2 - fw.getlength(words[i]) / 2, y + (bh - a - ds) / 2), words[i], font=fw, fill='#FFFFFF')
+                else:
+                    d.rounded_rectangle((x + 24, y + bh - 30, x + bw[i] - 24, y + bh - 23), 4, fill=th[6])
+                x += bw[i] + sp
+            y += bh + 14
         return im
-    B0, B1, BA = boxes(0), boxes(1), boxes(len(words))
+    B0, B1, BA = boxes(0), boxes(hint_n), boxes(len(words))
+    BY = 712 + BH / 2; top = 712 + BH + 4
+    g_card = card(g_en, g_vi, BOT_FONT, None, BOT_FILL, BOT_FG, BOT_SUB, w=600, maxh=250, tail='right', max_size=48, sub_ratio=0.74)
+    m_card = card(q['en'], q['mean'], M.TAGFONT, None, '#FFFFFF', '#0B6B3A', '#1971C2', maxh=max(170, 1196 - top), max_size=46, sub_ratio=0.8)
+    MY = top + (m_card.height - 192) / 2; GY2 = min(1090, top + 16 + (g_card.height - 192) / 2)
+    end_p = pill('Bạn đoán ra không?', 29, th[6], '#FFFFFF')
 
     def draw(t):
         im = st.base(t)
         paste_c(im, chip, W / 2, 335)
         im.alpha_composite(panel, (70, 400))
-        for i, ch in enumerate(q['emoji']):
+        for i, ch in enumerate(ems):
             p = (t - 0.05 - i * 0.3) / 0.25
-            if p > 0: M.paste_emoji(im, ch, 70 + gap * i + gap / 2, 565 + 8 * math.sin(t * 3 + i), max(4, int(ES * ease_back(p))))
+            if p > 0: M.paste_emoji(im, ch, 70 + gap * i + gap / 2, 400 + PH / 2 + 8 * math.sin(t * 3 + i), max(4, int(ES * ease_back(p))))
         bx = BA if t >= t_rv else B1 if t >= t_hint else B0
-        k = 1 + 0.12 * max(0, 1 - (t - t_rv) / 0.25) if t >= t_rv else 1 + 0.08 * max(0, 1 - (t - t_hint) / 0.2) if t >= t_hint else 1
-        paste_c(im, bx, W / 2, 825, sc * k)
+        k = 1 + 0.10 * max(0, 1 - (t - t_rv) / 0.25) if t >= t_rv else 1 + 0.06 * max(0, 1 - (t - t_hint) / 0.2) if t >= t_hint else 1
+        paste_c(im, bx, W / 2, BY, k)
         if t_cd <= t < t_rv:
             u = t - t_cd; frac = u - int(u)
             paste_c(im, ring(1 - u / 5.0, 5 - int(u), st.th[6], '#FFFFFF'), W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
             if t_gs <= t < t_gs + len(gs) / SR + 0.9:
-                paste_c(im, g_card, 660, 1045, 0.5 + 0.5 * ease_back((t - t_gs) / 0.25))
+                paste_c(im, g_card, 640, GY2, 0.5 + 0.5 * ease_back((t - t_gs) / 0.25))
         if t >= t_rv:
             u = t - t_rv
-            paste_c(im, m_card, W / 2, 1025, 0.5 + 0.5 * ease_back((u - 0.2) / 0.3)); confetti(im, u, C + 9)
+            paste_c(im, m_card, W / 2, MY, 0.5 + 0.5 * ease_back((u - 0.2) / 0.3)); confetti(im, u, C + 9)
         if t >= t_end: paste_c(im, end_p, W / 2, 1330, ease_back((t - t_end) / 0.3))
         cat = '😺' if t < t_cd else '😼' if t < t_rv else '😸' if t < t_end else '😹'
         st.char(im, 'cat', cat, t, boost=1.5 if t >= t_end else 1); st.char(im, 'bot', '🤖', t, over='🤔' if t_cd <= t < t_rv else '👏' if t >= t_rv else None)
         return im
 
     encode(draw, total, audio, out, shots=(0.3, 1.5, t_gs + 1.0, t_hint + 0.5, t_rv + 0.6, t_rv + 2.5, t_end + 1.0))
-    return (f"🧩 Đuổi hình bắt chữ: {' '.join(q['emoji'])} là {q['kind_vi'].split(' · ')[0].lower()} gì?\nGuess the Vietnamese idiom from the emojis!\n\n"
-            f"👇 Bạn đoán ra không?\n\n#SongVuiMoiNgay #DuoiHinhBatChu #EmojiQuiz #ThanhNgu #HocTiengAnh")
+    return (f"🧩 Đuổi hình bắt chữ: {' '.join(ems)}\n{ask_line} ({len(words)} tiếng)\nCan you guess it from the emojis? ({ke})\n\n"
+            f"👇 Bạn đoán ra không?\n\n#SongVuiMoiNgay #DuoiHinhBatChu #EmojiQuiz #TiengViet #HocTiengAnh"), q['id']
 
 
-def main():
+def build(kind, c, D):
+    """Dựng video cho một loạt. Trả về (đường dẫn video, chú thích, mã nội dung)."""
+    global C
+    C = int(c); D = D or {}
     os.makedirs(WORK, exist_ok=True); M.ensure_fonts()
     th = list(M.THEMES[(C * 5) % len(M.THEMES)])
     if th[0] in ('Pacifico.ttf', 'DancingScript.ttf', 'Lobster.ttf', 'Pattaya.ttf'): th[0], th[1] = 'Baloo2.ttf', 700  # chữ đố cần dễ đọc
-    out = f'{WORK}/{KIND}.mp4'
-    cap = {'meo': make_meo, 'odd': make_odd, 'emoji': make_emoji}[KIND](th, out)
+    out = f'{WORK}/final.mp4'
+    cap, cid = {'meo': make_meo, 'odd': make_odd, 'emoji': make_emoji}[kind](th, out, D)
+    if D.get('q_vi'):  # câu nói vui của ngày đưa vào chú thích
+        qs = f"😹 Mèo Vui: “{str(D['q_vi']).strip()}”" + (f"\n🤖 Robot Tây: “{str(D['q_en']).strip()}”" if D.get('q_en') else '')
+        head, tags = cap.rsplit('\n\n#', 1); cap = f"{head}\n\n{qs}\n\n#{tags}"
+    return out, cap, cid
+
+
+def main():
+    out, cap, cid = build(KIND, C, {})
+    if os.path.exists(out): os.replace(out, f'{WORK}/{KIND}.mp4')
     open(f'{WORK}/{KIND}_caption.txt', 'w', encoding='utf8').write(cap)
+    print(cid); print(cap)
 
 
 if __name__ == '__main__':
