@@ -1,11 +1,11 @@
 {
- "counter": 19,
- "last_time": 1794823424.1499174,
+ "counter": 20,
+ "last_time": 1794832340.0527403,
  "pending": [
   {
-   "post": "1118242111198373",
-   "video": "886967517807023",
-   "text": "🎯 Bạn đoán đúng chưa? / Did you get it?\n❓ Cái gì có thể lấp đầy cả căn phòng mà không chiếm không gian?\n👉 Ánh sáng.\n\n❓ What can fill an entire room without taking up space?\n👉 Light.",
+   "post": "1118365834519334",
+   "video": "2201553170572666",
+   "text": "🔎 Cùng xem đáp án nhé! / Let us check the answer!\n❓ Cái gì luôn ở trước mặt bạn nhưng bạn không thể nhìn thấy?\n👉 Tương lai.\n\n❓ What is always in front of you but can't be seen?\n👉 The future.",
    "tries": 0
   }
  ],
@@ -161,6 +161,14 @@
    "post": "1118242111198373",
    "video": "886967517807023",
    "t": "2026-11-16 10:03"
+  },
+  {
+   "n": 19,
+   "q": "Q065",
+   "r": "R122",
+   "post": "1118365834519334",
+   "video": "2201553170572666",
+   "t": "2026-11-16 12:32"
   }
  ]
 }
