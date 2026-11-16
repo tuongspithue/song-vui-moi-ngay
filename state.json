@@ -1,14 +1,7 @@
 {
- "counter": 20,
- "last_time": 1794832340.0527403,
- "pending": [
-  {
-   "post": "1118365834519334",
-   "video": "2201553170572666",
-   "text": "🔎 Cùng xem đáp án nhé! / Let us check the answer!\n❓ Cái gì luôn ở trước mặt bạn nhưng bạn không thể nhìn thấy?\n👉 Tương lai.\n\n❓ What is always in front of you but can't be seen?\n👉 The future.",
-   "tries": 0
-  }
- ],
+ "counter": 21,
+ "last_time": 1794871805.7616808,
+ "pending": [],
  "history": [
   {
    "n": 0,
@@ -169,6 +162,14 @@
    "post": "1118365834519334",
    "video": "2201553170572666",
    "t": "2026-11-16 12:32"
+  },
+  {
+   "kind": "odd",
+   "id": "odd-⭐-🐵-😌",
+   "n": 20,
+   "post": "1118837254472192",
+   "video": "1012682524501198",
+   "t": "2026-11-16 23:30"
   }
  ]
 }
