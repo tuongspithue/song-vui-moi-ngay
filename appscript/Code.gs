@@ -109,10 +109,11 @@ function _inSeason(txt) {
 function _pick(name, useCol, cntCol, seasonCol) {
   var sh = _ss().getSheetByName(name), n = sh ? sh.getLastRow() - 1 : 0;
   if (n < 1) throw new Error('Tab ' + name + ' chưa có dữ liệu (chạy UPDATE_DATA)');
-  var v = sh.getRange(2, 1, n, Math.max(sh.getLastColumn(), cntCol, seasonCol || 1)).getDisplayValues();
+  var v = sh.getRange(2, 1, n, Math.max(sh.getLastColumn(), cntCol, seasonCol || 1)).getValues();
   var best = [], bc = 1e9, sBest = [], sc = 1e9;
   for (var i = 0; i < v.length; i++) {
-    if (String(v[i][useCol - 1]).toUpperCase() !== 'TRUE') continue;
+    var on = v[i][useCol - 1];
+    if (!(on === true || String(on).toUpperCase() === 'TRUE')) continue;
     if (!String(v[i][1]).trim()) continue;
     var c = Number(v[i][cntCol - 1]) || 0, ss = seasonCol ? _inSeason(v[i][seasonCol - 1]) : null;
     if (ss === false) continue;
@@ -122,7 +123,7 @@ function _pick(name, useCol, cntCol, seasonCol) {
   if (sBest.length && (sc <= bc || !best.length)) best = sBest;
   if (!best.length) throw new Error('Tab ' + name + ' không còn dòng nào được bật');
   var k = best[Math.floor(Math.random() * best.length)];
-  return { sheet: sh, row: k + 2, cntCol: cntCol, d: v[k] };
+  return { sheet: sh, row: k + 2, cntCol: cntCol, d: v[k].map(function (x) { return x === null || x === undefined ? '' : String(x); }) };
 }
 function _mark(x) { var r = x.sheet.getRange(x.row, x.cntCol); r.setValue((Number(r.getValue()) || 0) + 1); }
 
