@@ -1,0 +1,19 @@
+name: gioi-thieu-trang
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'read = chỉ đọc, write = cập nhật từ data/page_about.json'
+        default: 'read'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests
+      - env:
+          FB_PAGE_TOKEN_SVMN: ${{ secrets.FB_PAGE_TOKEN_SVMN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          MODE: ${{ github.event.inputs.mode }}
+        run: python reel/page_info.py
