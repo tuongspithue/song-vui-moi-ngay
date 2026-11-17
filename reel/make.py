@@ -419,6 +419,9 @@ def main():
         import show
         D = P.get('data') or {}
         if isinstance(D, str): D = json.loads(D or '{}')
+        if kind == 'meo' and not PREVIEW:
+            try: D['board'] = get_board(st)
+            except Exception as e: print('Bảng vàng lỗi', e)
         out, caption, cid = show.build(kind, c, D)
         open(f'{WORK}/caption.txt', 'w', encoding='utf8').write(caption)
         print('Tin số', c, 'loạt', kind, cid); print(caption)
@@ -426,7 +429,9 @@ def main():
             print('PREVIEW: không đăng, không đổi trạng thái.'); return
         if not (PAGE_ID and TOKEN):
             sys.exit('Thiếu page_id hoặc secret FB_PAGE_TOKEN_SVMN')
-        publish(st, c, now, out, caption, {'kind': kind, 'id': cid}, None)
+        vid = publish(st, c, now, out, caption, {'kind': kind, 'id': cid}, None)
+        if kind == 'meo' and D.get('va'):  # nguồn cho Bảng vàng ở câu đố sau
+            st['board_src'] = {'video': vid, 'ans': str(D['va']), 't': now}; save_state(st)
         return
     if P.get('quote_vi') and P.get('r_vq'):  # nội dung do Apps Script chọn từ Google Sheet
         ids = str(P.get('ids') or 'sheet/sheet').split('/')
@@ -537,6 +542,25 @@ def main():
     publish(st, c, now, out, caption, {'q': quote['id'], 'r': riddle['id']}, answer_text)
 
 
+def _norm(t):
+    import unicodedata, re
+    t = unicodedata.normalize('NFD', str(t).lower().replace('đ', 'd'))
+    return re.sub(r'[^a-z0-9 ]+', ' ', ''.join(ch for ch in t if unicodedata.category(ch) != 'Mn')).strip()
+
+
+def get_board(st, need=5):
+    """Bảng vàng: đếm bình luận THẬT của người xem ở câu đố trước (chỉ đọc). Chưa đủ `need` bình luận thì bỏ qua."""
+    src = st.get('board_src') or {}
+    if not src.get('video') or time.time() - float(src.get('t', 0)) < 3 * 3600: return None
+    r = requests.get(f"{GV}/{src['video']}/comments", params={'fields': 'message,from', 'limit': 200, 'filter': 'stream', 'access_token': TOKEN}, timeout=40)
+    if not r.ok: print('Bảng vàng: không đọc được bình luận', r.status_code, r.text[:150]); return None
+    cm = [c for c in r.json().get('data', []) if str((c.get('from') or {}).get('id', '')) != PAGE_ID and (c.get('message') or '').strip()]
+    keys = [k for k in (_norm(x) for x in __import__('re').split(r'[,:(/]| và ', src.get('ans', ''))) if len(k) >= 2][:2]
+    ok = sum(1 for c in cm if any(k in _norm(c['message']) for k in keys))
+    print('Bảng vàng: bình luận thật', len(cm), 'đúng', ok)
+    return {'total': len(cm), 'correct': ok} if len(cm) >= need else None
+
+
 def publish(st, c, now, out, caption, hist, answer_text):
     """Đăng Reel, ghi trạng thái, bình luận các đáp án còn chờ của bản cũ."""
     # 3) đăng Reel
@@ -581,6 +605,7 @@ def publish(st, c, now, out, caption, hist, answer_text):
     st['pending'] = new_pending[-8:]
     save_state(st)
     print('Xong tin', c)
+    return vid
 
 
 if __name__ == '__main__':

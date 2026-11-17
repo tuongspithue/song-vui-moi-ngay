@@ -16,6 +16,7 @@ BOT_VOICES = ['en-US-GuyNeural', 'en-US-AndrewNeural', 'en-GB-SoniaNeural']
 BOT_FONT = 'ChakraPetch-Bold.ttf'
 BOT_FILL, BOT_FG, BOT_SUB = '#10243E', '#E6FBFF', '#7FE9FF'
 
+THINK = 8.0  # số giây cho người xem suy nghĩ (Apps Script có thể gửi data.think để đổi)
 GUESS_DEFAULT = ('Hmm... is it a banana?', 'Hừm… là quả chuối hả?')
 KINDS = {  # mã: (tên Việt, tên Anh, câu Mèo hỏi)
     'TN': ('Thành ngữ', 'Vietnamese idiom', 'Đây là thành ngữ gì?'), 'TU': ('Tục ngữ', 'Vietnamese proverb', 'Đây là câu tục ngữ nào?'),
@@ -324,19 +325,24 @@ def make_meo(th, out, D):
     a2 = say('Oh! Vietnamese is so tricky!' if vo else 'Oh! ' + ans_en + '!', BOT_VOICES, 'a2', '+0%', '-6Hz', robot=True)
     lg = get_laugh(C, 2.4)
     t_ask = 0.25; tr.put(sfx_pop(), 0.0); e = tr.put(ask, t_ask, 'cat')
-    t_cd = e + 0.15; tr.put(M.synth_ticks(5.0), t_cd)
-    t_g = t_cd + 5.0; tr.put(sfx_whoosh(), t_g - 0.05); e = tr.put(gs, t_g + 0.15, 'bot')
+    t_cd = e + 0.15; tr.put(M.synth_ticks(THINK), t_cd)
+    t_g = t_cd + THINK; tr.put(sfx_whoosh(), t_g - 0.05); e = tr.put(gs, t_g + 0.15, 'bot')
     t_bz = e + 0.05; tr.put(sfx_buzz(), t_bz)
     t_rv = t_bz + 0.5; tr.put(sfx_ting(), t_rv); tr.put(sfx_win(), t_rv + 0.05)
     e = tr.put(a1, t_rv - 0.35, 'cat'); e = tr.put(a2, max(e, t_rv + 0.6) + 0.1, 'bot')
     t_end = e + 0.1; tr.put(lg * 0.9, t_end, 'cat'); total = t_end + 2.5
     audio, env = tr.mix(total)
-    st = Stage(th, 'MÈO ĐỐ · 5 GIÂY', '😺', total, env, tr.speak)
+    st = Stage(th, 'MÈO ĐỐ', '😺', total, env, tr.speak)
     q_card = card(r['vi_q'], '' if vo else r['en_q'], th[0], th[1], th[4], th[5], th[6], tail='left')
     g_card = card(g_en, g_vi, BOT_FONT, None, BOT_FILL, BOT_FG, BOT_SUB, tail='right', maxh=480)
     a_card = card(ans_vi, ans_en, th[0], th[1], '#FFFFFF', '#0B6B3A', '#1971C2', header='ĐÁP ÁN · ANSWER', accent='#2BAE66', top=r['vi_q'], maxh=600, max_size=110)
-    end_p = pill('Bạn đoán mất mấy giây?', 44, th[6], '#FFFFFF', '⏱️')
-    end_e = pill('How fast were you?', 32, '#FFFFFF', th[5])
+    B = D.get('board') or {}
+    if B.get('total'):  # Bảng vàng: số liệu thật từ bình luận của câu đố trước
+        end_p = pill(f"Câu trước: {B['total']} bạn đoán, {B.get('correct', 0)} bạn đúng", 38, th[6], '#FFFFFF', '🏆')
+        end_e = pill('Đến lượt bạn! · Your turn!', 32, '#FFFFFF', th[5])
+    else:
+        end_p = pill('Bạn đoán mất mấy giây?', 44, th[6], '#FFFFFF', '⏱️')
+        end_e = pill('How fast were you?', 32, '#FFFFFF', th[5])
     cdl = pill('Đoán nhanh!  Quick, guess!', 30, '#FFFFFF', th[5])
     CY = 660
 
@@ -353,8 +359,8 @@ def make_meo(th, out, D):
             paste_c(im, a_card, W / 2, CY, 0.5 + 0.5 * ease_back(u / 0.32))
             confetti(im, u, C + 3)
         if t_cd <= t < t_g:
-            u = t - t_cd; n = 5 - int(u); frac = u - int(u)
-            rg = ring(1 - u / 5.0, n, st.th[6], '#FFFFFF')
+            u = t - t_cd; n = max(1, int(math.ceil(THINK - u))); frac = u - int(u)
+            rg = ring(1 - u / THINK, n, st.th[6], '#FFFFFF')
             paste_c(im, rg, W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
             paste_c(im, cdl, W / 2, 1165)
         if t >= t_end:
@@ -374,7 +380,7 @@ def make_meo(th, out, D):
 def make_odd(th, out, D):
     rng = random.Random(C * 31 + 5)
     levels = []
-    for li, (n, dur) in enumerate(((5, 3.6), (6, 4.0), (8, 4.6))):
+    for li, (n, dur) in enumerate(((5, THINK - 2.5), (6, THINK - 1.5), (8, THINK - 0.5))):
         a, b = rng.choice(ODD_PAIRS[li]); levels.append({'n': n, 'dur': dur, 'a': a, 'b': b, 'pos': (rng.randrange(n), rng.randrange(n))})
     tr = Track(); t = 0.0
     lines = ['Tìm emoji khác biệt! Màn một.', 'Màn hai!', 'Màn ba. Siêu khó!']
@@ -456,9 +462,9 @@ def make_emoji(th, out, D):
     a1 = say(q['vi'] + '!', CAT_VOICES, 'a1', '+0%', '+22Hz')
     a2 = say('. '.join(x for x in (q['en'].rstrip('.'), q['mean'].rstrip('.')) if x) + '.', BOT_VOICES, 'a2', '+6%', '-6Hz', robot=True)
     for i in range(len(ems)): tr.put(sfx_pop(), 0.05 + i * 0.3)
-    e = tr.put(ask, 0.2, 'cat'); t_cd = e + 0.1; tr.put(M.synth_ticks(5.0), t_cd)
-    t_gs = t_cd + 0.5; tr.put(gs, t_gs, 'bot'); t_hint = t_cd + 3.0; tr.put(sfx_pop(), t_hint)
-    t_rv = t_cd + 5.0; tr.put(sfx_ting(), t_rv); tr.put(sfx_win(), t_rv + 0.05)
+    e = tr.put(ask, 0.2, 'cat'); t_cd = e + 0.1; tr.put(M.synth_ticks(THINK), t_cd)
+    t_gs = t_cd + 0.5; tr.put(gs, t_gs, 'bot'); t_hint = t_cd + THINK * 0.62; tr.put(sfx_pop(), t_hint)
+    t_rv = t_cd + THINK; tr.put(sfx_ting(), t_rv); tr.put(sfx_win(), t_rv + 0.05)
     e = tr.put(a1, t_rv + 0.25, 'cat'); e = tr.put(a2, e + 0.15, 'bot')
     t_end = e; tr.put(get_laugh(C, 1.8) * 0.8, t_end, 'cat'); total = t_end + 1.9
     audio, env = tr.mix(total)
@@ -514,7 +520,7 @@ def make_emoji(th, out, D):
         paste_c(im, bx, W / 2, BY, k)
         if t_cd <= t < t_rv:
             u = t - t_cd; frac = u - int(u)
-            paste_c(im, ring(1 - u / 5.0, 5 - int(u), st.th[6], '#FFFFFF'), W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
+            paste_c(im, ring(1 - u / THINK, max(1, int(math.ceil(THINK - u))), st.th[6], '#FFFFFF'), W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
             if t_gs <= t < t_gs + len(gs) / SR + 0.9:
                 paste_c(im, g_card, 640, GY2, 0.5 + 0.5 * ease_back((t - t_gs) / 0.25))
         if t >= t_rv:
@@ -532,8 +538,10 @@ def make_emoji(th, out, D):
 
 def build(kind, c, D):
     """Dựng video cho một loạt. Trả về (đường dẫn video, chú thích, mã nội dung)."""
-    global C
+    global C, THINK
     C = int(c); D = D or {}
+    try: THINK = float(min(12, max(4, float(D.get('think') or THINK))))
+    except Exception: pass
     os.makedirs(WORK, exist_ok=True); M.ensure_fonts()
     th = list(M.THEMES[(C * 5) % len(M.THEMES)])
     if th[0] in ('Pacifico.ttf', 'DancingScript.ttf', 'Lobster.ttf', 'Pattaya.ttf'): th[0], th[1] = 'Baloo2.ttf', 700  # chữ đố cần dễ đọc

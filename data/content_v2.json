@@ -8,7 +8,8 @@
 "en_a": "A broken arm (pun: \"bó tay\" = to give up)",
 "vi_only": 1,
 "g_en": "Is it... the hospital bill?",
-"g_vi": "Là… hoá đơn viện phí hả?"
+"g_vi": "Là… hoá đơn viện phí hả?",
+"season": ""
 },
 {
 "id": "R002",
@@ -18,7 +19,8 @@
 "en_a": "The heart",
 "g_en": "Is it... a drum?",
 "g_vi": "Là… cái trống hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R004",
@@ -28,7 +30,8 @@
 "en_a": "Your shadow",
 "g_en": "Is it... my umbrella?",
 "g_vi": "Là… cái ô của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R005",
@@ -38,7 +41,8 @@
 "en_a": "Your name",
 "g_en": "Is it... my phone charger?",
 "g_vi": "Là… cục sạc điện thoại hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R006",
@@ -48,7 +52,8 @@
 "en_a": "A human",
 "g_en": "Is it... a broken table?",
 "g_vi": "Là… cái bàn gãy chân hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R008",
@@ -58,7 +63,8 @@
 "en_a": "History (\"lịch sử\")",
 "vi_only": 1,
 "g_en": "My homework calendar?",
-"g_vi": "Lịch nộp bài tập hả?"
+"g_vi": "Lịch nộp bài tập hả?",
+"season": ""
 },
 {
 "id": "R009",
@@ -68,7 +74,8 @@
 "en_a": "Society (\"xã hội\")",
 "vi_only": 1,
 "g_en": "The traffic jam?",
-"g_vi": "Chỗ kẹt xe hả?"
+"g_vi": "Chỗ kẹt xe hả?",
+"season": ""
 },
 {
 "id": "R010",
@@ -78,7 +85,8 @@
 "en_a": "An archipelago (\"quần đảo\")",
 "vi_only": 1,
 "g_en": "My dad's pajamas?",
-"g_vi": "Quần ngủ của bố hả?"
+"g_vi": "Quần ngủ của bố hả?",
+"season": ""
 },
 {
 "id": "R011",
@@ -88,7 +96,8 @@
 "en_a": "The road of life",
 "g_en": "The way home when I'm hungry?",
 "g_vi": "Đường về nhà lúc đói bụng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R015",
@@ -98,7 +107,8 @@
 "en_a": "A clock",
 "g_en": "Is it... a robot like me?",
 "g_vi": "Là… con robot như tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R016",
@@ -108,7 +118,8 @@
 "en_a": "A comb",
 "g_en": "Is it... a sleepy shark?",
 "g_vi": "Là… cá mập buồn ngủ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R017",
@@ -118,7 +129,8 @@
 "en_a": "A shirt",
 "g_en": "Is it... a giraffe ghost?",
 "g_vi": "Là… con ma hươu cao cổ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R018",
@@ -128,7 +140,8 @@
 "en_a": "Water",
 "g_en": "Is it... my little brother?",
 "g_vi": "Là… em trai tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R019",
@@ -138,7 +151,8 @@
 "en_a": "Tomorrow",
 "g_en": "Is it... my pizza delivery?",
 "g_vi": "Là… anh giao pizza hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R021",
@@ -148,7 +162,8 @@
 "en_a": "A sponge",
 "g_en": "Is it... my old socks?",
 "g_vi": "Là… đôi tất cũ của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R022",
@@ -158,7 +173,8 @@
 "en_a": "A hole",
 "g_en": "Is it... my debt?",
 "g_vi": "Là… món nợ của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R023",
@@ -168,7 +184,8 @@
 "en_a": "Your age",
 "g_en": "Is it... the prices?",
 "g_vi": "Là… giá cả hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R024",
@@ -178,7 +195,8 @@
 "en_a": "A potato",
 "g_en": "Is it me, without my glasses?",
 "g_vi": "Là tôi lúc quên kính hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R026",
@@ -188,7 +206,8 @@
 "en_a": "A piano",
 "g_en": "A locksmith on holiday?",
 "g_vi": "Ông thợ khoá đi nghỉ mát hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R027",
@@ -198,7 +217,8 @@
 "en_a": "A river",
 "g_en": "Is it... my nose?",
 "g_vi": "Là… cái mũi của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R028",
@@ -208,7 +228,8 @@
 "en_a": "All of them",
 "g_en": "February!",
 "g_vi": "Tháng Hai!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R031",
@@ -218,7 +239,8 @@
 "en_a": "Charcoal",
 "g_en": "Is it... a traffic light?",
 "g_vi": "Là… đèn giao thông hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R033",
@@ -228,7 +250,8 @@
 "en_a": "Breath",
 "g_en": "Is it... my diet plan?",
 "g_vi": "Là… kế hoạch ăn kiêng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R035",
@@ -238,7 +261,8 @@
 "en_a": "A snail",
 "g_en": "My mom on moving day?",
 "g_vi": "Mẹ tôi hôm chuyển nhà hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R036",
@@ -248,7 +272,8 @@
 "en_a": "All ducks",
 "g_en": "A circus duck?",
 "g_vi": "Vịt làm xiếc hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R042",
@@ -258,7 +283,8 @@
 "en_a": "Lunch and dinner",
 "g_en": "Is it... homework?",
 "g_vi": "Là… bài tập về nhà hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R043",
@@ -268,7 +294,8 @@
 "en_a": "His mouth",
 "g_en": "By phone?",
 "g_vi": "Bằng điện thoại hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R046",
@@ -278,7 +305,8 @@
 "en_a": "Dried fish",
 "g_en": "A lazy fish?",
 "g_vi": "Con cá lười hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R047",
@@ -288,7 +316,8 @@
 "en_a": "An anchor",
 "g_en": "Is it... my dog on a leash?",
 "g_vi": "Là… con chó nhà tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R048",
@@ -298,7 +327,8 @@
 "en_a": "A coin",
 "g_en": "Is it... a snake?",
 "g_vi": "Là… con rắn hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R049",
@@ -308,7 +338,8 @@
 "en_a": "Light",
 "g_en": "Is it... my dad's snoring?",
 "g_vi": "Là… tiếng ngáy của bố hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R050",
@@ -318,7 +349,8 @@
 "en_a": "A wave",
 "g_en": "Is it... a ghost?",
 "g_vi": "Là… con ma hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R051",
@@ -328,7 +360,8 @@
 "en_a": "The word \"and\"",
 "g_en": "An airplane?",
 "g_vi": "Máy bay hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R053",
@@ -338,7 +371,8 @@
 "en_a": "A mug (\"tai\" = handle)",
 "vi_only": 1,
 "g_en": "My brother when mom calls?",
-"g_vi": "Anh trai tôi lúc mẹ gọi hả?"
+"g_vi": "Anh trai tôi lúc mẹ gọi hả?",
+"season": ""
 },
 {
 "id": "R054",
@@ -348,7 +382,8 @@
 "en_a": "A shoe",
 "g_en": "A shy parrot?",
 "g_vi": "Con vẹt nhút nhát hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R055",
@@ -358,7 +393,8 @@
 "en_a": "An unhatched bird",
 "g_en": "An airplane in the factory?",
 "g_vi": "Máy bay trong xưởng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R060",
@@ -368,7 +404,8 @@
 "en_a": "On a map",
 "g_en": "In a video game?",
 "g_vi": "Trong trò chơi điện tử hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R062",
@@ -378,7 +415,8 @@
 "en_a": "Silence",
 "g_en": "Is it... a soap bubble?",
 "g_vi": "Là… bong bóng xà phòng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R063",
@@ -388,7 +426,8 @@
 "en_a": "Because it has no alarm clock",
 "g_en": "Because it is hungry?",
 "g_vi": "Vì nó đói bụng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R064",
@@ -398,7 +437,8 @@
 "en_a": "A table",
 "g_en": "Is it... a sleeping dog?",
 "g_vi": "Là… con chó đang ngủ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R069",
@@ -408,7 +448,8 @@
 "en_a": "A cloud",
 "g_en": "Is it... a sad airplane?",
 "g_vi": "Là… máy bay đang buồn hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R070",
@@ -418,7 +459,8 @@
 "en_a": "A mirror",
 "g_en": "Is it... a security camera?",
 "g_vi": "Là… camera an ninh hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R072",
@@ -428,7 +470,8 @@
 "en_a": "A towel",
 "g_en": "Is it... a fish?",
 "g_vi": "Là… con cá hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R080",
@@ -438,7 +481,8 @@
 "en_a": "Boiling water",
 "g_en": "The Sahara?",
 "g_vi": "Sa mạc Sahara hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R081",
@@ -448,7 +492,8 @@
 "en_a": "A wheel (\"bánh xe\")",
 "vi_only": 1,
 "g_en": "A plastic cake?",
-"g_vi": "Bánh nhựa hả?"
+"g_vi": "Bánh nhựa hả?",
+"season": ""
 },
 {
 "id": "R082",
@@ -458,7 +503,8 @@
 "en_a": "A flag (\"lá cờ\")",
 "vi_only": 1,
 "g_en": "A leaf with superglue?",
-"g_vi": "Chiếc lá dán keo hả?"
+"g_vi": "Chiếc lá dán keo hả?",
+"season": ""
 },
 {
 "id": "R089",
@@ -468,7 +514,8 @@
 "en_a": "Mount Everest",
 "g_en": "Mount Fuji?",
 "g_vi": "Núi Phú Sĩ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R090",
@@ -478,7 +525,8 @@
 "en_a": "Concrete floors don't crack easily",
 "g_en": "Use a pillow?",
 "g_vi": "Lót cái gối hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R092",
@@ -488,7 +536,8 @@
 "en_a": "Your foot",
 "g_en": "Is it... a lazy cat?",
 "g_vi": "Là… con mèo lười hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R099",
@@ -498,7 +547,8 @@
 "en_a": "An umbrella",
 "g_en": "The frogs?",
 "g_vi": "Mấy con ếch hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R101",
@@ -508,7 +558,8 @@
 "en_a": "A fence",
 "g_en": "My dog chasing its tail?",
 "g_vi": "Con chó đuổi theo đuôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R102",
@@ -518,7 +569,8 @@
 "en_a": "Wet",
 "g_en": "It turns purple?",
 "g_vi": "Nó thành màu tím hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R104",
@@ -528,7 +580,8 @@
 "en_a": "The tongue",
 "g_en": "Is it... my dog's nose?",
 "g_vi": "Là… mũi con chó nhà tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R105",
@@ -538,7 +591,8 @@
 "en_a": "He was walking",
 "g_en": "The police were sleeping?",
 "g_vi": "Cảnh sát ngủ gật hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R106",
@@ -548,7 +602,8 @@
 "en_a": "Open it, put it in, close it",
 "g_en": "Buy a bigger fridge?",
 "g_vi": "Mua tủ lạnh to hơn hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R113",
@@ -558,7 +613,8 @@
 "en_a": "The Milky Way (\"sông Ngân Hà\")",
 "vi_only": 1,
 "g_en": "A river on the map?",
-"g_vi": "Con sông trên bản đồ hả?"
+"g_vi": "Con sông trên bản đồ hả?",
+"season": ""
 },
 {
 "id": "R114",
@@ -568,7 +624,8 @@
 "en_a": "A book",
 "g_en": "My sofa and my TV?",
 "g_vi": "Ghế sofa và cái tivi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R115",
@@ -578,7 +635,8 @@
 "en_a": "Darkness",
 "g_en": "Is it... mosquitoes?",
 "g_vi": "Là… muỗi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R116",
@@ -588,7 +646,8 @@
 "en_a": "Perfume (\"nước hoa\")",
 "vi_only": 1,
 "g_en": "Airport water?",
-"g_vi": "Nước suối ở sân bay hả?"
+"g_vi": "Nước suối ở sân bay hả?",
+"season": ""
 },
 {
 "id": "R118",
@@ -598,7 +657,8 @@
 "en_a": "A balloon",
 "g_en": "Is it... my cheeks?",
 "g_vi": "Là… hai cái má của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R119",
@@ -608,7 +668,8 @@
 "en_a": "A soap bubble",
 "g_en": "Is it... my salary?",
 "g_vi": "Là… tiền lương của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R121",
@@ -618,7 +679,8 @@
 "en_a": "Yesterday, Today, Tomorrow",
 "g_en": "Day one, day two, day three?",
 "g_vi": "Ngày một, ngày hai, ngày ba hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R122",
@@ -628,7 +690,8 @@
 "en_a": "The future",
 "g_en": "Is it... my glasses?",
 "g_vi": "Là… cặp kính của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R124",
@@ -638,7 +701,8 @@
 "en_a": "Salt",
 "g_en": "Is it... a paper boat?",
 "g_vi": "Là… thuyền giấy hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R125",
@@ -648,7 +712,8 @@
 "en_a": "Gloves",
 "g_en": "Is it... a ghost hand?",
 "g_vi": "Là… bàn tay ma hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R126",
@@ -658,7 +723,8 @@
 "en_a": "Anything. Buildings can't jump",
 "g_en": "A kangaroo!",
 "g_vi": "Con kangaroo!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R133",
@@ -668,7 +734,8 @@
 "en_a": "An icicle",
 "g_en": "A sleeping bat?",
 "g_vi": "Con dơi đang ngủ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R134",
@@ -678,7 +745,8 @@
 "en_a": "Love",
 "g_en": "Calling in sick on Monday?",
 "g_vi": "Bệnh xin nghỉ làm thứ Hai hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R137",
@@ -688,7 +756,8 @@
 "en_a": "Sawdust",
 "g_en": "Is it... a pencil?",
 "g_vi": "Là… cây bút chì hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R138",
@@ -698,7 +767,8 @@
 "en_a": "A postage stamp",
 "g_en": "Is it... a spider?",
 "g_vi": "Là… con nhện hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R140",
@@ -708,7 +778,8 @@
 "en_a": "Walking takes too long",
 "g_en": "Because they have GPS?",
 "g_vi": "Vì chúng có GPS hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R141",
@@ -718,7 +789,8 @@
 "en_a": "Your right elbow",
 "g_en": "A hot potato?",
 "g_vi": "Củ khoai nóng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R142",
@@ -728,7 +800,8 @@
 "en_a": "Mary",
 "g_en": "Winter!",
 "g_vi": "Đông!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R146",
@@ -738,7 +811,8 @@
 "en_a": "An egg",
 "g_en": "Is it... my phone screen?",
 "g_vi": "Là… màn hình điện thoại hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R148",
@@ -748,7 +822,8 @@
 "en_a": "1 hour",
 "g_en": "Five hours!",
 "g_vi": "Năm tiếng!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R162",
@@ -758,7 +833,8 @@
 "en_a": "Time",
 "g_en": "Is it... my grandma?",
 "g_vi": "Là… bà của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R163",
@@ -768,7 +844,8 @@
 "en_a": "Because their mouth is always full of water",
 "g_en": "Because it is shy?",
 "g_vi": "Vì nó nhút nhát hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R166",
@@ -778,7 +855,8 @@
 "en_a": "A mosquito",
 "g_en": "A tiny helicopter?",
 "g_vi": "Trực thăng tí hon hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R167",
@@ -788,7 +866,8 @@
 "en_a": "A pencil",
 "g_en": "Is it... my patience?",
 "g_vi": "Là… sự kiên nhẫn của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R174",
@@ -798,7 +877,8 @@
 "en_a": "A mushroom",
 "g_en": "A snowman without a head?",
 "g_vi": "Người tuyết mất đầu hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R175",
@@ -808,7 +888,8 @@
 "en_a": "Smoke",
 "g_en": "Is it... my electricity bill?",
 "g_vi": "Là… hoá đơn tiền điện hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R177",
@@ -818,7 +899,8 @@
 "en_a": "A cake truck (\"bánh\" = cake or wheel)",
 "vi_only": 1,
 "g_en": "A train?",
-"g_vi": "Tàu hoả hả?"
+"g_vi": "Tàu hoả hả?",
+"season": ""
 },
 {
 "id": "R181",
@@ -828,7 +910,8 @@
 "en_a": "Fog",
 "g_en": "Is it... a snail?",
 "g_vi": "Là… con ốc sên hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R184",
@@ -838,7 +921,8 @@
 "en_a": "Snow",
 "g_en": "Is it... a ninja?",
 "g_vi": "Là… một ninja hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R185",
@@ -848,7 +932,8 @@
 "en_a": "Dreams",
 "g_en": "The inside of my eyelids?",
 "g_vi": "Mặt trong mí mắt hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R186",
@@ -858,7 +943,8 @@
 "en_a": "Wind",
 "g_en": "Is it... an electric fan?",
 "g_vi": "Là… cái quạt điện hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R191",
@@ -868,7 +954,8 @@
 "en_a": "Your mouth",
 "g_en": "The fridge at midnight?",
 "g_vi": "Tủ lạnh lúc nửa đêm hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R195",
@@ -878,7 +965,8 @@
 "en_a": "Other people's money",
 "g_en": "The stars?",
 "g_vi": "Mấy ngôi sao hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "R198",
@@ -888,7 +976,8 @@
 "en_a": "A dumbbell (\"quả tạ\")",
 "vi_only": 1,
 "g_en": "A square watermelon?",
-"g_vi": "Dưa hấu vuông hả?"
+"g_vi": "Dưa hấu vuông hả?",
+"season": ""
 },
 {
 "id": "R199",
@@ -898,7 +987,8 @@
 "en_a": "A window",
 "g_en": "X-ray glasses?",
 "g_vi": "Kính nhìn xuyên thấu hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N001",
@@ -908,7 +998,8 @@
 "en_a": "Footsteps",
 "g_en": "Is it... my money?",
 "g_vi": "Là… tiền của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N002",
@@ -918,7 +1009,8 @@
 "en_a": "A needle",
 "g_en": "A sleepy pirate?",
 "g_vi": "Cướp biển buồn ngủ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N003",
@@ -928,7 +1020,8 @@
 "en_a": "A promise",
 "g_en": "Is it... the Wi-Fi?",
 "g_vi": "Là… cái Wi-Fi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N004",
@@ -938,7 +1031,8 @@
 "en_a": "The stairs",
 "g_en": "Is it... my mood?",
 "g_vi": "Là… tâm trạng của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N005",
@@ -948,7 +1042,8 @@
 "en_a": "An echo",
 "g_en": "Google Translate?",
 "g_vi": "Google Dịch hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N006",
@@ -958,7 +1053,8 @@
 "en_a": "A saw",
 "g_en": "A hungry beaver?",
 "g_vi": "Con hải ly đói bụng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N007",
@@ -968,7 +1064,8 @@
 "en_a": "They are a grandma, a mom and a daughter",
 "g_en": "One of them is on a diet?",
 "g_vi": "Một người đang ăn kiêng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N008",
@@ -978,7 +1075,8 @@
 "en_a": "He is bald",
 "g_en": "He runs really fast?",
 "g_vi": "Ông ấy chạy siêu nhanh hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N009",
@@ -988,7 +1086,8 @@
 "en_a": "Roosters don't lay eggs",
 "g_en": "To the left!",
 "g_vi": "Lăn sang trái!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N010",
@@ -998,7 +1097,8 @@
 "en_a": "They weigh the same",
 "g_en": "Iron, of course!",
 "g_vi": "Sắt chứ còn gì nữa!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N011",
@@ -1008,7 +1108,8 @@
 "en_a": "Still 10. Fish can't drown",
 "g_en": "Eight!",
 "g_vi": "Tám con!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N012",
@@ -1018,7 +1119,8 @@
 "en_a": "Second place",
 "g_en": "First place!",
 "g_vi": "Hạng nhất!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N013",
@@ -1028,7 +1130,8 @@
 "en_a": "Two",
 "g_en": "One!",
 "g_vi": "Một quả!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N014",
@@ -1038,7 +1141,8 @@
 "en_a": "One",
 "g_en": "Nine!",
 "g_vi": "Chín đống!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N015",
@@ -1048,7 +1152,8 @@
 "en_a": "The word \"wrong\"",
 "g_en": "Is it... my name?",
 "g_vi": "Là… tên của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N016",
@@ -1058,7 +1163,8 @@
 "en_a": "Your eyes",
 "g_en": "The fridge?",
 "g_vi": "Cái tủ lạnh hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N017",
@@ -1068,7 +1174,8 @@
 "en_a": "The match",
 "g_en": "The candle!",
 "g_vi": "Cây nến!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N018",
@@ -1078,7 +1185,8 @@
 "en_a": "One hour",
 "g_en": "An hour and a half!",
 "g_vi": "Một tiếng rưỡi!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N019",
@@ -1088,7 +1196,8 @@
 "en_a": "A deck of cards",
 "g_en": "Valentine's Day?",
 "g_vi": "Ngày Valentine hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N020",
@@ -1098,7 +1207,8 @@
 "en_a": "Joy",
 "g_en": "Is it... my pizza?",
 "g_vi": "Là… cái bánh pizza của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N021",
@@ -1108,7 +1218,8 @@
 "en_a": "A blackboard",
 "g_en": "Is it... a panda?",
 "g_vi": "Là… con gấu trúc hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N022",
@@ -1118,7 +1229,8 @@
 "en_a": "A horse",
 "g_en": "My dad after work?",
 "g_vi": "Bố tôi lúc đi làm về hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N023",
@@ -1128,7 +1240,8 @@
 "en_a": "A crab (\"càng\" = claw)",
 "g_en": "A shy elephant?",
 "g_vi": "Con voi nhút nhát hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N024",
@@ -1138,7 +1251,8 @@
 "en_a": "A slope: \"d\" from dê + \"ốc\"",
 "g_en": "A goat in a shell?",
 "g_vi": "Con dê chui vỏ ốc hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N025",
@@ -1148,7 +1262,8 @@
 "en_a": "Thăng Long = rising dragon, Hạ Long = landing dragon",
 "g_en": "At the airport?",
 "g_vi": "Ở sân bay hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N026",
@@ -1158,7 +1273,8 @@
 "en_a": "\"Ba\" and \"Tư\": only two letters",
 "g_en": "February, I am sure!",
 "g_vi": "Tháng Hai, chắc chắn luôn!",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N027",
@@ -1168,7 +1284,8 @@
 "en_a": "Mount Thái Sơn (\"thái\" = to slice)",
 "g_en": "A mountain of cake?",
 "g_vi": "Núi bánh kem hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N028",
@@ -1178,7 +1295,8 @@
 "en_a": "A toothbrush (\"đánh răng\" = brush teeth)",
 "g_en": "A naughty kid?",
 "g_vi": "Đứa trẻ hư hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N029",
@@ -1188,7 +1306,8 @@
 "en_a": "A pearl (\"con trai\" = boy or clam)",
 "g_en": "His phone?",
 "g_vi": "Cái điện thoại hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N030",
@@ -1198,7 +1317,8 @@
 "en_a": "Corn on the cob",
 "g_en": "A pizza box?",
 "g_vi": "Hộp bánh pizza hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N031",
@@ -1208,7 +1328,8 @@
 "en_a": "Cycling (\"thắng\" = win or brake)",
 "g_en": "Arguing with my mom?",
 "g_vi": "Môn cãi nhau với mẹ hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N032",
@@ -1218,7 +1339,8 @@
 "en_a": "A tank (\"tăng\" = increase)",
 "g_en": "My dad's old bike?",
 "g_vi": "Xe đạp cũ của bố hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N033",
@@ -1228,7 +1350,8 @@
 "en_a": "A beauty queen (\"hoa hậu\")",
 "g_en": "A sunflower with a phone?",
 "g_vi": "Hoa hướng dương cầm điện thoại hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N034",
@@ -1238,7 +1361,8 @@
 "en_a": "The humans",
 "g_en": "The cheetah!",
 "g_vi": "Con báo!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N035",
@@ -1248,7 +1372,8 @@
 "en_a": "15 (\"rằm\" = the fifteenth)",
 "g_en": "They all flew away?",
 "g_vi": "Bay hết rồi hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N036",
@@ -1258,7 +1383,8 @@
 "en_a": "Because its head is so far from its body",
 "g_en": "To catch the Wi-Fi?",
 "g_vi": "Để bắt sóng Wi-Fi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N037",
@@ -1268,7 +1394,8 @@
 "en_a": "A candle",
 "g_en": "Is it... my grandpa?",
 "g_vi": "Là… ông nội tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N038",
@@ -1278,7 +1405,8 @@
 "en_a": "A hedgehog",
 "g_en": "My grandma on holiday?",
 "g_vi": "Bà tôi lúc đi du lịch hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N039",
@@ -1288,7 +1416,8 @@
 "en_a": "A bed",
 "g_en": "A very short snake?",
 "g_vi": "Con rắn siêu ngắn hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N040",
@@ -1298,7 +1427,8 @@
 "en_a": "Chopsticks",
 "g_en": "Is it... broccoli?",
 "g_vi": "Là… bông cải xanh hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N041",
@@ -1308,7 +1438,8 @@
 "en_a": "Fire",
 "g_en": "A cat taking a bath?",
 "g_vi": "Con mèo bị bắt đi tắm hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N042",
@@ -1318,7 +1449,8 @@
 "en_a": "Getting older",
 "g_en": "Checking their phones?",
 "g_vi": "Bấm điện thoại hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N043",
@@ -1328,7 +1460,8 @@
 "en_a": "\"Are you asleep?\"",
 "g_en": "\"Did you do your homework?\"",
 "g_vi": "\"Con làm bài tập chưa?\" hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N044",
@@ -1338,7 +1471,8 @@
 "en_a": "A chessboard",
 "g_en": "A costume party?",
 "g_vi": "Tiệc hoá trang hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N045",
@@ -1348,7 +1482,8 @@
 "en_a": "A pillow",
 "g_en": "Is it... a zombie?",
 "g_vi": "Là… một con zombie hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N046",
@@ -1358,7 +1493,8 @@
 "en_a": "No one. The doctors are his sisters",
 "g_en": "The doctors!",
 "g_vi": "Mấy ông bác sĩ!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N047",
@@ -1368,7 +1504,8 @@
 "en_a": "He fell from the first step",
 "g_en": "He can fly?",
 "g_vi": "Cậu ấy biết bay hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N048",
@@ -1378,7 +1515,8 @@
 "en_a": "They sleep at night",
 "g_en": "Too much coffee?",
 "g_vi": "Uống quá nhiều cà phê hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N049",
@@ -1388,7 +1526,8 @@
 "en_a": "One. The others flew away",
 "g_en": "Four!",
 "g_vi": "Bốn con!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N050",
@@ -1398,7 +1537,8 @@
 "en_a": "A globe (\"quả địa cầu\")",
 "g_en": "A giant watermelon?",
 "g_vi": "Quả dưa hấu khổng lồ hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N051",
@@ -1408,7 +1548,8 @@
 "en_a": "Scissors",
 "g_en": "A two-headed shark?",
 "g_vi": "Cá mập hai đầu hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N052",
@@ -1418,7 +1559,8 @@
 "en_a": "A piece of chalk",
 "g_en": "A polar bear at school?",
 "g_vi": "Gấu Bắc Cực đi học hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N053",
@@ -1428,7 +1570,8 @@
 "en_a": "A fountain pen",
 "g_en": "A thirsty buffalo?",
 "g_vi": "Con trâu khát nước hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N054",
@@ -1438,7 +1581,8 @@
 "en_a": "A fly",
 "g_en": "My little cousin?",
 "g_vi": "Thằng em họ tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N055",
@@ -1448,7 +1592,8 @@
 "en_a": "A pillar",
 "g_en": "Is it... my cat?",
 "g_vi": "Là… con mèo nhà tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N056",
@@ -1458,7 +1603,8 @@
 "en_a": "A stork",
 "g_en": "A snowman wearing boots?",
 "g_vi": "Người tuyết đi ủng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N057",
@@ -1468,7 +1614,8 @@
 "en_a": "A paper fan",
 "g_en": "An ice cream shop?",
 "g_vi": "Tiệm kem hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N058",
@@ -1478,7 +1625,8 @@
 "en_a": "Fingers. The thumb has only two joints",
 "g_en": "A boy band?",
 "g_vi": "Một nhóm nhạc nam hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N059",
@@ -1488,7 +1636,8 @@
 "en_a": "Your eyes",
 "g_en": "Two shops?",
 "g_vi": "Hai cửa tiệm hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N060",
@@ -1498,7 +1647,8 @@
 "en_a": "A teapot and cups",
 "g_en": "A mother duck?",
 "g_vi": "Vịt mẹ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N061",
@@ -1508,7 +1658,8 @@
 "en_a": "Bánh chưng, the Tết rice cake",
 "g_en": "A tiny farm?",
 "g_vi": "Nông trại tí hon hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": "01/02-12/02"
 },
 {
 "id": "N062",
@@ -1518,7 +1669,8 @@
 "en_a": "The moon's reflection",
 "g_en": "My lost phone?",
 "g_vi": "Điện thoại tôi làm rơi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N063",
@@ -1528,7 +1680,8 @@
 "en_a": "The sun, thunder and rain",
 "g_en": "A tomato, a rooster and me?",
 "g_vi": "Cà chua, gà trống và tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N064",
@@ -1538,7 +1691,8 @@
 "en_a": "Your leg",
 "g_en": "A shirt worn backwards?",
 "g_vi": "Cái áo mặc ngược hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N065",
@@ -1548,7 +1702,8 @@
 "en_a": "A tear-off calendar",
 "g_en": "Is it... my wallet?",
 "g_vi": "Là… cái ví của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N066",
@@ -1558,7 +1713,8 @@
 "en_a": "In a dictionary",
 "g_en": "In a time machine?",
 "g_vi": "Trong cỗ máy thời gian hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N067",
@@ -1568,7 +1724,8 @@
 "en_a": "A road",
 "g_en": "A lazy hiker?",
 "g_vi": "Người leo núi lười hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N068",
@@ -1578,7 +1735,8 @@
 "en_a": "The number 6",
 "g_en": "My test score?",
 "g_vi": "Điểm kiểm tra của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N069",
@@ -1588,7 +1746,8 @@
 "en_a": "Three",
 "g_en": "Two!",
 "g_vi": "Bằng hai!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N070",
@@ -1598,7 +1757,8 @@
 "en_a": "5 minutes",
 "g_en": "One minute!",
 "g_vi": "Một phút!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N071",
@@ -1608,7 +1768,8 @@
 "en_a": "Day 29",
 "g_en": "Day 15!",
 "g_vi": "Ngày 15!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N072",
@@ -1618,7 +1779,8 @@
 "en_a": "The last person took the basket too",
 "g_en": "A chicken is hiding inside?",
 "g_vi": "Có con gà trốn trong giỏ hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N073",
@@ -1628,7 +1790,8 @@
 "en_a": "A secret",
 "g_en": "Is it... my sandwich?",
 "g_vi": "Là… cái bánh mì của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N074",
@@ -1638,7 +1801,8 @@
 "en_a": "A ringing phone",
 "g_en": "A text from my boss?",
 "g_vi": "Tin nhắn của sếp hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N075",
@@ -1648,7 +1812,8 @@
 "en_a": "Nothing",
 "g_en": "Instant noodles?",
 "g_vi": "Mì gói hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N076",
@@ -1658,7 +1823,8 @@
 "en_a": "A barber",
 "g_en": "A werewolf?",
 "g_vi": "Người sói hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N077",
@@ -1668,7 +1834,8 @@
 "en_a": "A fish",
 "g_en": "Me, in math class?",
 "g_vi": "Tôi trong giờ Toán hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N078",
@@ -1678,7 +1845,8 @@
 "en_a": "A kangaroo",
 "g_en": "My stubborn uncle?",
 "g_vi": "Ông chú bướng bỉnh của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N079",
@@ -1688,7 +1856,8 @@
 "en_a": "An octopus",
 "g_en": "A K-pop fan?",
 "g_vi": "Một fan K-pop hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N080",
@@ -1698,7 +1867,8 @@
 "en_a": "A penguin",
 "g_en": "A wet chicken?",
 "g_vi": "Con gà bị ướt hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N081",
@@ -1708,7 +1878,8 @@
 "en_a": "A pineapple",
 "g_en": "The king's apple?",
 "g_vi": "Quả táo của nhà vua hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N082",
@@ -1718,7 +1889,8 @@
 "en_a": "A raindrop (\"hạt mưa\")",
 "g_en": "A chili seed?",
 "g_vi": "Hạt ớt cay hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N083",
@@ -1728,7 +1900,8 @@
 "en_a": "Your homeland (\"đất nước\")",
 "g_en": "Fish sauce?",
 "g_vi": "Nước mắm hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N084",
@@ -1738,7 +1911,8 @@
 "en_a": "A road (\"đường\" = sugar or road)",
 "g_en": "Sugar-free sugar?",
 "g_vi": "Đường không đường hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N085",
@@ -1748,7 +1922,8 @@
 "en_a": "Face wash (\"sữa rửa mặt\")",
 "g_en": "Expired milk?",
 "g_vi": "Sữa hết hạn hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N086",
@@ -1758,7 +1933,8 @@
 "en_a": "Your ankle (\"mắt cá chân\")",
 "g_en": "A fish that can walk?",
 "g_vi": "Con cá biết đi hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N087",
@@ -1768,7 +1944,8 @@
 "en_a": "A rainbow (\"cầu vồng\")",
 "g_en": "A bridge in a cartoon?",
 "g_vi": "Cây cầu trong phim hoạt hình hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N088",
@@ -1778,7 +1955,8 @@
 "en_a": "A honeymoon (\"trăng mật\")",
 "g_en": "The moon in my soup?",
 "g_vi": "Mặt trăng trong bát canh hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N089",
@@ -1788,7 +1966,8 @@
 "en_a": "A striker in football (\"tiền đạo\")",
 "g_en": "Toy money?",
 "g_vi": "Tiền đồ chơi hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N090",
@@ -1798,7 +1977,8 @@
 "en_a": "A rice field (\"cánh đồng\")",
 "g_en": "A gold coin farm?",
 "g_vi": "Nông trại tiền vàng hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N091",
@@ -1808,7 +1988,8 @@
 "en_a": "A sleeve (\"tay áo\")",
 "g_en": "A robot arm with no battery?",
 "g_vi": "Tay robot hết pin hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N092",
@@ -1818,7 +1999,8 @@
 "en_a": "The horizon (\"chân trời\")",
 "g_en": "A bird's leg?",
 "g_vi": "Chân con chim hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N093",
@@ -1828,7 +2010,8 @@
 "en_a": "A volcano crater (\"miệng núi lửa\")",
 "g_en": "A yawning hippo?",
 "g_vi": "Con hà mã đang ngáp hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N094",
@@ -1838,7 +2021,8 @@
 "en_a": "An arrow (\"mũi tên\")",
 "g_en": "My nose when I have a cold?",
 "g_vi": "Mũi tôi lúc bị cảm hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N095",
@@ -1848,7 +2032,8 @@
 "en_a": "A starfish",
 "g_en": "A movie star on vacation?",
 "g_vi": "Ngôi sao điện ảnh đi nghỉ mát hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N096",
@@ -1858,7 +2043,8 @@
 "en_a": "A seahorse",
 "g_en": "A horse with a snorkel?",
 "g_vi": "Con ngựa đeo ống thở hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N097",
@@ -1868,7 +2054,8 @@
 "en_a": "A chair",
 "g_en": "An invisible horse?",
 "g_vi": "Con ngựa tàng hình hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N098",
@@ -1878,7 +2065,8 @@
 "en_a": "A pair of trousers",
 "g_en": "A haunted house?",
 "g_vi": "Ngôi nhà ma hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N099",
@@ -1888,7 +2076,8 @@
 "en_a": "A broom",
 "g_en": "My cousin, the robot vacuum?",
 "g_vi": "Anh họ robot hút bụi của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N100",
@@ -1898,7 +2087,8 @@
 "en_a": "Your feet off the floor",
 "g_en": "My socks!",
 "g_vi": "Đôi tất!",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N101",
@@ -1908,7 +2098,8 @@
 "en_a": "Trouble",
 "g_en": "My bed in the morning?",
 "g_vi": "Cái giường buổi sáng hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N102",
@@ -1918,7 +2109,8 @@
 "en_a": "A taxi driver",
 "g_en": "A grumpy waiter?",
 "g_vi": "Anh bồi bàn khó tính hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N103",
@@ -1928,7 +2120,8 @@
 "en_a": "An onion",
 "g_en": "My bank account?",
 "g_vi": "Tài khoản ngân hàng của tôi hả?",
-"vi_only": 0
+"vi_only": 0,
+"season": ""
 },
 {
 "id": "N104",
@@ -1938,7 +2131,8 @@
 "en_a": "A bank (\"nhà băng\": \"băng\" = ice)",
 "g_en": "A penguin's house?",
 "g_vi": "Nhà của chim cánh cụt hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N105",
@@ -1948,7 +2142,8 @@
 "en_a": "An ice cream (\"cây kem\")",
 "g_en": "A Christmas tree in the freezer?",
 "g_vi": "Cây thông trong tủ đá hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N106",
@@ -1958,7 +2153,8 @@
 "en_a": "Bánh tét (\"tét\" = to spank)",
 "g_en": "A cake made of bricks?",
 "g_vi": "Bánh làm bằng gạch hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": "01/02-12/02"
 },
 {
 "id": "N107",
@@ -1968,7 +2164,8 @@
 "en_a": "Bánh khoái (\"khoái\" = delighted)",
 "g_en": "Free cake?",
 "g_vi": "Bánh miễn phí hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N108",
@@ -1978,7 +2175,8 @@
 "en_a": "Success (\"thành công\")",
 "g_en": "The Great Wall?",
 "g_vi": "Vạn Lý Trường Thành hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
 },
 {
 "id": "N109",
@@ -1988,7 +2186,162 @@
 "en_a": "The word \"tai\": \"ai\" = who, \"ta\" = me",
 "g_en": "A broken question mark?",
 "g_vi": "Dấu hỏi bị gãy hả?",
-"vi_only": 1
+"vi_only": 1,
+"season": ""
+},
+{
+"id": "S001",
+"vi_q": "Ai dạy bạn bao điều hay, chẳng đòi trả ơn, chỉ mong bạn giỏi hơn mình?",
+"vi_a": "Thầy cô giáo",
+"en_q": "Who teaches you so much and only hopes you become better than them?",
+"en_a": "Your teachers",
+"g_en": "Is it... YouTube?",
+"g_vi": "Là… YouTube hả?",
+"vi_only": 0,
+"season": "19/11-20/11"
+},
+{
+"id": "S002",
+"vi_q": "Nghề gì đưa hàng nghìn người sang sông mà không cần thuyền?",
+"vi_a": "Nghề giáo, người lái đò thầm lặng",
+"en_q": "",
+"en_a": "Teaching: teachers are called \"ferrymen\"",
+"g_en": "A bridge builder?",
+"g_vi": "Thợ xây cầu hả?",
+"vi_only": 1,
+"season": "19/11-20/11"
+},
+{
+"id": "S003",
+"vi_q": "Cái gì thầy cô cho đi mỗi ngày mà không bao giờ vơi?",
+"vi_a": "Kiến thức",
+"en_q": "What do teachers give away every day but never run out of?",
+"en_a": "Knowledge",
+"g_en": "Is it... homework?",
+"g_vi": "Là… bài tập về nhà hả?",
+"vi_only": 0,
+"season": "19/11-20/11"
+},
+{
+"id": "S004",
+"vi_q": "Ngày nào học trò mang hoa tới trường tặng thầy cô?",
+"vi_a": "Ngày 20 tháng 11",
+"en_q": "On which day do students in Vietnam bring flowers to their teachers?",
+"en_a": "November 20th, Vietnamese Teachers' Day",
+"g_en": "My teacher's birthday?",
+"g_vi": "Sinh nhật cô giáo hả?",
+"vi_only": 0,
+"season": "19/11-20/11"
+},
+{
+"id": "S005",
+"vi_q": "Ông già nào không bao giờ già thêm, năm nào cũng mặc đồ đỏ?",
+"vi_a": "Ông già Noel",
+"en_q": "Which old man never gets older and wears red every year?",
+"en_a": "Santa Claus",
+"g_en": "My grandpa in his new pajamas?",
+"g_vi": "Ông tôi mặc đồ ngủ mới hả?",
+"vi_only": 0,
+"season": "24/12-25/12"
+},
+{
+"id": "S006",
+"vi_q": "Cây gì không ra quả mà đêm Giáng sinh lại đầy quà bên dưới?",
+"vi_a": "Cây thông Noel",
+"en_q": "Which tree bears no fruit but has gifts under it on Christmas Eve?",
+"en_a": "A Christmas tree",
+"g_en": "A money tree?",
+"g_vi": "Cây tiền hả?",
+"vi_only": 0,
+"season": "24/12-25/12"
+},
+{
+"id": "S007",
+"vi_q": "Con gì có sừng, kéo xe trượt tuyết bay trên trời đêm Giáng sinh?",
+"vi_a": "Con tuần lộc",
+"en_q": "Which animal has antlers and pulls a flying sleigh on Christmas night?",
+"en_a": "A reindeer",
+"g_en": "A buffalo with wings?",
+"g_vi": "Con trâu có cánh hả?",
+"vi_only": 0,
+"season": "24/12-25/12"
+},
+{
+"id": "S008",
+"vi_q": "Người gì mùa đông mới có, nắng lên là tan?",
+"vi_a": "Người tuyết",
+"en_q": "Who only appears in winter and melts when the sun comes out?",
+"en_a": "A snowman",
+"g_en": "Is it... my motivation?",
+"g_vi": "Là… động lực của tôi hả?",
+"vi_only": 0,
+"season": "24/12-25/12"
+},
+{
+"id": "S009",
+"vi_q": "Cái gì mỗi năm chỉ đến một lần lúc nửa đêm, cả thế giới cùng đếm ngược chờ nó?",
+"vi_a": "Năm mới",
+"en_q": "What arrives once a year at midnight while the whole world counts down?",
+"en_a": "The New Year",
+"g_en": "A very late bus?",
+"g_vi": "Chuyến xe buýt siêu trễ hả?",
+"vi_only": 0,
+"season": "31/12-01/01"
+},
+{
+"id": "S010",
+"vi_q": "Đêm nào bạn đi ngủ năm nay mà thức dậy vào năm sau?",
+"vi_a": "Đêm giao thừa",
+"en_q": "On which night do you go to bed this year and wake up next year?",
+"en_a": "New Year's Eve",
+"g_en": "A very long nap?",
+"g_vi": "Một giấc ngủ siêu dài hả?",
+"vi_only": 0,
+"season": "31/12-01/01"
+},
+{
+"id": "S011",
+"vi_q": "Cái gì màu đỏ, đầu năm trẻ con đứa nào cũng mong được nhận?",
+"vi_a": "Bao lì xì",
+"en_q": "What is red and makes every child happy at Lunar New Year?",
+"en_a": "A lucky red envelope",
+"g_en": "Is it... a tomato?",
+"g_vi": "Là… quả cà chua hả?",
+"vi_only": 0,
+"season": "01/02-12/02"
+},
+{
+"id": "S012",
+"vi_q": "Hoa gì miền Bắc nở hồng, hoa gì miền Nam nở vàng mỗi khi Tết đến?",
+"vi_a": "Hoa đào và hoa mai",
+"en_q": "Which flower blooms pink in the North, and which blooms yellow in the South, at Tết?",
+"en_a": "Peach blossom and apricot blossom",
+"g_en": "Plastic flowers?",
+"g_vi": "Hoa nhựa hả?",
+"vi_only": 0,
+"season": "01/02-12/02"
+},
+{
+"id": "S013",
+"vi_q": "Thịt mỡ, dưa hành, câu đối đỏ; cây nêu, tràng pháo, bánh chưng xanh. Đó là dịp gì?",
+"vi_a": "Tết Nguyên Đán",
+"en_q": "",
+"en_a": "Tết, the Lunar New Year (a famous couplet)",
+"g_en": "A cooking show?",
+"g_vi": "Chương trình nấu ăn hả?",
+"vi_only": 1,
+"season": "01/02-12/02"
+},
+{
+"id": "S014",
+"vi_q": "Tiền gì đầu năm cho đi mà ai cũng vui?",
+"vi_a": "Tiền mừng tuổi",
+"en_q": "",
+"en_a": "Lucky money (\"tiền mừng tuổi\")",
+"g_en": "Tax money?",
+"g_vi": "Tiền thuế hả?",
+"vi_only": 1,
+"season": "01/02-12/02"
 }
 ],
 "riddles_off": [
@@ -2022,7 +2375,8 @@
 "en": "A frog sitting at the bottom of a well",
 "mean": "Meaning: a narrow view of the world",
 "g_en": "A frog on a chair fell in a hole?",
-"g_vi": "Con ếch ngồi ghế rơi xuống lỗ hả?"
+"g_vi": "Con ếch ngồi ghế rơi xuống lỗ hả?",
+"season": ""
 },
 {
 "id": "E002",
@@ -2032,7 +2386,8 @@
 "en": "An elephant through the eye of a needle",
 "mean": "Meaning: something impossible",
 "g_en": "An elephant doing some sewing?",
-"g_vi": "Con voi đang may vá hả?"
+"g_vi": "Con voi đang may vá hả?",
+"season": ""
 },
 {
 "id": "E003",
@@ -2042,7 +2397,8 @@
 "en": "Playing music to a buffalo's ears",
 "mean": "Meaning: talking to someone who won't listen",
 "g_en": "A buffalo rock concert?",
-"g_vi": "Buổi hoà nhạc rock của trâu hả?"
+"g_vi": "Buổi hoà nhạc rock của trâu hả?",
+"season": ""
 },
 {
 "id": "E004",
@@ -2052,7 +2408,8 @@
 "en": "A mouse falls into a jar of rice",
 "mean": "Meaning: a sudden stroke of luck",
 "g_en": "A mouse ordering lunch?",
-"g_vi": "Con chuột gọi cơm trưa hả?"
+"g_vi": "Con chuột gọi cơm trưa hả?",
+"season": ""
 },
 {
 "id": "E005",
@@ -2062,7 +2419,8 @@
 "en": "A cat crying for a mouse",
 "mean": "Meaning: fake sympathy",
 "g_en": "A sad cat movie?",
-"g_vi": "Phim buồn về con mèo hả?"
+"g_vi": "Phim buồn về con mèo hả?",
+"season": ""
 },
 {
 "id": "E006",
@@ -2072,7 +2430,8 @@
 "en": "Grandpa says chicken, grandma says duck",
 "mean": "Meaning: two people talking about different things",
 "g_en": "Grandparents at the zoo?",
-"g_vi": "Ông bà đi sở thú hả?"
+"g_vi": "Ông bà đi sở thú hả?",
+"season": ""
 },
 {
 "id": "E007",
@@ -2082,7 +2441,8 @@
 "en": "Flowing water wears away stone",
 "mean": "Meaning: persistence beats anything",
 "g_en": "A rock taking a shower?",
-"g_vi": "Hòn đá đi tắm hả?"
+"g_vi": "Hòn đá đi tắm hả?",
+"season": ""
 },
 {
 "id": "E008",
@@ -2092,7 +2452,8 @@
 "en": "Fire tests gold",
 "mean": "Meaning: hardship shows true worth",
 "g_en": "A gold medal in chemistry?",
-"g_vi": "Huy chương vàng môn Hoá hả?"
+"g_vi": "Huy chương vàng môn Hoá hả?",
+"season": ""
 },
 {
 "id": "E009",
@@ -2102,7 +2463,8 @@
 "en": "Walls have ears",
 "mean": "Meaning: be careful, secrets spread",
 "g_en": "An ear stuck in a wall?",
-"g_vi": "Cái tai kẹt trong tường hả?"
+"g_vi": "Cái tai kẹt trong tường hả?",
+"season": ""
 },
 {
 "id": "E010",
@@ -2112,7 +2474,8 @@
 "en": "Like a fish meeting water",
 "mean": "Meaning: being in your element",
 "g_en": "A fish signing a contract?",
-"g_vi": "Con cá ký hợp đồng hả?"
+"g_vi": "Con cá ký hợp đồng hả?",
+"season": ""
 },
 {
 "id": "E011",
@@ -2122,7 +2485,8 @@
 "en": "An egg fighting a rock",
 "mean": "Meaning: a hopeless fight",
 "g_en": "An egg ninja?",
-"g_vi": "Ninja trứng hả?"
+"g_vi": "Ninja trứng hả?",
+"season": ""
 },
 {
 "id": "E012",
@@ -2132,7 +2496,8 @@
 "en": "Riding a horse to look at flowers",
 "mean": "Meaning: doing things in a rush",
 "g_en": "A horse on a date?",
-"g_vi": "Con ngựa đi hẹn hò hả?"
+"g_vi": "Con ngựa đi hẹn hò hả?",
+"season": ""
 },
 {
 "id": "E013",
@@ -2142,7 +2507,8 @@
 "en": "Sending the tiger back to the forest",
 "mean": "Meaning: letting a dangerous rival go",
 "g_en": "A tiger going camping?",
-"g_vi": "Con hổ đi cắm trại hả?"
+"g_vi": "Con hổ đi cắm trại hả?",
+"season": ""
 },
 {
 "id": "E014",
@@ -2152,7 +2518,8 @@
 "en": "Drawing a snake and adding legs",
 "mean": "Meaning: spoiling something by overdoing it",
 "g_en": "A snake buying shoes?",
-"g_vi": "Con rắn đi mua giày hả?"
+"g_vi": "Con rắn đi mua giày hả?",
+"season": ""
 },
 {
 "id": "E015",
@@ -2162,7 +2529,8 @@
 "en": "Water poured on a taro leaf",
 "mean": "Meaning: advice that has no effect",
 "g_en": "Potato soup?",
-"g_vi": "Canh khoai tây hả?"
+"g_vi": "Canh khoai tây hả?",
+"season": ""
 },
 {
 "id": "E016",
@@ -2172,7 +2540,8 @@
 "en": "Searching for a needle at the bottom of the sea",
 "mean": "Meaning: an almost impossible search",
 "g_en": "A fish getting a vaccine?",
-"g_vi": "Con cá đi tiêm vắc-xin hả?"
+"g_vi": "Con cá đi tiêm vắc-xin hả?",
+"season": ""
 },
 {
 "id": "E017",
@@ -2182,7 +2551,8 @@
 "en": "Ants carrying little by little fill the nest",
 "mean": "Meaning: small efforts add up",
 "g_en": "An ant paying rent?",
-"g_vi": "Con kiến trả tiền thuê nhà hả?"
+"g_vi": "Con kiến trả tiền thuê nhà hả?",
+"season": ""
 },
 {
 "id": "E018",
@@ -2192,7 +2562,8 @@
 "en": "Sweet honey kills flies",
 "mean": "Meaning: beware of sweet words",
 "g_en": "A haunted honey shop?",
-"g_vi": "Tiệm mật ong ma ám hả?"
+"g_vi": "Tiệm mật ong ma ám hả?",
+"season": ""
 },
 {
 "id": "E019",
@@ -2202,7 +2573,8 @@
 "en": "A duck listening to thunder",
 "mean": "Meaning: hearing without understanding",
 "g_en": "A duck weather reporter?",
-"g_vi": "Con vịt dự báo thời tiết hả?"
+"g_vi": "Con vịt dự báo thời tiết hả?",
+"season": ""
 },
 {
 "id": "E020",
@@ -2212,7 +2584,8 @@
 "en": "A yawning dog catches a fly",
 "mean": "Meaning: pure dumb luck",
 "g_en": "A sleepy dog's breakfast?",
-"g_vi": "Bữa sáng của con chó buồn ngủ hả?"
+"g_vi": "Bữa sáng của con chó buồn ngủ hả?",
+"season": ""
 },
 {
 "id": "E021",
@@ -2222,7 +2595,8 @@
 "en": "A rooster raising the chicks",
 "mean": "Meaning: a single father raising his kids",
 "g_en": "A chicken babysitter?",
-"g_vi": "Con gà trông trẻ hả?"
+"g_vi": "Con gà trông trẻ hả?",
+"season": ""
 },
 {
 "id": "E022",
@@ -2232,7 +2606,8 @@
 "en": "When you eat the fruit, remember who planted the tree",
 "mean": "Meaning: be grateful",
 "g_en": "A very smart apple?",
-"g_vi": "Quả táo thông minh hả?"
+"g_vi": "Quả táo thông minh hả?",
+"season": ""
 },
 {
 "id": "E023",
@@ -2242,7 +2617,8 @@
 "en": "When you drink water, remember the spring",
 "mean": "Meaning: never forget your roots",
 "g_en": "Brain freeze?",
-"g_vi": "Uống lạnh buốt óc hả?"
+"g_vi": "Uống lạnh buốt óc hả?",
+"season": ""
 },
 {
 "id": "E024",
@@ -2252,7 +2628,8 @@
 "en": "Big fish swallow small fish",
 "mean": "Meaning: the strong beat the weak",
 "g_en": "A whale at a sushi bar?",
-"g_vi": "Cá voi đi ăn sushi hả?"
+"g_vi": "Cá voi đi ăn sushi hả?",
+"season": ""
 },
 {
 "id": "E025",
@@ -2262,7 +2639,8 @@
 "en": "Near ink you turn black, near a lamp you shine",
 "mean": "Meaning: you become like your friends",
 "g_en": "A pen fixing a lamp?",
-"g_vi": "Cây bút sửa bóng đèn hả?"
+"g_vi": "Cây bút sửa bóng đèn hả?",
+"season": ""
 },
 {
 "id": "E026",
@@ -2272,7 +2650,8 @@
 "en": "The horse goes back to its old road",
 "mean": "Meaning: old habits die hard",
 "g_en": "A horse stuck in traffic?",
-"g_vi": "Con ngựa bị kẹt xe hả?"
+"g_vi": "Con ngựa bị kẹt xe hả?",
+"season": ""
 },
 {
 "id": "E027",
@@ -2282,7 +2661,8 @@
 "en": "Hands that work get food to chew",
 "mean": "Meaning: you must work to eat",
 "g_en": "Eating a hammer?",
-"g_vi": "Ăn cái búa hả?"
+"g_vi": "Ăn cái búa hả?",
+"season": ""
 },
 {
 "id": "E028",
@@ -2292,7 +2672,8 @@
 "en": "Travel for a day, learn a basket of wisdom",
 "mean": "Meaning: travel makes you wiser",
 "g_en": "Walking to university?",
-"g_vi": "Đi bộ tới trường đại học hả?"
+"g_vi": "Đi bộ tới trường đại học hả?",
+"season": ""
 },
 {
 "id": "E029",
@@ -2302,7 +2683,8 @@
 "en": "Spoken words fly away with the wind",
 "mean": "Meaning: spoken promises are easily forgotten",
 "g_en": "Someone talking too fast?",
-"g_vi": "Ai đó nói quá nhanh hả?"
+"g_vi": "Ai đó nói quá nhanh hả?",
+"season": ""
 },
 {
 "id": "E030",
@@ -2312,7 +2694,8 @@
 "en": "As fast as lightning",
 "mean": "Meaning: extremely fast",
 "g_en": "Running from the electricity bill?",
-"g_vi": "Chạy trốn hoá đơn tiền điện hả?"
+"g_vi": "Chạy trốn hoá đơn tiền điện hả?",
+"season": ""
 },
 {
 "id": "E031",
@@ -2322,7 +2705,8 @@
 "en": "As strong as an elephant",
 "mean": "Meaning: very strong",
 "g_en": "An elephant at the gym?",
-"g_vi": "Con voi đi tập gym hả?"
+"g_vi": "Con voi đi tập gym hả?",
+"season": ""
 },
 {
 "id": "E032",
@@ -2332,7 +2716,8 @@
 "en": "As silent as a clam",
 "mean": "Meaning: saying absolutely nothing",
 "g_en": "A secret seafood recipe?",
-"g_vi": "Công thức hải sản bí mật hả?"
+"g_vi": "Công thức hải sản bí mật hả?",
+"season": ""
 },
 {
 "id": "E033",
@@ -2342,7 +2727,8 @@
 "en": "As timid as a rabbit",
 "mean": "Meaning: easily scared",
 "g_en": "A scary bunny movie?",
-"g_vi": "Phim kinh dị về thỏ hả?"
+"g_vi": "Phim kinh dị về thỏ hả?",
+"season": ""
 },
 {
 "id": "E034",
@@ -2352,7 +2738,8 @@
 "en": "An old fox",
 "mean": "Meaning: a cunning, experienced person",
 "g_en": "The fox's grandpa?",
-"g_vi": "Ông nội của con cáo hả?"
+"g_vi": "Ông nội của con cáo hả?",
+"season": ""
 },
 {
 "id": "E035",
@@ -2362,7 +2749,8 @@
 "en": "A father's devotion is as great as a mountain",
 "mean": "A line from a beloved folk verse",
 "g_en": "Dad goes hiking?",
-"g_vi": "Bố đi leo núi hả?"
+"g_vi": "Bố đi leo núi hả?",
+"season": ""
 },
 {
 "id": "E036",
@@ -2372,7 +2760,8 @@
 "en": "A mother's love flows like water from the spring",
 "mean": "The next line of the same folk verse",
 "g_en": "Mom washing the dishes?",
-"g_vi": "Mẹ đang rửa bát hả?"
+"g_vi": "Mẹ đang rửa bát hả?",
+"season": ""
 },
 {
 "id": "E037",
@@ -2382,7 +2771,8 @@
 "en": "Whole leaves wrap torn leaves",
 "mean": "Meaning: those who have more help those in need",
 "g_en": "Leaves at a hug party?",
-"g_vi": "Lá cây mở tiệc ôm nhau hả?"
+"g_vi": "Lá cây mở tiệc ôm nhau hả?",
+"season": ""
 },
 {
 "id": "E038",
@@ -2392,7 +2782,8 @@
 "en": "Three trees together make a high mountain",
 "mean": "Meaning: unity is strength",
 "g_en": "A tiny forest?",
-"g_vi": "Khu rừng tí hon hả?"
+"g_vi": "Khu rừng tí hon hả?",
+"season": ""
 },
 {
 "id": "E039",
@@ -2402,7 +2793,8 @@
 "en": "When one horse is sick, the whole stable stops eating",
 "mean": "Meaning: sharing each other's pain",
 "g_en": "A horse on a diet?",
-"g_vi": "Con ngựa ăn kiêng hả?"
+"g_vi": "Con ngựa ăn kiêng hả?",
+"season": ""
 },
 {
 "id": "E040",
@@ -2412,7 +2804,8 @@
 "en": "Grind iron long enough and it becomes a needle",
 "mean": "Meaning: perseverance pays off",
 "g_en": "A very slow tailor?",
-"g_vi": "Ông thợ may siêu chậm hả?"
+"g_vi": "Ông thợ may siêu chậm hả?",
+"season": ""
 },
 {
 "id": "E041",
@@ -2422,7 +2815,8 @@
 "en": "A fish without salt goes bad",
 "mean": "Meaning: children who don't listen go astray",
 "g_en": "A fish on a low-salt diet?",
-"g_vi": "Con cá ăn nhạt hả?"
+"g_vi": "Con cá ăn nhạt hả?",
+"season": ""
 },
 {
 "id": "E042",
@@ -2432,7 +2826,8 @@
 "en": "Steady rain soaks deep",
 "mean": "Meaning: slow, steady effort works",
 "g_en": "Waiting for the bus in the rain?",
-"g_vi": "Đợi xe buýt dưới mưa hả?"
+"g_vi": "Đợi xe buýt dưới mưa hả?",
+"season": ""
 },
 {
 "id": "E043",
@@ -2442,7 +2837,8 @@
 "en": "Smooth sails and a fair wind",
 "mean": "Meaning: everything goes smoothly",
 "g_en": "A boat running late?",
-"g_vi": "Con thuyền đi trễ hả?"
+"g_vi": "Con thuyền đi trễ hả?",
+"season": ""
 },
 {
 "id": "E044",
@@ -2452,7 +2848,8 @@
 "en": "Hearing a hundred times is not as good as seeing once",
 "mean": "Meaning: seeing is believing",
 "g_en": "An ear fighting an eye?",
-"g_vi": "Tai đánh nhau với mắt hả?"
+"g_vi": "Tai đánh nhau với mắt hả?",
+"season": ""
 },
 {
 "id": "E045",
@@ -2462,7 +2859,8 @@
 "en": "One worm spoils the pot of soup",
 "mean": "Meaning: one bad member ruins the group",
 "g_en": "Worm soup? Yuck!",
-"g_vi": "Canh sâu hả? Eo ôi!"
+"g_vi": "Canh sâu hả? Eo ôi!",
+"season": ""
 },
 {
 "id": "E046",
@@ -2472,7 +2870,8 @@
 "en": "Time is gold",
 "mean": "Meaning: time is precious",
 "g_en": "A gold medal for waking up early?",
-"g_vi": "Huy chương vàng dậy sớm hả?"
+"g_vi": "Huy chương vàng dậy sớm hả?",
+"season": ""
 },
 {
 "id": "E047",
@@ -2482,7 +2881,8 @@
 "en": "Learning goes hand in hand with practice",
 "mean": "Meaning: use what you learn",
 "g_en": "A book fixing a car?",
-"g_vi": "Quyển sách sửa xe hả?"
+"g_vi": "Quyển sách sửa xe hả?",
+"season": ""
 },
 {
 "id": "E048",
@@ -2492,7 +2892,8 @@
 "en": "Birds settle on good land",
 "mean": "Meaning: good places attract good people",
 "g_en": "A happy bird farmer?",
-"g_vi": "Bác chim nông dân vui vẻ hả?"
+"g_vi": "Bác chim nông dân vui vẻ hả?",
+"season": ""
 },
 {
 "id": "E049",
@@ -2502,7 +2903,8 @@
 "en": "The buffalo is the heart of the farm",
 "mean": "An old farming saying",
 "g_en": "King Buffalo the First?",
-"g_vi": "Vua Trâu đệ nhất hả?"
+"g_vi": "Vua Trâu đệ nhất hả?",
+"season": ""
 },
 {
 "id": "E050",
@@ -2512,7 +2914,8 @@
 "en": "A blind cat stumbles on a fried fish",
 "mean": "Meaning: an unexpected stroke of luck",
 "g_en": "A cool cat having a barbecue?",
-"g_vi": "Mèo ngầu đi ăn đồ nướng hả?"
+"g_vi": "Mèo ngầu đi ăn đồ nướng hả?",
+"season": ""
 },
 {
 "id": "E051",
@@ -2522,7 +2925,8 @@
 "en": "Empty barrels make the most noise",
 "mean": "Meaning: those who know little talk the most",
 "g_en": "A barrel giving a speech?",
-"g_vi": "Cái thùng đang phát biểu hả?"
+"g_vi": "Cái thùng đang phát biểu hả?",
+"season": ""
 },
 {
 "id": "E052",
@@ -2532,7 +2936,8 @@
 "en": "Even torn paper must keep its margin",
 "mean": "Meaning: keep your dignity in hard times",
 "g_en": "Arts and crafts class?",
-"g_vi": "Giờ thủ công hả?"
+"g_vi": "Giờ thủ công hả?",
+"season": ""
 },
 {
 "id": "E053",
@@ -2542,7 +2947,8 @@
 "en": "A drop of blood is worth more than a pond of water",
 "mean": "Meaning: family comes first",
 "g_en": "A vampire choosing a drink?",
-"g_vi": "Ma cà rồng chọn đồ uống hả?"
+"g_vi": "Ma cà rồng chọn đồ uống hả?",
+"season": ""
 },
 {
 "id": "E054",
@@ -2552,7 +2958,8 @@
 "en": "When the sister falls, the brother lifts her up",
 "mean": "Meaning: siblings support each other",
 "g_en": "A playground accident?",
-"g_vi": "Tai nạn ở sân chơi hả?"
+"g_vi": "Tai nạn ở sân chơi hả?",
+"season": ""
 },
 {
 "id": "E055",
@@ -2562,7 +2969,8 @@
 "en": "Eating the porridge, then kicking the bowl",
 "mean": "Meaning: being ungrateful",
 "g_en": "Football with a bowl?",
-"g_vi": "Đá bóng bằng cái bát hả?"
+"g_vi": "Đá bóng bằng cái bát hả?",
+"season": ""
 },
 {
 "id": "E056",
@@ -2572,7 +2980,8 @@
 "en": "Crossing the bridge, then pulling up the planks",
 "mean": "Meaning: abandoning those who helped you",
 "g_en": "Someone stealing a bridge?",
-"g_vi": "Ai đó trộm cây cầu hả?"
+"g_vi": "Ai đó trộm cây cầu hả?",
+"season": ""
 },
 {
 "id": "E057",
@@ -2582,7 +2991,8 @@
 "en": "Standing on this mountain, looking at that one",
 "mean": "Meaning: never happy with what you have",
 "g_en": "A lost tourist?",
-"g_vi": "Du khách bị lạc hả?"
+"g_vi": "Du khách bị lạc hả?",
+"season": ""
 },
 {
 "id": "E058",
@@ -2592,7 +3002,8 @@
 "en": "Jumping only when the water reaches your feet",
 "mean": "Meaning: leaving things to the last minute",
 "g_en": "Beach volleyball?",
-"g_vi": "Bóng chuyền bãi biển hả?"
+"g_vi": "Bóng chuyền bãi biển hả?",
+"season": ""
 },
 {
 "id": "E059",
@@ -2602,7 +3013,8 @@
 "en": "Building the barn after the cow is lost",
 "mean": "Meaning: acting too late",
 "g_en": "A cow playing hide and seek?",
-"g_vi": "Con bò chơi trốn tìm hả?"
+"g_vi": "Con bò chơi trốn tìm hả?",
+"season": ""
 },
 {
 "id": "E060",
@@ -2612,7 +3024,8 @@
 "en": "The frog dies because of its mouth",
 "mean": "Meaning: talking too much brings trouble",
 "g_en": "A frog ate too much chili?",
-"g_vi": "Con ếch ăn quá nhiều ớt hả?"
+"g_vi": "Con ếch ăn quá nhiều ớt hả?",
+"season": ""
 },
 {
 "id": "E061",
@@ -2622,7 +3035,8 @@
 "en": "When the house burns, the rats show their faces",
 "mean": "Meaning: a crisis reveals who people really are",
 "g_en": "A mouse firefighter?",
-"g_vi": "Chuột lính cứu hoả hả?"
+"g_vi": "Chuột lính cứu hoả hả?",
+"season": ""
 },
 {
 "id": "E062",
@@ -2632,7 +3046,8 @@
 "en": "Golden forests, silver seas",
 "mean": "Meaning: a land rich in resources",
 "g_en": "The nature Olympics?",
-"g_vi": "Thế vận hội thiên nhiên hả?"
+"g_vi": "Thế vận hội thiên nhiên hả?",
+"season": ""
 },
 {
 "id": "E063",
@@ -2642,7 +3057,8 @@
 "en": "Up on an elephant, down on a dog",
 "mean": "Meaning: the ups and downs of life",
 "g_en": "An elevator for animals?",
-"g_vi": "Thang máy cho thú hả?"
+"g_vi": "Thang máy cho thú hả?",
+"season": ""
 },
 {
 "id": "E064",
@@ -2652,7 +3068,8 @@
 "en": "An elephant's head, a mouse's tail",
 "mean": "Meaning: a grand start, a weak finish",
 "g_en": "An elephant shrinking machine?",
-"g_vi": "Máy thu nhỏ con voi hả?"
+"g_vi": "Máy thu nhỏ con voi hả?",
+"season": ""
 },
 {
 "id": "E065",
@@ -2662,7 +3079,8 @@
 "en": "Timely rain and gentle wind",
 "mean": "Meaning: good weather, a good harvest",
 "g_en": "A five-star review for a storm?",
-"g_vi": "Chấm 5 sao cho cơn bão hả?"
+"g_vi": "Chấm 5 sao cho cơn bão hả?",
+"season": ""
 },
 {
 "id": "E066",
@@ -2672,7 +3090,8 @@
 "en": "One sun, two dews",
 "mean": "Meaning: working hard from dawn to dusk",
 "g_en": "Today's weather forecast?",
-"g_vi": "Dự báo thời tiết hôm nay hả?"
+"g_vi": "Dự báo thời tiết hôm nay hả?",
+"season": ""
 },
 {
 "id": "E067",
@@ -2682,7 +3101,8 @@
 "en": "When the bamboo grows old, young shoots spring up",
 "mean": "Meaning: the young follow the old",
 "g_en": "Grandpa's garden?",
-"g_vi": "Vườn của ông nội hả?"
+"g_vi": "Vườn của ông nội hả?",
+"season": ""
 },
 {
 "id": "E068",
@@ -2692,7 +3112,8 @@
 "en": "A straight tree fears nothing",
 "mean": "Meaning: honest people have nothing to fear",
 "g_en": "The coolest tree in school?",
-"g_vi": "Cái cây ngầu nhất trường hả?"
+"g_vi": "Cái cây ngầu nhất trường hả?",
+"season": ""
 },
 {
 "id": "E069",
@@ -2702,7 +3123,8 @@
 "en": "When buffaloes fight, the mosquitoes die",
 "mean": "Meaning: the small suffer when the powerful fight",
 "g_en": "A buffalo wrestling show?",
-"g_vi": "Giải đấu vật của trâu hả?"
+"g_vi": "Giải đấu vật của trâu hả?",
+"season": ""
 },
 {
 "id": "E070",
@@ -2712,7 +3134,8 @@
 "en": "Unity is strength",
 "mean": "A motto everyone knows",
 "g_en": "An arm wrestling deal?",
-"g_vi": "Thoả thuận vật tay hả?"
+"g_vi": "Thoả thuận vật tay hả?",
+"season": ""
 },
 {
 "id": "E071",
@@ -2722,7 +3145,8 @@
 "en": "Lunar New Year",
 "mean": "Vietnam's biggest holiday",
 "g_en": "A red flower explosion?",
-"g_vi": "Vụ nổ hoa đỏ hả?"
+"g_vi": "Vụ nổ hoa đỏ hả?",
+"season": "01/02-12/02"
 },
 {
 "id": "E072",
@@ -2732,7 +3156,8 @@
 "en": "The Mid-Autumn Festival",
 "mean": "A night of mooncakes and lanterns",
 "g_en": "Dinner on the moon?",
-"g_vi": "Ăn tối trên mặt trăng hả?"
+"g_vi": "Ăn tối trên mặt trăng hả?",
+"season": "08/09-16/09"
 },
 {
 "id": "E073",
@@ -2742,7 +3167,8 @@
 "en": "The lion dance",
 "mean": "Performed at Mid-Autumn and Tết",
 "g_en": "A lion playing the drums?",
-"g_vi": "Sư tử chơi trống hả?"
+"g_vi": "Sư tử chơi trống hả?",
+"season": "08/09-16/09"
 },
 {
 "id": "E074",
@@ -2752,7 +3178,8 @@
 "en": "The conical leaf hat",
 "mean": "A symbol of Vietnam",
 "g_en": "A bamboo fashion show?",
-"g_vi": "Trình diễn thời trang tre hả?"
+"g_vi": "Trình diễn thời trang tre hả?",
+"season": ""
 },
 {
 "id": "E075",
@@ -2762,7 +3189,8 @@
 "en": "Áo dài, the long dress",
 "mean": "Vietnam's traditional dress",
 "g_en": "A flower dance party?",
-"g_vi": "Tiệc khiêu vũ hoa hả?"
+"g_vi": "Tiệc khiêu vũ hoa hả?",
+"season": ""
 },
 {
 "id": "E076",
@@ -2772,7 +3200,8 @@
 "en": "A buffalo boy playing the flute",
 "mean": "A classic image of the countryside",
 "g_en": "A buffalo music teacher?",
-"g_vi": "Trâu dạy nhạc hả?"
+"g_vi": "Trâu dạy nhạc hả?",
+"season": ""
 },
 {
 "id": "E077",
@@ -2782,7 +3211,8 @@
 "en": "Flying a kite",
 "mean": "A favorite summer game",
 "g_en": "A boy chasing the wind?",
-"g_vi": "Cậu bé đuổi theo gió hả?"
+"g_vi": "Cậu bé đuổi theo gió hả?",
+"season": ""
 },
 {
 "id": "E078",
@@ -2792,7 +3222,8 @@
 "en": "Boat racing",
 "mean": "A festival tradition on the river",
 "g_en": "A drum on a boat trip?",
-"g_vi": "Cái trống đi du thuyền hả?"
+"g_vi": "Cái trống đi du thuyền hả?",
+"season": ""
 },
 {
 "id": "E079",
@@ -2802,7 +3233,8 @@
 "en": "A traffic jam",
 "mean": "Daily life in the big city",
 "g_en": "A party for vehicles?",
-"g_vi": "Tiệc của xe cộ hả?"
+"g_vi": "Tiệc của xe cộ hả?",
+"season": ""
 },
 {
 "id": "E080",
@@ -2812,7 +3244,8 @@
 "en": "Beef pho",
 "mean": "Vietnam's most famous noodle soup",
 "g_en": "A cow eating noodles?",
-"g_vi": "Con bò ăn mì hả?"
+"g_vi": "Con bò ăn mì hả?",
+"season": ""
 },
 {
 "id": "E081",
@@ -2822,7 +3255,8 @@
 "en": "Bánh mì sandwich",
 "mean": "Loved all around the world",
 "g_en": "A very long hamburger?",
-"g_vi": "Hamburger siêu dài hả?"
+"g_vi": "Hamburger siêu dài hả?",
+"season": ""
 },
 {
 "id": "E082",
@@ -2832,7 +3266,8 @@
 "en": "Iced milk coffee",
 "mean": "The taste of a Vietnamese morning",
 "g_en": "A coffee snowman?",
-"g_vi": "Người tuyết cà phê hả?"
+"g_vi": "Người tuyết cà phê hả?",
+"season": ""
 },
 {
 "id": "E083",
@@ -2842,7 +3277,8 @@
 "en": "Egg coffee",
 "mean": "A creamy Hanoi specialty",
 "g_en": "Breakfast in one cup?",
-"g_vi": "Bữa sáng trong một cái cốc hả?"
+"g_vi": "Bữa sáng trong một cái cốc hả?",
+"season": ""
 },
 {
 "id": "E084",
@@ -2852,7 +3288,8 @@
 "en": "Chicken rice",
 "mean": "A simple, tasty classic",
 "g_en": "A chicken sleeping on rice?",
-"g_vi": "Con gà ngủ trên cơm hả?"
+"g_vi": "Con gà ngủ trên cơm hả?",
+"season": ""
 },
 {
 "id": "E085",
@@ -2862,7 +3299,8 @@
 "en": "Crab noodle soup",
 "mean": "A tangy tomato and crab broth",
 "g_en": "A crab's swimming pool?",
-"g_vi": "Hồ bơi của con cua hả?"
+"g_vi": "Hồ bơi của con cua hả?",
+"season": ""
 },
 {
 "id": "E086",
@@ -2872,7 +3310,8 @@
 "en": "Sizzling crispy pancake",
 "mean": "Named after its sizzling sound",
 "g_en": "A shrimp sleeping under a blanket?",
-"g_vi": "Con tôm đắp chăn ngủ hả?"
+"g_vi": "Con tôm đắp chăn ngủ hả?",
+"season": ""
 },
 {
 "id": "E087",
@@ -2882,7 +3321,8 @@
 "en": "Fresh spring rolls",
 "mean": "Light, fresh and healthy",
 "g_en": "A salad burrito?",
-"g_vi": "Burrito rau hả?"
+"g_vi": "Burrito rau hả?",
+"season": ""
 },
 {
 "id": "E088",
@@ -2892,7 +3332,8 @@
 "en": "Fish sauce",
 "mean": "The soul of Vietnamese cooking",
 "g_en": "A crying fish?",
-"g_vi": "Con cá đang khóc hả?"
+"g_vi": "Con cá đang khóc hả?",
+"season": ""
 },
 {
 "id": "E089",
@@ -2902,7 +3343,8 @@
 "en": "Bubble milk tea",
 "mean": "The favorite drink of students",
 "g_en": "Tea with a black hole?",
-"g_vi": "Trà có hố đen hả?"
+"g_vi": "Trà có hố đen hả?",
+"season": ""
 },
 {
 "id": "E090",
@@ -2912,7 +3354,8 @@
 "en": "Coconut candy",
 "mean": "A sweet gift from Bến Tre",
 "g_en": "A coconut's birthday?",
-"g_vi": "Sinh nhật quả dừa hả?"
+"g_vi": "Sinh nhật quả dừa hả?",
+"season": ""
 },
 {
 "id": "E091",
@@ -2922,7 +3365,8 @@
 "en": "Bamboo-tube rice",
 "mean": "Rice cooked inside bamboo",
 "g_en": "A panda's lunch box?",
-"g_vi": "Hộp cơm của gấu trúc hả?"
+"g_vi": "Hộp cơm của gấu trúc hả?",
+"season": ""
 },
 {
 "id": "E092",
@@ -2932,7 +3376,8 @@
 "en": "Green mango with chili salt",
 "mean": "Sour, salty and spicy: a perfect snack",
 "g_en": "An angry mango?",
-"g_vi": "Quả xoài nổi giận hả?"
+"g_vi": "Quả xoài nổi giận hả?",
+"season": ""
 },
 {
 "id": "E093",
@@ -2942,7 +3387,8 @@
 "en": "Popcorn",
 "mean": "The best friend of every movie",
 "g_en": "A corn in the sauna?",
-"g_vi": "Trái bắp đi xông hơi hả?"
+"g_vi": "Trái bắp đi xông hơi hả?",
+"season": ""
 },
 {
 "id": "E094",
@@ -2952,7 +3398,8 @@
 "en": "Ha Long Bay",
 "mean": "Its name means the descending dragon",
 "g_en": "A dragon learning to swim?",
-"g_vi": "Con rồng tập bơi hả?"
+"g_vi": "Con rồng tập bơi hả?",
+"season": ""
 },
 {
 "id": "E095",
@@ -2962,7 +3409,8 @@
 "en": "The Dragon Bridge in Da Nang",
 "mean": "It breathes fire on weekend nights",
 "g_en": "A dragon barbecue?",
-"g_vi": "Tiệc nướng của rồng hả?"
+"g_vi": "Tiệc nướng của rồng hả?",
+"season": ""
 },
 {
 "id": "E096",
@@ -2972,7 +3420,8 @@
 "en": "Hoi An Ancient Town",
 "mean": "Famous for its colorful lanterns",
 "g_en": "A street of lamp shops?",
-"g_vi": "Phố bán đèn hả?"
+"g_vi": "Phố bán đèn hả?",
+"season": ""
 },
 {
 "id": "E097",
@@ -2982,7 +3431,8 @@
 "en": "Sword Lake in Hanoi",
 "mean": "A golden turtle took back the king's sword",
 "g_en": "A turtle knight?",
-"g_vi": "Rùa hiệp sĩ hả?"
+"g_vi": "Rùa hiệp sĩ hả?",
+"season": ""
 },
 {
 "id": "E098",
@@ -2992,7 +3442,8 @@
 "en": "Da Lat",
 "mean": "The city of flowers, pines and strawberries",
 "g_en": "A strawberry forest?",
-"g_vi": "Rừng dâu tây hả?"
+"g_vi": "Rừng dâu tây hả?",
+"season": ""
 },
 {
 "id": "E099",
@@ -3002,7 +3453,8 @@
 "en": "Phu Quoc, the Pearl Island",
 "mean": "Vietnam's largest island",
 "g_en": "A pirate treasure map?",
-"g_vi": "Bản đồ kho báu cướp biển hả?"
+"g_vi": "Bản đồ kho báu cướp biển hả?",
+"season": ""
 },
 {
 "id": "E100",
@@ -3012,7 +3464,8 @@
 "en": "Son Doong Cave",
 "mean": "The largest cave in the world",
 "g_en": "A hotel for bats?",
-"g_vi": "Khách sạn của dơi hả?"
+"g_vi": "Khách sạn của dơi hả?",
+"season": ""
 },
 {
 "id": "E101",
@@ -3022,7 +3475,8 @@
 "en": "Terraced rice fields",
 "mean": "Giant green stairs in the northern mountains",
 "g_en": "Stairs for a giant?",
-"g_vi": "Cầu thang cho người khổng lồ hả?"
+"g_vi": "Cầu thang cho người khổng lồ hả?",
+"season": ""
 },
 {
 "id": "E102",
@@ -3032,7 +3486,8 @@
 "en": "The Golden Bridge in Da Nang",
 "mean": "Held up by two giant stone hands",
 "g_en": "A high five from a bridge?",
-"g_vi": "Cây cầu đập tay hả?"
+"g_vi": "Cây cầu đập tay hả?",
+"season": ""
 },
 {
 "id": "E103",
@@ -3042,7 +3497,8 @@
 "en": "Hue Imperial City",
 "mean": "Home of the Nguyễn kings",
 "g_en": "A king's video game?",
-"g_vi": "Trò chơi điện tử của vua hả?"
+"g_vi": "Trò chơi điện tử của vua hả?",
+"season": ""
 },
 {
 "id": "E104",
@@ -3052,7 +3508,8 @@
 "en": "The Mekong Delta",
 "mean": "A land of rivers, boats and coconuts",
 "g_en": "A coconut delivery boat?",
-"g_vi": "Thuyền giao dừa hả?"
+"g_vi": "Thuyền giao dừa hả?",
+"season": ""
 },
 {
 "id": "E105",
@@ -3062,7 +3519,8 @@
 "en": "Raccoon",
 "mean": "In Vietnamese: a bear cat",
 "g_en": "A bear adopting a cat?",
-"g_vi": "Gấu nhận nuôi mèo hả?"
+"g_vi": "Gấu nhận nuôi mèo hả?",
+"season": ""
 },
 {
 "id": "E106",
@@ -3072,7 +3530,8 @@
 "en": "Dolphin",
 "mean": "In Vietnamese: a pig fish",
 "g_en": "A pig learning to swim?",
-"g_vi": "Con heo tập bơi hả?"
+"g_vi": "Con heo tập bơi hả?",
+"season": ""
 },
 {
 "id": "E107",
@@ -3082,7 +3541,8 @@
 "en": "Swordfish",
 "mean": "The same idea in both languages",
 "g_en": "A fish in a sword fight?",
-"g_vi": "Con cá đấu kiếm hả?"
+"g_vi": "Con cá đấu kiếm hả?",
+"season": ""
 },
 {
 "id": "E108",
@@ -3092,7 +3552,8 @@
 "en": "Train",
 "mean": "In Vietnamese: a fire vehicle",
 "g_en": "A car on fire? Call 114!",
-"g_vi": "Xe bị cháy hả? Gọi 114!"
+"g_vi": "Xe bị cháy hả? Gọi 114!",
+"season": ""
 },
 {
 "id": "E109",
@@ -3102,7 +3563,8 @@
 "en": "Telephone",
 "mean": "In Vietnamese: electric talk",
 "g_en": "Shouting in a storm?",
-"g_vi": "La hét giữa cơn bão hả?"
+"g_vi": "La hét giữa cơn bão hả?",
+"season": ""
 },
 {
 "id": "E110",
@@ -3112,7 +3574,8 @@
 "en": "Refrigerator",
 "mean": "In Vietnamese: a cold cabinet",
 "g_en": "A door to the North Pole?",
-"g_vi": "Cánh cửa tới Bắc Cực hả?"
+"g_vi": "Cánh cửa tới Bắc Cực hả?",
+"season": ""
 },
 {
 "id": "E111",
@@ -3122,7 +3585,8 @@
 "en": "Computer mouse",
 "mean": "The same idea in both languages",
 "g_en": "A mouse doing homework?",
-"g_vi": "Con chuột làm bài tập hả?"
+"g_vi": "Con chuột làm bài tập hả?",
+"season": ""
 },
 {
 "id": "E112",
@@ -3132,7 +3596,8 @@
 "en": "Raincoat",
 "mean": "In Vietnamese: a rain shirt",
 "g_en": "A laundry day disaster?",
-"g_vi": "Thảm hoạ ngày giặt đồ hả?"
+"g_vi": "Thảm hoạ ngày giặt đồ hả?",
+"season": ""
 },
 {
 "id": "E113",
@@ -3142,7 +3607,8 @@
 "en": "Rocket",
 "mean": "In Vietnamese: a fire arrow",
 "g_en": "A barbecue with arrows?",
-"g_vi": "Nướng thịt bằng mũi tên hả?"
+"g_vi": "Nướng thịt bằng mũi tên hả?",
+"season": ""
 },
 {
 "id": "E114",
@@ -3152,7 +3618,8 @@
 "en": "Sea lion",
 "mean": "The same idea in both languages",
 "g_en": "A lion on a surfboard?",
-"g_vi": "Sư tử lướt sóng hả?"
+"g_vi": "Sư tử lướt sóng hả?",
+"season": ""
 },
 {
 "id": "E115",
@@ -3162,7 +3629,8 @@
 "en": "Badminton",
 "mean": "In Vietnamese: a feather shuttle",
 "g_en": "A bridge for birds?",
-"g_vi": "Cây cầu cho chim hả?"
+"g_vi": "Cây cầu cho chim hả?",
+"season": ""
 },
 {
 "id": "E116",
@@ -3172,7 +3640,8 @@
 "en": "Chess",
 "mean": "In Vietnamese: the king's game",
 "g_en": "A king waving a flag?",
-"g_vi": "Nhà vua vẫy cờ hả?"
+"g_vi": "Nhà vua vẫy cờ hả?",
+"season": ""
 },
 {
 "id": "E117",
@@ -3182,7 +3651,8 @@
 "en": "Bell pepper",
 "mean": "The same idea in both languages",
 "g_en": "A spicy doorbell?",
-"g_vi": "Chuông cửa cay xè hả?"
+"g_vi": "Chuông cửa cay xè hả?",
+"season": ""
 },
 {
 "id": "E118",
@@ -3192,7 +3662,8 @@
 "en": "Dragon fruit",
 "mean": "In Vietnamese: a green dragon",
 "g_en": "A dragon that ate too much salad?",
-"g_vi": "Con rồng ăn quá nhiều rau hả?"
+"g_vi": "Con rồng ăn quá nhiều rau hả?",
+"season": ""
 },
 {
 "id": "E119",
@@ -3202,7 +3673,8 @@
 "en": "Longan",
 "mean": "Its name means the dragon's eye",
 "g_en": "A dragon at the eye doctor?",
-"g_vi": "Con rồng đi khám mắt hả?"
+"g_vi": "Con rồng đi khám mắt hả?",
+"season": ""
 },
 {
 "id": "E120",
@@ -3212,7 +3684,107 @@
 "en": "Sunflower",
 "mean": "In Vietnamese: the flower facing the sun",
 "g_en": "A flower on a beach trip?",
-"g_vi": "Bông hoa đi biển hả?"
+"g_vi": "Bông hoa đi biển hả?",
+"season": ""
+},
+{
+"id": "SE01",
+"emoji": "👩 📚 💐",
+"kind": "VH",
+"vi": "Ngày Nhà giáo Việt Nam",
+"en": "Vietnamese Teachers' Day",
+"mean": "Celebrated on November 20th",
+"g_en": "A flower shop in a library?",
+"g_vi": "Tiệm hoa trong thư viện hả?",
+"season": "19/11-20/11"
+},
+{
+"id": "SE02",
+"emoji": "⛵ 👨 🌊",
+"kind": "VH",
+"vi": "Người lái đò",
+"en": "The ferryman",
+"mean": "A loving name for teachers in Vietnam",
+"g_en": "A fisherman on holiday?",
+"g_vi": "Bác ngư dân đi nghỉ hả?",
+"season": "19/11-20/11"
+},
+{
+"id": "SE03",
+"emoji": "🙇 👨 📖",
+"kind": "TN",
+"vi": "Tôn sư trọng đạo",
+"en": "Respect your teachers and value learning",
+"mean": "A proud Vietnamese tradition",
+"g_en": "Reading a book upside down?",
+"g_vi": "Đọc sách lộn ngược hả?",
+"season": "19/11-20/11"
+},
+{
+"id": "SE04",
+"emoji": "🎅 🎁 🌙",
+"kind": "VH",
+"vi": "Đêm Giáng sinh",
+"en": "Christmas Eve",
+"mean": "The night Santa delivers the gifts",
+"g_en": "A night shift delivery man?",
+"g_vi": "Anh giao hàng ca đêm hả?",
+"season": "24/12-25/12"
+},
+{
+"id": "SE05",
+"emoji": "🎄 ⭐ 🎁",
+"kind": "VH",
+"vi": "Cây thông Noel",
+"en": "A Christmas tree",
+"mean": "A star on top and gifts below",
+"g_en": "A tree winning a prize?",
+"g_vi": "Cái cây trúng thưởng hả?",
+"season": "24/12-25/12"
+},
+{
+"id": "SE06",
+"emoji": "🎆 🕛 🥳",
+"kind": "VH",
+"vi": "Đêm giao thừa",
+"en": "New Year's Eve",
+"mean": "Counting down to midnight",
+"g_en": "A very noisy alarm clock?",
+"g_vi": "Đồng hồ báo thức ồn ào hả?",
+"season": "31/12-01/01"
+},
+{
+"id": "SE07",
+"emoji": "🧧 👶 😄",
+"kind": "VH",
+"vi": "Lì xì đầu năm",
+"en": "Lucky money",
+"mean": "Red envelopes for children at Tết",
+"g_en": "A baby winning the lottery?",
+"g_vi": "Em bé trúng số hả?",
+"season": "01/02-12/02"
+},
+{
+"id": "SE08",
+"emoji": "🌼 🟡 🏠",
+"kind": "VH",
+"vi": "Hoa mai ngày Tết",
+"en": "Yellow apricot blossoms",
+"mean": "The flower of Tết in the South",
+"g_en": "A house painted yellow?",
+"g_vi": "Ngôi nhà sơn vàng hả?",
+"season": "01/02-12/02"
+},
+{
+"id": "SE09",
+"emoji": "🍌 🍊 🍇 🥭 🍍",
+"kind": "VH",
+"vi": "Mâm ngũ quả",
+"en": "The five-fruit tray",
+"mean": "A Tết offering to the ancestors",
+"g_en": "A fruit salad?",
+"g_vi": "Món salad trái cây hả?",
+"season": "01/02-12/02"
 }
 ]
 }

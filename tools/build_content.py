@@ -355,6 +355,38 @@ EMOJI = """
 """
 
 
+# Theo mùa: khoảng ngày (dd/MM-dd/MM) || câu đố VI | đáp án | riddle EN | answer EN | Robot đoán EN | VI | V
+SEASON_R = """
+19/11-20/11 || Ai dạy bạn bao điều hay, chẳng đòi trả ơn, chỉ mong bạn giỏi hơn mình? | Thầy cô giáo | Who teaches you so much and only hopes you become better than them? | Your teachers | Is it... YouTube? | Là… YouTube hả?
+19/11-20/11 || Nghề gì đưa hàng nghìn người sang sông mà không cần thuyền? | Nghề giáo, người lái đò thầm lặng | | Teaching: teachers are called "ferrymen" | A bridge builder? | Thợ xây cầu hả? | V
+19/11-20/11 || Cái gì thầy cô cho đi mỗi ngày mà không bao giờ vơi? | Kiến thức | What do teachers give away every day but never run out of? | Knowledge | Is it... homework? | Là… bài tập về nhà hả?
+19/11-20/11 || Ngày nào học trò mang hoa tới trường tặng thầy cô? | Ngày 20 tháng 11 | On which day do students in Vietnam bring flowers to their teachers? | November 20th, Vietnamese Teachers' Day | My teacher's birthday? | Sinh nhật cô giáo hả?
+24/12-25/12 || Ông già nào không bao giờ già thêm, năm nào cũng mặc đồ đỏ? | Ông già Noel | Which old man never gets older and wears red every year? | Santa Claus | My grandpa in his new pajamas? | Ông tôi mặc đồ ngủ mới hả?
+24/12-25/12 || Cây gì không ra quả mà đêm Giáng sinh lại đầy quà bên dưới? | Cây thông Noel | Which tree bears no fruit but has gifts under it on Christmas Eve? | A Christmas tree | A money tree? | Cây tiền hả?
+24/12-25/12 || Con gì có sừng, kéo xe trượt tuyết bay trên trời đêm Giáng sinh? | Con tuần lộc | Which animal has antlers and pulls a flying sleigh on Christmas night? | A reindeer | A buffalo with wings? | Con trâu có cánh hả?
+24/12-25/12 || Người gì mùa đông mới có, nắng lên là tan? | Người tuyết | Who only appears in winter and melts when the sun comes out? | A snowman | Is it... my motivation? | Là… động lực của tôi hả?
+31/12-01/01 || Cái gì mỗi năm chỉ đến một lần lúc nửa đêm, cả thế giới cùng đếm ngược chờ nó? | Năm mới | What arrives once a year at midnight while the whole world counts down? | The New Year | A very late bus? | Chuyến xe buýt siêu trễ hả?
+31/12-01/01 || Đêm nào bạn đi ngủ năm nay mà thức dậy vào năm sau? | Đêm giao thừa | On which night do you go to bed this year and wake up next year? | New Year's Eve | A very long nap? | Một giấc ngủ siêu dài hả?
+01/02-12/02 || Cái gì màu đỏ, đầu năm trẻ con đứa nào cũng mong được nhận? | Bao lì xì | What is red and makes every child happy at Lunar New Year? | A lucky red envelope | Is it... a tomato? | Là… quả cà chua hả?
+01/02-12/02 || Hoa gì miền Bắc nở hồng, hoa gì miền Nam nở vàng mỗi khi Tết đến? | Hoa đào và hoa mai | Which flower blooms pink in the North, and which blooms yellow in the South, at Tết? | Peach blossom and apricot blossom | Plastic flowers? | Hoa nhựa hả?
+01/02-12/02 || Thịt mỡ, dưa hành, câu đối đỏ; cây nêu, tràng pháo, bánh chưng xanh. Đó là dịp gì? | Tết Nguyên Đán | | Tết, the Lunar New Year (a famous couplet) | A cooking show? | Chương trình nấu ăn hả? | V
+01/02-12/02 || Tiền gì đầu năm cho đi mà ai cũng vui? | Tiền mừng tuổi | | Lucky money ("tiền mừng tuổi") | Tax money? | Tiền thuế hả? | V
+"""
+SEASON_E = """
+19/11-20/11 || 👩 📚 💐 | VH | Ngày Nhà giáo Việt Nam | Vietnamese Teachers' Day | Celebrated on November 20th | A flower shop in a library? | Tiệm hoa trong thư viện hả?
+19/11-20/11 || ⛵ 👨 🌊 | VH | Người lái đò | The ferryman | A loving name for teachers in Vietnam | A fisherman on holiday? | Bác ngư dân đi nghỉ hả?
+19/11-20/11 || 🙇 👨 📖 | TN | Tôn sư trọng đạo | Respect your teachers and value learning | A proud Vietnamese tradition | Reading a book upside down? | Đọc sách lộn ngược hả?
+24/12-25/12 || 🎅 🎁 🌙 | VH | Đêm Giáng sinh | Christmas Eve | The night Santa delivers the gifts | A night shift delivery man? | Anh giao hàng ca đêm hả?
+24/12-25/12 || 🎄 ⭐ 🎁 | VH | Cây thông Noel | A Christmas tree | A star on top and gifts below | A tree winning a prize? | Cái cây trúng thưởng hả?
+31/12-01/01 || 🎆 🕛 🥳 | VH | Đêm giao thừa | New Year's Eve | Counting down to midnight | A very noisy alarm clock? | Đồng hồ báo thức ồn ào hả?
+01/02-12/02 || 🧧 👶 😄 | VH | Lì xì đầu năm | Lucky money | Red envelopes for children at Tết | A baby winning the lottery? | Em bé trúng số hả?
+01/02-12/02 || 🌼 🟡 🏠 | VH | Hoa mai ngày Tết | Yellow apricot blossoms | The flower of Tết in the South | A house painted yellow? | Ngôi nhà sơn vàng hả?
+01/02-12/02 || 🍌 🍊 🍇 🥭 🍍 | VH | Mâm ngũ quả | The five-fruit tray | A Tết offering to the ancestors | A fruit salad? | Món salad trái cây hả?
+"""
+# Câu có sẵn nhưng chỉ hợp một mùa (theo đáp án)
+SEASON_BY_ANSWER = {'Bánh chưng': '01/02-12/02', 'Bánh tét': '01/02-12/02', 'Tết Nguyên Đán': '01/02-12/02', 'Tết Trung thu': '08/09-16/09', 'Múa lân': '08/09-16/09'}
+
+
 def rows(block, n):
     out = []
     for ln in block.strip().split('\n'):
@@ -379,5 +411,15 @@ for i, p in enumerate(rows(NEW, 6), 1):
     assert v or p[2], p
     riddles.append(dict(id=f'N{i:03d}', vi_q=p[0], vi_a=p[1], en_q=p[2], en_a=p[3], g_en=p[4], g_vi=p[5], vi_only=v))
 emoji = [dict(id=f'E{i:03d}', emoji=p[0], kind=p[1], vi=p[2], en=p[3], mean=p[4], g_en=p[5], g_vi=p[6]) for i, p in enumerate(rows(EMOJI, 7), 1)]
+for r in riddles: r['season'] = SEASON_BY_ANSWER.get(r['vi_a'], '')
+for e in emoji: e['season'] = SEASON_BY_ANSWER.get(e['vi'], '')
+for i, ln in enumerate(SEASON_R.strip().split('\n'), 1):
+    win, rest = [x.strip() for x in ln.split('||')]; p = [x.strip() for x in rest.split('|')]
+    v = int(len(p) == 7 and p[6] == 'V'); assert len(p) in (6, 7) and (v or p[2]), ln
+    riddles.append(dict(id=f'S{i:03d}', vi_q=p[0], vi_a=p[1], en_q=p[2], en_a=p[3], g_en=p[4], g_vi=p[5], vi_only=v, season=win))
+for i, ln in enumerate(SEASON_E.strip().split('\n'), 1):
+    win, rest = [x.strip() for x in ln.split('||')]; p = [x.strip() for x in rest.split('|')]; assert len(p) == 7, ln
+    emoji.append(dict(id=f'SE{i:02d}', emoji=p[0], kind=p[1], vi=p[2], en=p[3], mean=p[4], g_en=p[5], g_vi=p[6], season=win))
 json.dump({'riddles': riddles, 'riddles_off': OFF, 'emoji': emoji}, open(os.path.join(ROOT, 'data', 'content_v2.json'), 'w', encoding='utf8'), ensure_ascii=False, indent=0)
+print('theo mùa:', sum(1 for r in riddles if r['season']), sum(1 for e in emoji if e['season']))
 print('câu đố', len(riddles), '(chỉ tiếng Việt:', sum(r['vi_only'] for r in riddles), ') tắt', len(OFF), '| emoji', len(emoji))
