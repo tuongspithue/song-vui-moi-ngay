@@ -343,13 +343,13 @@ def make_meo(th, out, D):
     else:
         end_p = pill('Bạn đoán mất mấy giây?', 44, th[6], '#FFFFFF', '⏱️')
         end_e = pill('How fast were you?', 32, '#FFFFFF', th[5])
-    cdl = pill('Đoán nhanh!  Quick, guess!', 30, '#FFFFFF', th[5])
+    cdl = pill('Gõ đáp án vào bình luận!', 32, '#FFFFFF', th[5])
     CY = 660
 
     def draw(t):
         im = st.base(t)
         if t < t_g:
-            paste_c(im, q_card, W / 2, CY, 0.55 + 0.45 * ease_back((t) / 0.32))
+            paste_c(im, q_card, W / 2, CY, 0.93 + 0.07 * ease_back((t) / 0.32))
         elif t < t_rv:
             u = t - t_g; sh = 16 * math.sin((t - t_bz) * 55) * max(0, 1 - (t - t_bz) / 0.4) if t >= t_bz else 0
             paste_c(im, g_card, W / 2 + sh, CY, 0.55 + 0.45 * ease_back(u / 0.28))
@@ -362,7 +362,7 @@ def make_meo(th, out, D):
             u = t - t_cd; n = max(1, int(math.ceil(THINK - u))); frac = u - int(u)
             rg = ring(1 - u / THINK, n, st.th[6], '#FFFFFF')
             paste_c(im, rg, W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
-            paste_c(im, cdl, W / 2, 1165)
+            paste_c(im, cdl, W / 2, 1150)
         if t >= t_end:
             u = t - t_end
             paste_c(im, end_p, W / 2, 1050, ease_back(u / 0.3)); paste_c(im, end_e, W / 2, 1135, ease_back((u - 0.15) / 0.3))
@@ -393,7 +393,7 @@ def make_odd(th, out, D):
     t_end = t; e = tr.put(v, t_end + 0.1, 'cat'); e = tr.put(b, e + 0.1, 'bot'); tr.put(get_laugh(C, 1.6) * 0.7, e, 'cat'); total = e + 1.7
     audio, env = tr.mix(total)
     st = Stage(th, 'TÌM EMOJI KHÁC BIỆT', '🔍', total, env, tr.speak, char_y=1460, char_size=190)
-    sub = pill('Spot the odd one out', 30, '#FFFFFF', th[5])
+    sub = pill('Bạn tìm ra trong vài giây?  Can you spot it?', 28, '#FFFFFF', th[5])
     GX, GY, GS = 100, 395, 880
     panel = Image.new('RGBA', (GS + 60, GS + 60), (0, 0, 0, 0)); ImageDraw.Draw(panel).rounded_rectangle((0, 0, GS + 59, GS + 59), 50, fill=(255, 255, 255, 215))
     for lv in levels:
@@ -415,7 +415,7 @@ def make_odd(th, out, D):
             li = max(i for i, lv in enumerate(levels) if t >= lv['t0']); lv = levels[li]; u = t - lv['t0']
             im.alpha_composite(panel, (GX - 30, GY - 30))
             n, cs, sz = lv['n'], lv['cs'], lv['sz']; ox, oy = lv['pos']
-            if u < 0.34:  # ô bật ra theo làn sóng
+            if u < 0.34 and li > 0:  # ô bật ra theo làn sóng (màn 1 hiện sẵn để khung đầu có hình)
                 for r in range(n):
                     for c in range(n):
                         p = (u - (r + c) * 0.16 / (2 * n)) / 0.16
@@ -513,7 +513,7 @@ def make_emoji(th, out, D):
         paste_c(im, chip, W / 2, 335)
         im.alpha_composite(panel, (70, 400))
         for i, ch in enumerate(ems):
-            p = (t - 0.05 - i * 0.3) / 0.25
+            p = (t + 1.5 - i * 0.3) / 0.25  # hiện sẵn ngay khung đầu
             if p > 0: M.paste_emoji(im, ch, 70 + gap * i + gap / 2, 400 + PH / 2 + 8 * math.sin(t * 3 + i), max(4, int(ES * ease_back(p))))
         bx = BA if t >= t_rv else B1 if t >= t_hint else B0
         k = 1 + 0.10 * max(0, 1 - (t - t_rv) / 0.25) if t >= t_rv else 1 + 0.06 * max(0, 1 - (t - t_hint) / 0.2) if t >= t_hint else 1
