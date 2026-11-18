@@ -38,6 +38,15 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           WORK_DIR: /tmp/svmn
         run: python reel/make.py
+      - name: Đăng YouTube Shorts (riêng tư)
+        if: success() && github.event.inputs.preview != 'true' && github.event.client_payload.preview != true
+        continue-on-error: true
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          WORK_DIR: /tmp/svmn
+        run: python reel/yt_upload.py
       - name: Lưu video xem thử
         if: always()
         uses: actions/upload-artifact@v4
