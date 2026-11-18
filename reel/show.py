@@ -34,8 +34,8 @@ ODD_PAIRS = [
 ]
 
 
-SCHEDULE = [(6, 30, 'odd'), (11, 45, 'meo'), (17, 0, 'emoji'), (19, 30, 'meo')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
-KIND_VI = {'odd': 'Tìm emoji khác biệt', 'meo': 'Mèo đố', 'emoji': 'Đuổi hình bắt chữ'}
+SCHEDULE = [(6, 30, 'odd'), (11, 45, 'meo'), (17, 0, 'emoji'), (19, 30, 'thu')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
+KIND_VI = {'thu': 'Thử thách mới', 'odd': 'Tìm emoji khác biệt', 'meo': 'Mèo đố', 'emoji': 'Đuổi hình bắt chữ'}
 
 
 def teaser():
@@ -527,6 +527,148 @@ def make_tuan(th, out, D):
             f"#SongVuiMoiNgay #CauDoCuaTuan #CauDoVui #Riddle #HocTiengAnh"), 'tuan-' + time.strftime('%Y%m%d', time.gmtime(time.time() + 7 * 3600))
 
 
+# ------------------------------------------------------------------ Loạt thử nghiệm: Đúng hay Sai / Quy luật nào đây / 10 giây tiếng Anh
+# Mỗi câu Đúng/Sai đều là kiến thức phổ thông đã được xác nhận; (câu VI, câu EN, đúng?, giải thích VI, giải thích EN)
+DUNGSAI = [
+    ("Cá heo thở bằng mang.", "Dolphins breathe with gills.", False, "Cá heo thở bằng phổi và phải nổi lên mặt nước để hít thở.", "Dolphins are mammals and breathe air with lungs."),
+    ("Mật ong bảo quản kín có thể để rất lâu mà không hỏng.", "Properly sealed honey can last a very long time without spoiling.", True, "Mật ong rất ít nước và có tính axit nên vi khuẩn khó phát triển.", "Honey has little water and is acidic, so bacteria struggle to grow."),
+    ("Quả chuối là một loại quả mọng theo thực vật học.", "Bananas are berries in botany.", True, "Theo thực vật học, chuối là quả mọng.", "Botanically, a banana is a berry."),
+    ("Dâu tây là quả mọng theo thực vật học.", "Strawberries are berries in botany.", False, "Dâu tây không phải quả mọng thực sự theo thực vật học.", "Botanically, strawberries are not true berries."),
+    ("Sét không bao giờ đánh hai lần vào cùng một chỗ.", "Lightning never strikes the same place twice.", False, "Sét có thể đánh nhiều lần vào cùng một nơi, nhất là chỗ cao.", "Lightning often strikes the same place again, especially tall objects."),
+    ("Con người chỉ dùng 10% bộ não.", "Humans only use 10% of their brain.", False, "Đây là lầm tưởng: gần như mọi vùng não đều được sử dụng.", "It is a myth: nearly all brain regions are used."),
+    ("Lạc đà trữ nước trong bướu.", "Camels store water in their humps.", False, "Bướu lạc đà chứa mỡ, không chứa nước.", "A camel's hump stores fat, not water."),
+    ("Bạch tuộc có ba trái tim.", "An octopus has three hearts.", True, "Hai tim bơm máu qua mang, một tim bơm máu đi khắp cơ thể.", "Two hearts pump blood to the gills, one to the body."),
+    ("Nước luôn sôi ở 100 độ C dù ở độ cao nào.", "Water always boils at 100°C at any altitude.", False, "Càng lên cao áp suất càng thấp nên nước sôi ở nhiệt độ thấp hơn.", "At higher altitude pressure drops, so water boils at a lower temperature."),
+    ("Thủ đô của Úc là Sydney.", "The capital of Australia is Sydney.", False, "Thủ đô của Úc là Canberra.", "The capital of Australia is Canberra."),
+    ("Thủ đô của Thổ Nhĩ Kỳ là Istanbul.", "The capital of Turkey is Istanbul.", False, "Thủ đô của Thổ Nhĩ Kỳ là Ankara.", "The capital of Turkey is Ankara."),
+    ("Cá vàng chỉ nhớ được trong 3 giây.", "Goldfish only remember things for 3 seconds.", False, "Cá vàng có thể nhớ trong nhiều tháng.", "Goldfish can remember things for months."),
+    ("Dơi bị mù.", "Bats are blind.", False, "Dơi nhìn được, và nhiều loài còn dùng siêu âm để định hướng.", "Bats can see, and many also use echolocation."),
+    ("Mặt Trăng tự phát ra ánh sáng.", "The Moon makes its own light.", False, "Mặt Trăng chỉ phản chiếu ánh sáng Mặt Trời.", "The Moon only reflects sunlight."),
+    ("Sao Kim là hành tinh gần Mặt Trời nhất.", "Venus is the closest planet to the Sun.", False, "Hành tinh gần Mặt Trời nhất là Sao Thủy.", "The closest planet to the Sun is Mercury."),
+    ("Gấu trúc thuộc bộ Ăn thịt dù chủ yếu ăn tre.", "Giant pandas belong to the order Carnivora even though they mostly eat bamboo.", True, "Gấu trúc thuộc họ Gấu, bộ Ăn thịt, nhưng ăn tre là chính.", "Pandas are bears, in the order Carnivora, but mostly eat bamboo."),
+    ("Mèo luôn rơi xuống bằng bốn chân an toàn từ mọi độ cao.", "Cats always land safely on their feet from any height.", False, "Mèo biết xoay người khi rơi nhưng vẫn có thể bị thương nặng.", "Cats can twist in the air but can still be badly hurt."),
+    ("Vàng là kim loại dẫn điện tốt nhất.", "Gold is the best electrical conductor among metals.", False, "Bạc dẫn điện tốt nhất trong các kim loại.", "Silver is the best electrical conductor among metals."),
+    ("Cá voi là loài cá.", "Whales are fish.", False, "Cá voi là động vật có vú, thở bằng phổi và nuôi con bằng sữa.", "Whales are mammals: they breathe air and nurse their young."),
+    ("Cá mập là một loài cá.", "Sharks are fish.", True, "Cá mập là cá sụn, thở bằng mang.", "Sharks are cartilaginous fish and breathe with gills."),
+    ("Số 0 là số chẵn.", "Zero is an even number.", True, "Số 0 chia hết cho 2 nên là số chẵn.", "Zero is divisible by 2, so it is even."),
+    ("Chim cánh cụt sống ở Bắc Cực.", "Penguins live at the North Pole.", False, "Chim cánh cụt sống chủ yếu ở Nam bán cầu, không phải Bắc Cực.", "Penguins live mostly in the Southern Hemisphere, not the Arctic."),
+    ("Nhện là côn trùng.", "Spiders are insects.", False, "Nhện có 8 chân, còn côn trùng có 6 chân.", "Spiders have 8 legs, insects have 6."),
+    ("Ngày Nhà giáo Việt Nam là ngày 20 tháng 11.", "Vietnamese Teachers' Day is on November 20.", True, "Ngày 20/11 hằng năm là Ngày Nhà giáo Việt Nam.", "November 20 each year is Teachers' Day in Vietnam."),
+    ("Ếch có thể hấp thụ nước qua da.", "Frogs can absorb water through their skin.", True, "Ếch hấp thụ nước qua da nên ít khi cần uống như chúng ta.", "Frogs take in water through their skin."),
+    ("Ánh sáng đi nhanh hơn âm thanh.", "Light travels faster than sound.", True, "Vì vậy ta thấy tia chớp trước khi nghe tiếng sấm.", "That is why we see lightning before we hear thunder."),
+    ("Cà chua là một loại quả theo thực vật học.", "A tomato is a fruit in botany.", True, "Cà chua có hạt và phát triển từ hoa nên là quả.", "A tomato develops from a flower and holds seeds, so it is a fruit."),
+    ("Cá heo ngủ khi chỉ một nửa bộ não nghỉ.", "Dolphins sleep with only half of their brain resting.", True, "Nhờ vậy cá heo vẫn nổi lên thở khi ngủ.", "That lets them keep surfacing to breathe while asleep."),
+]
+ANH10 = [  # (nghĩa tiếng Việt, câu tiếng Anh, ghi chú)
+    ("Bạn khỏe không?", "How are you?", ""), ("Cảm ơn bạn rất nhiều", "Thank you very much", ""), ("Xin lỗi, tôi đến muộn", "Sorry, I am late", ""),
+    ("Bạn có thể giúp tôi không?", "Can you help me?", ""), ("Tôi không hiểu", "I do not understand", ""), ("Bạn có thể nói chậm hơn không?", "Can you speak more slowly?", ""),
+    ("Cái này giá bao nhiêu?", "How much is this?", ""), ("Tôi muốn một ly nước", "I would like a glass of water", ""), ("Nhà vệ sinh ở đâu?", "Where is the bathroom?", ""),
+    ("Rất vui được gặp bạn", "Nice to meet you", ""), ("Hẹn gặp lại bạn", "See you later", ""), ("Chúc một ngày tốt lành", "Have a nice day", ""),
+    ("Tôi đang học tiếng Anh", "I am learning English", ""), ("Bạn tên là gì?", "What is your name?", ""), ("Tôi đến từ Việt Nam", "I am from Vietnam", ""),
+    ("Bạn làm nghề gì?", "What do you do?", ""), ("Tôi đói rồi", "I am hungry", ""), ("Làm ơn cho tôi hoá đơn", "Could I have the bill, please?", ""),
+    ("Chúc mừng sinh nhật", "Happy birthday", ""), ("Chúc may mắn", "Good luck", ""), ("Đừng lo lắng", "Do not worry", ""),
+    ("Tôi nghĩ vậy", "I think so", ""), ("Tôi đồng ý", "I agree", ""), ("Không sao đâu", "It is okay", ""),
+    ("Bạn đang ở đâu?", "Where are you?", ""), ("Mấy giờ rồi?", "What time is it?", ""), ("Tôi bị lạc đường", "I am lost", ""),
+    ("Chúc ngủ ngon", "Sleep well", ""), ("Hôm nay trời đẹp quá", "The weather is lovely today", ""),
+]
+
+
+def quyluat(seed):
+    """Dãy số theo quy luật, tự sinh và tự tính đáp án: (dãy hiển thị, đáp án, mô tả quy luật, mức khó)."""
+    r = random.Random(seed); k = seed % 5
+    if k == 0:
+        a, d = r.randint(2, 9), r.randint(2, 7); s = [a + d * i for i in range(5)]; return s[:4], s[4], f'cộng thêm {d} mỗi lần', 1
+    if k == 1:
+        a, q = r.randint(1, 4), r.choice([2, 3]); s = [a * q ** i for i in range(5)]; return s[:4], s[4], f'nhân với {q} mỗi lần', 2
+    if k == 2:
+        a = r.randint(1, 4); s = [(a + i) ** 2 for i in range(5)]; return s[:4], s[4], 'các số chính phương liên tiếp', 3
+    if k == 3:
+        x, y = r.randint(1, 4), r.randint(2, 6); s = [x, y]
+        while len(s) < 6: s.append(s[-1] + s[-2])
+        return s[:5], s[5], 'mỗi số bằng tổng hai số đứng trước', 4
+    a, d1, d2 = r.randint(3, 9), r.randint(2, 5), r.randint(1, 3); s = [a]
+    for i in range(5): s.append(s[-1] + (d1 if i % 2 == 0 else -d2))
+    return s[:5], s[5], f'lần lượt cộng {d1}, trừ {d2}', 5
+
+
+def _single(th, out, title, emoji, ask_text, qmain, qsub, amain, asub, a_vi, a_en, think, caption, cid, afg='#0B6B3A', header='ĐÁP ÁN · ANSWER', top=None, bot_slow=False):
+    tr = Track()
+    ask = say(ask_text, CAT_VOICES, 'ask', '+4%', '+22Hz')
+    a1 = say(a_vi, CAT_VOICES, 'a1', '+6%', '+22Hz')
+    a2 = say(a_en, BOT_VOICES, 'a2', '-12%' if bot_slow else '+0%', '-6Hz', robot=not bot_slow)
+    lg = get_laugh(C, 2.4)
+    tr.put(sfx_pop(), 0.0); e = tr.put(ask, 0.25, 'cat')
+    t_cd = e + 0.15; tr.put(M.synth_ticks(think), t_cd)
+    t_rv = t_cd + think; tr.put(sfx_ting(), t_rv); tr.put(sfx_win(), t_rv + 0.05)
+    e = tr.put(a1, t_rv + 0.1, 'cat'); e = tr.put(a2, e + 0.1, 'bot')
+    t_end = e + 0.1; tr.put(lg * 0.9, t_end, 'cat'); total = t_end + 2.5
+    audio, env = tr.mix(total)
+    st = Stage(th, f'{title} · TẬP {C + 1}', emoji, total, env, tr.speak)
+    q_card = card(qmain, qsub, th[0], th[1], th[4], th[5], th[6], tail='left')
+    a_card = card(amain, asub, th[0], th[1], '#FFFFFF', afg, '#1971C2', header=header, accent='#2BAE66', top=top, maxh=600, max_size=110)
+    end_p = pill('Bạn đoán đúng không?', 44, th[6], '#FFFFFF', '⏱️')
+    end_e = pill(f'Tiếp theo {teaser()[0]} · {teaser()[1]}', 32, '#FFFFFF', th[5], '⏰')
+    cdl = pill('Gõ đáp án vào bình luận!', 32, '#FFFFFF', th[5]); CY = 660
+
+    def draw(t):
+        im = st.base(t)
+        if t < t_rv: paste_c(im, q_card, W / 2, CY, 0.93 + 0.07 * ease_back(t / 0.32))
+        else:
+            u = t - t_rv; paste_c(im, a_card, W / 2, CY, 0.5 + 0.5 * ease_back(u / 0.32)); confetti(im, u, C + 3)
+        if t_cd <= t < t_rv:
+            u = t - t_cd; frac = u - int(u)
+            paste_c(im, ring(1 - u / think, max(1, int(math.ceil(think - u))), st.th[6], '#FFFFFF'), W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
+            paste_c(im, cdl, W / 2, 1150)
+        if t >= t_end:
+            u = t - t_end; paste_c(im, end_p, W / 2, 1050, ease_back(u / 0.3)); paste_c(im, end_e, W / 2, 1135, ease_back((u - 0.15) / 0.3))
+        cat = '😺' if t < t_cd else '😼' if t < t_rv else '😸' if t < t_end else '😹'
+        st.char(im, 'cat', cat, t, boost=1.5 if t >= t_end else 1.0)
+        st.char(im, 'bot', '🤖', t, over='🤔' if t_cd <= t < t_rv else '👏' if t >= t_rv else None)
+        return im
+
+    encode(draw, total, audio, out, shots=(0.15, t_cd + 2.0, t_rv + 0.6, t_end + 1.2))
+    return caption, cid
+
+
+def _vn_days():
+    return int((time.time() + 7 * 3600) // 86400) - int(time.mktime(time.strptime('2026-11-18', '%Y-%m-%d')) // 86400)
+
+
+def make_dungsai(th, out, D):
+    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else C)) % len(DUNGSAI)
+    vi, en, ok, ev, ee = DUNGSAI[i]
+    ans = 'ĐÚNG' if ok else 'SAI'; ae = 'TRUE' if ok else 'FALSE'
+    cap = (f"🤔 Đúng hay Sai? {vi}\n🤔 True or False? {en}\n\n⏱️ Bạn đoán mấy giây? Gõ ĐÚNG hoặc SAI trong bình luận!\n\n"
+           "#SongVuiMoiNgay #DungHaySai #TrueOrFalse #KienThucVui #HocTiengAnh")
+    return _single(th, out, 'ĐÚNG HAY SAI?', '🤔', 'Đúng hay sai? ' + vi, vi, en, ans, f'{ae} · {ev}', f'Đáp án là: {ans}. {ev}', f'{ae}! {ee}', min(THINK, 6.0), cap, f'ds-{i}',
+                   afg='#0B6B3A' if ok else '#C92A2A', header='ĐÁP ÁN · ANSWER')
+
+
+def make_quyluat(th, out, D):
+    seq, ans, rule, lv = quyluat(int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else C)) + 11)
+    shown = ',  '.join(str(x) for x in seq) + ',  ?'
+    spoken = ', '.join(str(x) for x in seq)
+    cap = (f"🔢 Quy luật nào đây? Mức {lv}/5\n{shown}\n\n⏱️ Số tiếp theo là gì? Gõ đáp án trong bình luận!\n\n"
+           "#SongVuiMoiNgay #QuyLuat #IQ #BrainTeaser #DoVui")
+    return _single(th, out, 'QUY LUẬT NÀO ĐÂY?', '🔢', f'Quy luật nào đây? Mức {lv} trên 5. Dãy số: {spoken}. Số tiếp theo là gì?', shown, f'Level {lv}/5 · What comes next?', str(ans), f'Quy luật: {rule}', f'Số tiếp theo là {ans}. Quy luật: {rule}.',
+                   f'The next number is {ans}!', min(THINK + 2, 10.0), cap, f'ql-{seq[0]}-{ans}', afg='#0B6B3A', header='ĐÁP ÁN · QUY LUẬT', top='Số tiếp theo?')
+
+
+def make_tienganh(th, out, D):
+    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else C)) % len(ANH10)
+    vi, en, _ = ANH10[i]
+    cap = (f"🗣️ 10 giây tiếng Anh: \"{vi}\" nói thế nào?\n\nĐáp án trong video, nói theo Robot Tây nhé! Bạn nhớ được câu này không?\n\n"
+           "#SongVuiMoiNgay #TiengAnhMoiNgay #HocTiengAnh #EnglishInUse #Shorts")
+    return _single(th, out, '10 GIÂY TIẾNG ANH', '💬', f'Nói câu này bằng tiếng Anh: {vi}', vi, 'Say it in English!', en, vi, f'Tiếng Anh là: {en}. Nói theo Robot nhé!', f'{en}. Repeat after me: {en}.', 5.0, cap, f'en-{i}', afg='#0B6B3A',
+                   header='TIẾNG ANH · ENGLISH', top=vi, bot_slow=True)
+
+
+def make_thu(th, out, D):
+    """Khung giờ thử nghiệm: xoay vòng 3 loạt mới theo ngày."""
+    os.environ['ROT'] = '1'
+    return [make_dungsai, make_quyluat, make_tienganh][_vn_days() % 3](th, out, D)
+
+
 # ------------------------------------------------------------------ Loạt 3: Đuổi hình bắt chữ bằng emoji
 def make_emoji(th, out, D):
     if D.get('emoji'):
@@ -631,7 +773,7 @@ def build(kind, c, D):
     th = list(M.THEMES[(C * 5) % len(M.THEMES)])
     if th[0] in ('Pacifico.ttf', 'DancingScript.ttf', 'Lobster.ttf', 'Pattaya.ttf'): th[0], th[1] = 'Baloo2.ttf', 700  # chữ đố cần dễ đọc
     out = f'{WORK}/final.mp4'
-    cap, cid = {'meo': make_meo, 'odd': make_odd, 'emoji': make_emoji, 'tuan': make_tuan}[kind](th, out, D)
+    cap, cid = {'meo': make_meo, 'odd': make_odd, 'emoji': make_emoji, 'tuan': make_tuan, 'dungsai': make_dungsai, 'quyluat': make_quyluat, 'tienganh': make_tienganh, 'thu': make_thu}[kind](th, out, D)
     if D.get('q_vi'):  # câu nói vui của ngày đưa vào chú thích
         qs = f"😹 Mèo Vui: “{str(D['q_vi']).strip()}”" + (f"\n🤖 Robot Tây: “{str(D['q_en']).strip()}”" if D.get('q_en') else '')
         head, tags = cap.rsplit('\n\n#', 1); cap = f"{head}\n\n{qs}\n\n#{tags}"

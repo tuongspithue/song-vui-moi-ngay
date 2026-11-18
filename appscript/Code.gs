@@ -4,11 +4,11 @@
  *  Các tab: CAU_DO (câu đố + câu Robot đoán sai), EMOJI (đuổi hình bắt chữ), CAU_NOI (câu nói vui, đưa vào chú thích).
  *  Thêm/sửa/xoá dòng thoải mái; bỏ tích cột "Dùng" = tạm không đăng; bot luôn chọn dòng có "Số lần đã đăng" thấp nhất.
  *  Cột "Mùa" (dd/MM-dd/MM, ví dụ 19/11-20/11): dòng đó chỉ đăng trong khoảng ngày ấy và được ưu tiên đăng trước.
- *  Lịch: 6:30 Tìm emoji khác biệt · 11:45 Mèo đố · 17:00 Đuổi hình bắt chữ · 19:30 Mèo đố. */
+ *  Lịch: 6:30 Tìm emoji khác biệt · 11:45 Mèo đố · 17:00 Đuổi hình bắt chữ · 19:30 Thử nghiệm xoay vòng (Đúng hay Sai / Quy luật / 10 giây tiếng Anh). */
 var CFG = {
   GH_REPO: 'tuongspithue/song-vui-moi-ngay',
   TIMES: [[6, 30], [11, 45], [17, 0], [19, 30]],
-  KINDS: ['odd', 'meo', 'emoji', 'meo'],   // loạt ứng với từng giờ ở TIMES
+  KINDS: ['odd', 'meo', 'emoji', 'thu'],   // loạt ứng với từng giờ ở TIMES
   THINK: 8,                               // số giây cho người xem suy nghĩ (4-12)
   EVENT: 'dang_tin'
 };

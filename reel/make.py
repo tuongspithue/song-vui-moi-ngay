@@ -415,7 +415,7 @@ def main():
     if not PREVIEW and not FORCE and now - float(st.get('last_time', 0)) < 40 * 60:
         print('Vừa đăng cách đây dưới 40 phút, bỏ qua (dùng force để ép).'); return
     kind = str(P.get('kind') or os.environ.get('IN_KIND') or '').strip().lower()
-    if kind in ('meo', 'odd', 'emoji', 'tuan'):  # BẢN MỚI: gameshow Mèo Vui + Robot Tây (reel/show.py)
+    if kind in ('meo', 'odd', 'emoji', 'tuan', 'dungsai', 'quyluat', 'tienganh', 'thu'):  # BẢN MỚI: gameshow Mèo Vui + Robot Tây (reel/show.py)
         import show
         D = P.get('data') or {}
         if isinstance(D, str): D = json.loads(D or '{}')
