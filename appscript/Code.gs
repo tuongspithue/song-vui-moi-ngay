@@ -163,6 +163,7 @@ function _send(preview, force, kind) {
     data.id = e.d[0]; data.emoji = e.d[1]; data.kind = e.d[2]; data.vi = e.d[3]; data.en = e.d[4]; data.mean = e.d[5];
     data.g_en = e.d[6] || ''; data.g_vi = e.d[7] || '';
   }
+  if (kind === 'tuan') ids = 'tuan';  // tổng hợp 5 câu đố trong tuần, bot tự lấy từ lịch sử đã đăng
   var code = _dispatch({ page_id: pid || '', preview: String(preview), force: String(force), kind: kind, ids: ids, data: data });
   if (code === 204 && !preview) marks.forEach(_mark);
   return code;
@@ -180,6 +181,9 @@ function POST_FORCE() { return _send(false, true); }
 function POST_MEO() { return _send(false, true, 'meo'); }
 function POST_EMOJI() { return _send(false, true, 'emoji'); }
 function POST_ODD() { return _send(false, true, 'odd'); }
+/** Câu đố của tuần (Chủ nhật 20:45): tổng hợp 5 câu Mèo đố đã đăng trong tuần. */
+function POST_TUAN() { return _send(false, false, 'tuan'); }
+function PREVIEW_TUAN() { return _send(true, false, 'tuan'); }
 
 /** Cài 4 lịch đăng mỗi ngày (chạy 1 lần, hoặc sau khi đổi giờ ở CFG.TIMES). */
 function SETUP_TRIGGERS() {
@@ -187,6 +191,7 @@ function SETUP_TRIGGERS() {
   CFG.TIMES.forEach(function (hm) {
     ScriptApp.newTrigger('POST_NOW').timeBased().atHour(hm[0]).nearMinute(hm[1]).everyDays(1).inTimezone('Asia/Ho_Chi_Minh').create();
   });
-  _log('Đã cài ' + CFG.TIMES.length + ' lịch đăng mỗi ngày');
+  ScriptApp.newTrigger('POST_TUAN').timeBased().onWeekDay(ScriptApp.WeekDay.SUNDAY).atHour(20).nearMinute(45).inTimezone('Asia/Ho_Chi_Minh').create();
+  _log('Đã cài ' + CFG.TIMES.length + ' lịch đăng mỗi ngày + Câu đố của tuần Chủ nhật 20:45');
 }
 function SHOW_LOG() { Logger.log(_props().getProperty('LOG')); }

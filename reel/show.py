@@ -457,6 +457,76 @@ def make_odd(th, out, D):
             "Spot the odd emoji! 3 levels, how many can you find?\n\n#SongVuiMoiNgay #TimDiemKhacBiet #OddOneOut #EmojiChallenge #BrainTeaser"), 'odd-' + '-'.join(lv['a'] for lv in levels)
 
 
+# ------------------------------------------------------------------ Loạt 4: Câu đố của tuần (tổng hợp 5 câu, chạy Chủ nhật)
+def make_tuan(th, out, D):
+    data = {x['id']: x for x in load_v2()['riddles']}
+    ids = [i for i in (D.get('recap_ids') or []) if i in data and data[i].get('vi_q')]
+    rng = random.Random(C * 13 + 7)
+    rest = [x for x in data.values() if x['id'] not in ids and not x.get('season')]
+    rng.shuffle(rest)
+    rs = [data[i] for i in ids][:5]
+    rs += rest[:max(0, 5 - len(rs))]
+    NT = 6.0  # giây suy nghĩ mỗi câu (gọn để cả video khoảng 70-80 giây)
+    tr = Track(); t = 0.0
+    intro = say('Câu đố của tuần! Năm câu liên tiếp, bạn trả lời được mấy câu?', CAT_VOICES, 'in', '+6%', '+22Hz')
+    tr.put(sfx_pop(), 0.0); e = tr.put(intro, 0.25, 'cat'); t = e + 0.5
+    segs = []
+    for i, r in enumerate(rs):
+        ans_vi, ans_en = r['vi_a'].rstrip('.'), (r.get('en_a') or '').rstrip('.')
+        vo = bool(r.get('vi_only')) or not r.get('en_q')
+        ask = say(f"Câu {i + 1}. " + r['vi_q'], CAT_VOICES, f'q{i}', '+6%', '+22Hz')
+        a1 = say('Đáp án là: ' + ans_vi + '.', CAT_VOICES, f'a{i}', '+6%', '+22Hz')
+        sg = dict(r=r, vo=vo, ans_vi=ans_vi, ans_en=ans_en, t0=t)
+        tr.put(sfx_whoosh(), t); e = tr.put(ask, t + 0.2, 'cat')
+        sg['cd'] = e + 0.15; tr.put(M.synth_ticks(NT), sg['cd'])
+        sg['rv'] = sg['cd'] + NT; tr.put(sfx_ting(), sg['rv']); tr.put(sfx_win(), sg['rv'] + 0.05)
+        e = tr.put(a1, sg['rv'] + 0.1, 'cat')
+        if ans_en and not vo:
+            a2 = say(ans_en + '!', BOT_VOICES, f'b{i}', '+0%', '-6Hz', robot=True); e = tr.put(a2, e + 0.1, 'bot')
+        sg['t1'] = e + 0.9; t = sg['t1']; segs.append(sg)
+    t_end = t
+    outv = say('Bạn trả lời đúng mấy câu? Hẹn gặp lại nhé!', CAT_VOICES, 'out', '+6%', '+22Hz')
+    e = tr.put(outv, t_end + 0.1, 'cat'); tr.put(get_laugh(C, 1.6) * 0.8, e, 'cat'); total = e + 1.9
+    audio, env = tr.mix(total)
+    st = Stage(th, 'CÂU ĐỐ CỦA TUẦN', '🏅', total, env, tr.speak)
+    n_ = len(segs)
+    for i, sg in enumerate(segs):
+        r = sg['r']
+        sg['q'] = card(r['vi_q'], '' if sg['vo'] else r['en_q'], th[0], th[1], th[4], th[5], th[6], tail='left')
+        sg['a'] = card(sg['ans_vi'], sg['ans_en'], th[0], th[1], '#FFFFFF', '#0B6B3A', '#1971C2', header='ĐÁP ÁN · ANSWER', accent='#2BAE66', top=r['vi_q'], maxh=600, max_size=110)
+        sg['tag'] = pill(f'CÂU {i + 1}/{n_}', 40, th[6], '#FFFFFF')
+    ic = card('5 câu đố của tuần', 'Weekly riddles · Can you get them all?', th[0], th[1], th[4], th[5], th[6], maxh=520)
+    end_p = pill('Bạn đúng mấy câu?', 44, th[6], '#FFFFFF', '🏅'); end_e = pill(f'Tiếp theo {teaser()[0]} · {teaser()[1]}', 32, '#FFFFFF', th[5], '⏰')
+    cdl = pill('Gõ đáp án vào bình luận!', 32, '#FFFFFF', th[5]); CY = 660
+
+    def draw(t):
+        im = st.base(t); cat = '😺'; over = None
+        if t < segs[0]['t0']:
+            paste_c(im, ic, W / 2, CY, 0.93 + 0.07 * ease_back(t / 0.32))
+        elif t < t_end:
+            sg = max((s_ for s_ in segs if t >= s_['t0']), key=lambda s_: s_['t0']); u = t - sg['t0']
+            paste_c(im, sg['tag'], W / 2, 330, ease_back(u / 0.3))
+            if t < sg['rv']:
+                paste_c(im, sg['q'], W / 2, CY, 0.93 + 0.07 * ease_back(u / 0.32))
+                if t >= sg['cd']:
+                    v = t - sg['cd']; frac = v - int(v)
+                    paste_c(im, ring(1 - v / NT, max(1, int(math.ceil(NT - v))), st.th[6], '#FFFFFF'), W / 2, 1330, 1 + 0.16 * max(0, 1 - frac / 0.22))
+                    paste_c(im, cdl, W / 2, 1150); cat = '😼'; over = '🤔'
+            else:
+                paste_c(im, sg['a'], W / 2, CY, 0.5 + 0.5 * ease_back((t - sg['rv']) / 0.32)); confetti(im, t - sg['rv'], C + 3); cat = '😸'; over = '👏'
+        else:
+            u = t - t_end
+            paste_c(im, end_p, W / 2, 1050, ease_back(u / 0.3)); paste_c(im, end_e, W / 2, 1135, ease_back((u - 0.15) / 0.3)); cat = '😹'
+        st.char(im, 'cat', cat, t, boost=1.5 if t >= t_end else 1.0); st.char(im, 'bot', '🤖', t, over=over)
+        return im
+
+    s0, s2 = segs[0], segs[min(2, n_ - 1)]
+    encode(draw, total, audio, out, shots=(0.2, s0['t0'] + 1.0, s0['cd'] + 2.4, s0['rv'] + 0.8, s2['rv'] + 0.8, t_end + 1.0))
+    qs = '\n'.join(f"{i + 1}. {sg['r']['vi_q']}" for i, sg in enumerate(segs))
+    return (f"🏅 Câu đố của tuần: 5 câu liên tiếp, bạn trả lời được mấy câu?\n\n{qs}\n\n⏱️ Gõ số câu bạn đoán đúng nhé! / How many did you get?\n\n"
+            f"#SongVuiMoiNgay #CauDoCuaTuan #CauDoVui #Riddle #HocTiengAnh"), 'tuan-' + time.strftime('%Y%m%d', time.gmtime(time.time() + 7 * 3600))
+
+
 # ------------------------------------------------------------------ Loạt 3: Đuổi hình bắt chữ bằng emoji
 def make_emoji(th, out, D):
     if D.get('emoji'):
@@ -561,7 +631,7 @@ def build(kind, c, D):
     th = list(M.THEMES[(C * 5) % len(M.THEMES)])
     if th[0] in ('Pacifico.ttf', 'DancingScript.ttf', 'Lobster.ttf', 'Pattaya.ttf'): th[0], th[1] = 'Baloo2.ttf', 700  # chữ đố cần dễ đọc
     out = f'{WORK}/final.mp4'
-    cap, cid = {'meo': make_meo, 'odd': make_odd, 'emoji': make_emoji}[kind](th, out, D)
+    cap, cid = {'meo': make_meo, 'odd': make_odd, 'emoji': make_emoji, 'tuan': make_tuan}[kind](th, out, D)
     if D.get('q_vi'):  # câu nói vui của ngày đưa vào chú thích
         qs = f"😹 Mèo Vui: “{str(D['q_vi']).strip()}”" + (f"\n🤖 Robot Tây: “{str(D['q_en']).strip()}”" if D.get('q_en') else '')
         head, tags = cap.rsplit('\n\n#', 1); cap = f"{head}\n\n{qs}\n\n#{tags}"
