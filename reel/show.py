@@ -34,6 +34,18 @@ ODD_PAIRS = [
 ]
 
 
+SCHEDULE = [(6, 30, 'odd'), (11, 45, 'meo'), (17, 0, 'emoji'), (19, 30, 'meo')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
+KIND_VI = {'odd': 'Tìm emoji khác biệt', 'meo': 'Mèo đố', 'emoji': 'Đuổi hình bắt chữ'}
+
+
+def teaser():
+    """Hẹn tập kế tiếp theo lịch thật: (giờ, tên loạt)."""
+    t = time.gmtime(time.time() + 7 * 3600); now = t.tm_hour * 60 + t.tm_min
+    for h, m, k in SCHEDULE:
+        if h * 60 + m > now + 20: return f"{h}:{m:02d}", KIND_VI[k]
+    h, m, k = SCHEDULE[0]; return f"{h}:{m:02d} mai", KIND_VI[k]
+
+
 def load_v2(): return json.load(open(os.path.join(M.ROOT, 'data', 'content_v2.json'), encoding='utf8'))
 
 
@@ -332,7 +344,7 @@ def make_meo(th, out, D):
     e = tr.put(a1, t_rv - 0.35, 'cat'); e = tr.put(a2, max(e, t_rv + 0.6) + 0.1, 'bot')
     t_end = e + 0.1; tr.put(lg * 0.9, t_end, 'cat'); total = t_end + 2.5
     audio, env = tr.mix(total)
-    st = Stage(th, 'MÈO ĐỐ', '😺', total, env, tr.speak)
+    st = Stage(th, f'MÈO ĐỐ · TẬP {C + 1}', '😺', total, env, tr.speak)
     q_card = card(r['vi_q'], '' if vo else r['en_q'], th[0], th[1], th[4], th[5], th[6], tail='left')
     g_card = card(g_en, g_vi, BOT_FONT, None, BOT_FILL, BOT_FG, BOT_SUB, tail='right', maxh=480)
     a_card = card(ans_vi, ans_en, th[0], th[1], '#FFFFFF', '#0B6B3A', '#1971C2', header='ĐÁP ÁN · ANSWER', accent='#2BAE66', top=r['vi_q'], maxh=600, max_size=110)
@@ -342,7 +354,7 @@ def make_meo(th, out, D):
         end_e = pill('Đến lượt bạn! · Your turn!', 32, '#FFFFFF', th[5])
     else:
         end_p = pill('Bạn đoán mất mấy giây?', 44, th[6], '#FFFFFF', '⏱️')
-        end_e = pill('How fast were you?', 32, '#FFFFFF', th[5])
+        end_e = pill(f'Tiếp theo {teaser()[0]} · {teaser()[1]}', 32, '#FFFFFF', th[5], '⏰')
     cdl = pill('Gõ đáp án vào bình luận!', 32, '#FFFFFF', th[5])
     CY = 660
 
@@ -392,7 +404,7 @@ def make_odd(th, out, D):
     v = say('Bạn tìm được mấy màn?', CAT_VOICES, 'end', '+6%', '+22Hz'); b = say('How many did you find?', BOT_VOICES, 'endb', '+0%', '-6Hz', robot=True)
     t_end = t; e = tr.put(v, t_end + 0.1, 'cat'); e = tr.put(b, e + 0.1, 'bot'); tr.put(get_laugh(C, 1.6) * 0.7, e, 'cat'); total = e + 1.7
     audio, env = tr.mix(total)
-    st = Stage(th, 'TÌM EMOJI KHÁC BIỆT', '🔍', total, env, tr.speak, char_y=1460, char_size=190)
+    st = Stage(th, f'TÌM EMOJI KHÁC BIỆT · TẬP {C + 1}', '🔍', total, env, tr.speak, char_y=1460, char_size=190)
     sub = pill('Bạn tìm ra trong vài giây?  Can you spot it?', 28, '#FFFFFF', th[5])
     GX, GY, GS = 100, 395, 880
     panel = Image.new('RGBA', (GS + 60, GS + 60), (0, 0, 0, 0)); ImageDraw.Draw(panel).rounded_rectangle((0, 0, GS + 59, GS + 59), 50, fill=(255, 255, 255, 215))
@@ -407,6 +419,7 @@ def make_odd(th, out, D):
         dim = full.copy(); dim.putalpha(dim.getchannel('A').point(lambda v: int(v * 0.25))); lv['dim'] = dim
         lv['tag'] = pill(f"MÀN {levels.index(lv) + 1}/3", 40, th[6], '#FFFFFF')
     endc = card('Bạn tìm được mấy màn?', 'How many did you find?', th[0], th[1], th[4], th[5], th[6], maxh=420)
+    tz = pill(f'Tiếp theo {teaser()[0]} · {teaser()[1]}', 32, '#FFFFFF', th[5], '⏰'); fz = pill('Theo dõi để không lỡ!', 36, th[6], '#FFFFFF', '🔔')
 
     def draw(t):
         im = st.base(t)
@@ -433,6 +446,7 @@ def make_odd(th, out, D):
             paste_c(im, lv['tag'], W / 2, 1460, 0.6 + 0.4 * ease_back(u / 0.3))
         else:
             paste_c(im, endc, W / 2, 800, 0.5 + 0.5 * ease_back((t - t_end) / 0.3))
+            paste_c(im, tz, W / 2, 1090, ease_back((t - t_end - 0.4) / 0.3)); paste_c(im, fz, W / 2, 1175, ease_back((t - t_end - 0.6) / 0.3))
         rev = any(lv['t1'] <= t < lv['t1'] + 1.3 for lv in levels)
         st.char(im, 'cat', '😹' if t >= t_end + 2 else '😸' if rev else '😺', t, x=200); st.char(im, 'bot', '🤖', t, over='👏' if rev else '🤔', x=880)
         return im
@@ -468,7 +482,7 @@ def make_emoji(th, out, D):
     e = tr.put(a1, t_rv + 0.25, 'cat'); e = tr.put(a2, e + 0.15, 'bot')
     t_end = e; tr.put(get_laugh(C, 1.8) * 0.8, t_end, 'cat'); total = t_end + 1.9
     audio, env = tr.mix(total)
-    st = Stage(th, 'ĐUỔI HÌNH BẮT CHỮ', '🧩', total, env, tr.speak)
+    st = Stage(th, f'ĐUỔI HÌNH BẮT CHỮ · TẬP {C + 1}', '🧩', total, env, tr.speak)
     chip = pill(f"{kv} · {len(words)} tiếng  ·  {ke}", 30, '#FFFFFF', th[5])
     PH = 290
     panel = Image.new('RGBA', (940, PH), (0, 0, 0, 0)); ImageDraw.Draw(panel).rounded_rectangle((0, 0, 939, PH - 1), 54, fill=(255, 255, 255, 225))
@@ -506,7 +520,7 @@ def make_emoji(th, out, D):
     g_card = card(g_en, g_vi, BOT_FONT, None, BOT_FILL, BOT_FG, BOT_SUB, w=600, maxh=250, tail='right', max_size=48, sub_ratio=0.74)
     m_card = card(q['en'], q['mean'], M.TAGFONT, None, '#FFFFFF', '#0B6B3A', '#1971C2', maxh=max(170, 1196 - top), max_size=46, sub_ratio=0.8)
     MY = top + (m_card.height - 192) / 2; GY2 = min(1090, top + 16 + (g_card.height - 192) / 2)
-    end_p = pill('Bạn đoán ra không?', 29, th[6], '#FFFFFF')
+    end_p = pill('Theo dõi để không lỡ!', 29, th[6], '#FFFFFF', '🔔')
 
     def draw(t):
         im = st.base(t)
@@ -526,7 +540,8 @@ def make_emoji(th, out, D):
         if t >= t_rv:
             u = t - t_rv
             paste_c(im, m_card, W / 2, MY, 0.5 + 0.5 * ease_back((u - 0.2) / 0.3)); confetti(im, u, C + 9)
-        if t >= t_end: paste_c(im, end_p, W / 2, 1330, ease_back((t - t_end) / 0.3))
+        if t >= t_end:
+            paste_c(im, end_p, W / 2, 1330, ease_back((t - t_end) / 0.3))
         cat = '😺' if t < t_cd else '😼' if t < t_rv else '😸' if t < t_end else '😹'
         st.char(im, 'cat', cat, t, boost=1.5 if t >= t_end else 1); st.char(im, 'bot', '🤖', t, over='🤔' if t_cd <= t < t_rv else '👏' if t >= t_rv else None)
         return im
