@@ -430,6 +430,11 @@ def main():
             D['recap_ids'] = ids[:5]
         out, caption, cid = show.build(kind, c, D)
         open(f'{WORK}/caption.txt', 'w', encoding='utf8').write(caption)
+        try:  # bản để đăng thủ công lên YouTube Shorts: tiêu đề (tối đa 100 ký tự) + mô tả
+            first = next((l.strip() for l in caption.splitlines() if l.strip()), 'Sống vui mỗi ngày')
+            ttl = (first[:88] + ' #Shorts').strip()
+            open(f'{WORK}/youtube.txt', 'w', encoding='utf8').write('TIÊU ĐỀ:\n' + ttl + '\n\nMÔ TẢ:\n' + caption + '\n\n#Shorts\n')
+        except Exception as e: print('youtube.txt lỗi', e)
         print('Tin số', c, 'loạt', kind, cid); print(caption)
         if PREVIEW:
             print('PREVIEW: không đăng, không đổi trạng thái.'); return
