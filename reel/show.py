@@ -244,6 +244,17 @@ def ring(p, num, fg, bg, r=108):
     return im
 
 
+_MC = {}
+
+
+def _mascot(who, ch, k, size):
+    """Linh vật vẽ riêng (reel/mascot.py), lưu đệm theo cảm xúc và độ mở miệng."""
+    import mascot
+    key = (who, ch, int(min(1.0, k) * 6), size)
+    if key not in _MC: _MC[key] = mascot.draw(who, ch, int(min(1.0, k) * 6) / 6.0, size)
+    return _MC[key]
+
+
 class Stage:
     """Nền chuyển động + thanh tiến độ + tên loạt + hai nhân vật."""
     def __init__(self, th, title, title_emoji, total, env, speak, chars=True, char_y=1330, char_size=270):
@@ -279,7 +290,7 @@ class Stage:
         k = self.talk(who, t) * boost
         bob = 6 * math.sin(t * 2.2 + (0 if who == 'cat' else 1.7))
         d = ImageDraw.Draw(im); d.ellipse((x - size * 0.38, y + size * 0.47, x + size * 0.38, y + size * 0.57), fill=(0, 0, 0, 45))
-        e = M.emoji_img(ch, size)
+        e = _mascot(who, ch, k, size)
         if e is not None:
             sx, sy = 1 + 0.05 * k, 1 + 0.13 * k
             e2 = e.resize((int(e.width * sx), int(e.height * sy)), Image.BILINEAR) if k > 0.03 else e
