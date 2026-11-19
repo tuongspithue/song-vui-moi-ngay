@@ -26,7 +26,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11', cache: pip, cache-dependency-path: reel/requirements.txt }
-      - run: sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg fonts-noto-color-emoji
+      - name: Cài ffmpeg và font (tự thử lại)
+        run: |
+          for i in 1 2 3 4; do
+            if command -v ffmpeg >/dev/null && fc-list | grep -qi "noto color emoji"; then break; fi
+            sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 update || true
+            sudo apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 install -y --no-install-recommends ffmpeg fonts-noto-color-emoji && break
+            echo "Lần $i lỗi, thử lại sau 20 giây"; sleep 20
+          done
+          command -v ffmpeg
       - run: pip install -r reel/requirements.txt
       - name: Dựng video và đăng
         env:
