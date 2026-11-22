@@ -248,11 +248,21 @@ def ring(p, num, fg, bg, r=108):
 _MC = {}
 
 
-def _mascot(who, ch, k, size):
-    """Linh vật vẽ riêng (reel/mascot.py), lưu đệm theo cảm xúc và độ mở miệng."""
+def outfit_of(who):
+    """Bộ đồ theo ngày (giờ Việt Nam): Mèo và Robot mỗi ngày một kiểu, hai bạn không bao giờ trùng nhau."""
     import mascot
-    key = (who, ch, int(min(1.0, k) * 6), size)
-    if key not in _MC: _MC[key] = mascot.draw(who, ch, int(min(1.0, k) * 6) / 6.0, size)
+    n = len(mascot.OUTFITS)
+    ov = os.environ.get('OUTFIT')
+    day = int(ov) if ov not in (None, '') else _vn_days()
+    return day % n if who == 'cat' else (day * 5 + 7) % n
+
+
+def _mascot(who, ch, k, size):
+    """Linh vật vẽ riêng (reel/mascot.py), lưu đệm theo cảm xúc, độ mở miệng và bộ đồ."""
+    import mascot
+    of = outfit_of(who)
+    key = (who, ch, int(min(1.0, k) * 6), size, of)
+    if key not in _MC: _MC[key] = mascot.draw(who, ch, int(min(1.0, k) * 6) / 6.0, size, of)
     return _MC[key]
 
 
