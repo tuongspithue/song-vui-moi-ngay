@@ -11,6 +11,7 @@ import make as M
 W, H, FPS, SR, WORK = 1080, 1920, 30, M.SR, M.WORK
 KIND = os.environ.get('KIND', 'meo')
 C = int(os.environ.get('COUNTER', '0'))
+KC = C  # số tin ĐÃ ĐĂNG của riêng loạt này (make.py truyền vào) - dùng để chọn nội dung lần lượt, không trùng khi đăng nhiều tin/ngày
 CAT_VOICES = ['vi-VN-HoaiMyNeural', 'vi-VN-NamMinhNeural']
 BOT_VOICES = ['en-US-GuyNeural', 'en-US-AndrewNeural', 'en-GB-SoniaNeural']
 BOT_FONT = 'ChakraPetch-Bold.ttf'
@@ -34,8 +35,8 @@ ODD_PAIRS = [
 ]
 
 
-SCHEDULE = [(6, 30, 'odd'), (11, 45, 'meo'), (17, 0, 'emoji'), (19, 30, 'thu')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
-KIND_VI = {'thu': 'Thử thách mới', 'odd': 'Tìm emoji khác biệt', 'meo': 'Mèo đố', 'emoji': 'Đuổi hình bắt chữ'}
+SCHEDULE = [(6, 30, 'odd'), (8, 30, 'tienganh'), (10, 15, 'emoji'), (11, 45, 'meo'), (14, 0, 'quyluat'), (16, 30, 'dungsai'), (19, 30, 'meo'), (21, 30, 'emoji')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
+KIND_VI = {'thu': 'Thử thách mới', 'odd': 'Tìm emoji khác biệt', 'meo': 'Mèo đố', 'emoji': 'Đuổi hình bắt chữ', 'tienganh': '10 giây tiếng Anh', 'quyluat': 'Quy luật nào đây', 'dungsai': 'Đúng hay sai'}
 
 
 def teaser():
@@ -646,7 +647,7 @@ def _vn_days():
 
 
 def make_dungsai(th, out, D):
-    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else C)) % len(DUNGSAI)
+    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)) % len(DUNGSAI)
     vi, en, ok, ev, ee = DUNGSAI[i]
     ans = 'ĐÚNG' if ok else 'SAI'; ae = 'TRUE' if ok else 'FALSE'
     cap = (f"🤔 Đúng hay Sai? {vi}\n🤔 True or False? {en}\n\n⏱️ Bạn đoán mấy giây? Gõ ĐÚNG hoặc SAI trong bình luận!\n\n"
@@ -656,7 +657,7 @@ def make_dungsai(th, out, D):
 
 
 def make_quyluat(th, out, D):
-    seq, ans, rule, lv = quyluat(int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else C)) + 11)
+    seq, ans, rule, lv = quyluat(int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)) + 11)
     shown = ',  '.join(str(x) for x in seq) + ',  ?'
     spoken = ', '.join(str(x) for x in seq)
     cap = (f"🔢 Quy luật nào đây? Mức {lv}/5\n{shown}\n\n⏱️ Số tiếp theo là gì? Gõ đáp án trong bình luận!\n\n"
@@ -666,7 +667,7 @@ def make_quyluat(th, out, D):
 
 
 def make_tienganh(th, out, D):
-    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else C)) % len(ANH10)
+    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)) % len(ANH10)
     vi, en, _ = ANH10[i]
     cap = (f"🗣️ 10 giây tiếng Anh: \"{vi}\" nói thế nào?\n\nĐáp án trong video, nói theo Robot Tây nhé! Bạn nhớ được câu này không?\n\n"
            "#SongVuiMoiNgay #TiengAnhMoiNgay #HocTiengAnh #EnglishInUse #Shorts")
@@ -776,8 +777,10 @@ def make_emoji(th, out, D):
 
 def build(kind, c, D):
     """Dựng video cho một loạt. Trả về (đường dẫn video, chú thích, mã nội dung)."""
-    global C, THINK
+    global C, THINK, KC
     C = int(c); D = D or {}
+    try: KC = int(D.get('kcount'))
+    except Exception: KC = C
     try: THINK = float(min(12, max(4, float(D.get('think') or THINK))))
     except Exception: pass
     os.makedirs(WORK, exist_ok=True); M.ensure_fonts()

@@ -428,6 +428,7 @@ def main():
                 if h.get('kind') == 'meo' and h.get('id') and h['id'] not in seen and now - time.mktime(time.strptime(h['t'], '%Y-%m-%d %H:%M')) < 8 * 86400 + 7 * 3600:
                     seen.add(h['id']); ids.append(h['id'])
             D['recap_ids'] = ids[:5]
+        D['kcount'] = int((st.get('kcount') or {}).get(kind, 0))  # số tin đã đăng của loạt này
         out, caption, cid = show.build(kind, c, D)
         open(f'{WORK}/caption.txt', 'w', encoding='utf8').write(caption)
         try:  # bản để đăng thủ công lên YouTube Shorts: tiêu đề (tối đa 100 ký tự) + mô tả
@@ -572,6 +573,34 @@ def get_board(st, need=5):
     return {'total': len(cm), 'correct': ok} if len(cm) >= need else None
 
 
+def set_cover(vid, out):
+    """Đặt ảnh bìa Reel = khung ở giây 0.7 (luôn là màn hình câu hỏi), tránh việc Facebook tự chọn khung có đáp án."""
+    try:
+        jpg = f'{WORK}/cover.jpg'
+        subprocess.check_call(['ffmpeg', '-y', '-loglevel', 'error', '-ss', '0.7', '-i', out, '-frames:v', '1', '-q:v', '2', jpg])
+        with open(jpg, 'rb') as fh:
+            r = requests.post(f'{GV}/{vid}/thumbnails', data={'is_preferred': 'true', 'access_token': TOKEN}, files={'source': fh}, timeout=120)
+        print('Ảnh bìa', r.status_code, r.text[:200])
+    except Exception as e:
+        print('Ảnh bìa lỗi (bỏ qua)', e)
+
+
+def post_story(out):
+    """Đăng cùng video lên Tin (Story) của Trang. Lỗi ở đây không làm hỏng tin chính."""
+    try:
+        r = requests.post(f'{GV}/{PAGE_ID}/video_stories', data={'upload_phase': 'start', 'access_token': TOKEN}, timeout=60)
+        print('Story start', r.status_code, r.text[:300]); r.raise_for_status()
+        sid, up = r.json()['video_id'], r.json()['upload_url']
+        size = os.path.getsize(out)
+        with open(out, 'rb') as fh:
+            u = requests.post(up, headers={'Authorization': 'OAuth ' + TOKEN, 'offset': '0', 'file_size': str(size)}, data=fh, timeout=600)
+        print('Story upload', u.status_code, u.text[:200]); u.raise_for_status()
+        fin = requests.post(f'{GV}/{PAGE_ID}/video_stories', data={'upload_phase': 'finish', 'video_id': sid, 'access_token': TOKEN}, timeout=120)
+        print('Story finish', fin.status_code, fin.text[:300])
+    except Exception as e:
+        print('Story lỗi (bỏ qua)', e)
+
+
 def publish(st, c, now, out, caption, hist, answer_text):
     """Đăng Reel, ghi trạng thái, bình luận các đáp án còn chờ của bản cũ."""
     # 3) đăng Reel
@@ -595,10 +624,13 @@ def publish(st, c, now, out, caption, hist, answer_text):
     # 4) cập nhật trạng thái NGAY (tránh đăng trùng nếu bước sau lỗi), rồi bình luận đáp án của tin trước
     pend = list(st.get('pending', []))
     st['counter'] = c + 1; st['last_time'] = now
+    kc = st.setdefault('kcount', {}); kc[hist['kind']] = int(kc.get(hist['kind'], 0)) + 1
     st['history'] = (st.get('history', []) + [dict(hist, n=c, post=post_id, video=vid,
                                                t=time.strftime('%Y-%m-%d %H:%M', time.gmtime(now)))])[-120:]
     st['pending'] = pend
     save_state(st)
+    set_cover(vid, out)   # ảnh bìa = khung câu hỏi, không bao giờ là khung đáp án
+    post_story(out)       # đăng thêm vào Tin (Story) của Trang
     new_pending = []
     for item in pend:
         ok = False
