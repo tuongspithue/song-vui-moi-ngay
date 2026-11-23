@@ -2344,83 +2344,6 @@
    "season": "01/02-12/02"
   },
   {
-   "id": "M001",
-   "vi_q": "Cái gì của bạn nhưng người khác dùng nhiều hơn bạn?",
-   "vi_a": "Tên của bạn",
-   "en_q": "What belongs to you but other people use it more than you?",
-   "en_a": "Your name",
-   "g_en": "My phone?",
-   "g_vi": "Điện thoại của tôi hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M002",
-   "vi_q": "Cái gì có răng mà không cắn?",
-   "vi_a": "Cái lược",
-   "en_q": "What has teeth but never bites?",
-   "en_a": "A comb",
-   "g_en": "A friendly shark?",
-   "g_vi": "Con cá mập thân thiện hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M003",
-   "vi_q": "Cái gì có chân mà không biết đi?",
-   "vi_a": "Cái bàn",
-   "en_q": "What has legs but cannot walk?",
-   "en_a": "A table",
-   "g_en": "A sleepy chicken?",
-   "g_vi": "Con gà đang ngủ hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M004",
-   "vi_q": "Cái gì có mắt mà không nhìn thấy?",
-   "vi_a": "Cái kim",
-   "en_q": "What has an eye but cannot see?",
-   "en_a": "A needle",
-   "g_en": "A potato?",
-   "g_vi": "Củ khoai tây hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M005",
-   "vi_q": "Cái gì càng lấy đi càng lớn?",
-   "vi_a": "Cái hố",
-   "en_q": "What gets bigger the more you take away from it?",
-   "en_a": "A hole",
-   "g_en": "My homework?",
-   "g_vi": "Bài tập về nhà của tôi hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M006",
-   "vi_q": "Cái gì chỉ đi lên mà không bao giờ đi xuống?",
-   "vi_a": "Tuổi tác",
-   "en_q": "What only goes up and never comes down?",
-   "en_a": "Your age",
-   "g_en": "A rocket?",
-   "g_vi": "Tên lửa hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M007",
-   "vi_q": "Cái gì phải đập vỡ trước khi dùng?",
-   "vi_a": "Quả trứng",
-   "en_q": "What must be broken before you can use it?",
-   "en_a": "An egg",
-   "g_en": "A piggy bank?",
-   "g_vi": "Con heo đất hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
    "id": "M008",
    "vi_q": "Càng khô càng ướt là cái gì?",
    "vi_a": "Cái khăn tắm",
@@ -2432,39 +2355,6 @@
    "season": ""
   },
   {
-   "id": "M009",
-   "vi_q": "Cái gì mua về màu đen, dùng thì đỏ, vứt đi thì xám?",
-   "vi_a": "Than củi",
-   "en_q": "What is black when you buy it, red when you use it, and gray when you throw it away?",
-   "en_a": "Charcoal",
-   "g_en": "A sad tomato?",
-   "g_vi": "Quả cà chua buồn hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M010",
-   "vi_q": "Cái gì có thể bay mà không có cánh, khóc mà không có mắt?",
-   "vi_a": "Đám mây",
-   "en_q": "What can fly without wings and cry without eyes?",
-   "en_a": "A cloud",
-   "g_en": "A sad bird?",
-   "g_vi": "Chú chim buồn hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M011",
-   "vi_q": "Cái gì có nhiều phím nhưng không mở được ổ khóa nào?",
-   "vi_a": "Đàn piano",
-   "en_q": "What has many keys but cannot open a single lock?",
-   "en_a": "A piano",
-   "g_en": "A locksmith's dog?",
-   "g_vi": "Con chó của ông thợ khoá hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
    "id": "M012",
    "vi_q": "Cái gì có hai tay mà không thể vỗ?",
    "vi_a": "Cái đồng hồ",
@@ -2472,17 +2362,6 @@
    "en_a": "A clock",
    "g_en": "A robot?",
    "g_vi": "Con robot hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
-   "id": "M013",
-   "vi_q": "Cái gì phải cho đi trước rồi mới giữ được?",
-   "vi_a": "Lời hứa",
-   "en_q": "What do you have to give before you can keep it?",
-   "en_a": "Your word",
-   "g_en": "A birthday gift?",
-   "g_vi": "Món quà sinh nhật hả?",
    "vi_only": 0,
    "season": ""
   },
@@ -2520,17 +2399,6 @@
    "season": ""
   },
   {
-   "id": "M017",
-   "vi_q": "Cái gì chạy khắp thành phố mà không bao giờ rời khỏi chỗ?",
-   "vi_a": "Con đường",
-   "en_q": "What runs through the whole city but never moves?",
-   "en_a": "A road",
-   "g_en": "A taxi?",
-   "g_vi": "Xe taxi hả?",
-   "vi_only": 0,
-   "season": ""
-  },
-  {
    "id": "M018",
    "vi_q": "Nhà có 5 anh em trai, mỗi người đều có một em gái. Nhà đó có mấy người con?",
    "vi_a": "6 người",
@@ -2562,7 +2430,19 @@
   "R170",
   "R171",
   "R179",
-  "R192"
+  "R192",
+  "M001",
+  "M002",
+  "M003",
+  "M004",
+  "M005",
+  "M006",
+  "M007",
+  "M009",
+  "M010",
+  "M011",
+  "M013",
+  "M017"
  ],
  "emoji": [
   {

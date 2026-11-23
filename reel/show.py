@@ -722,22 +722,73 @@ ANH10 = [  # (nghĩa tiếng Việt, câu tiếng Anh, ghi chú)
 ]
 
 
-def quyluat(seed):
-    """Dãy số theo quy luật, tự sinh và tự tính đáp án: (dãy hiển thị, đáp án, mô tả quy luật, mức khó)."""
-    r = random.Random(seed); k = seed % 5
+def _norm_txt(s):
+    import unicodedata, re
+    s = unicodedata.normalize('NFD', s.lower()); s = ''.join(c for c in s if unicodedata.category(c) != 'Mn').replace('đ', 'd')
+    return re.sub(r'[^a-z0-9 ]', ' ', s)
+
+
+_SPREAD = {}
+
+
+def spread_idx(name, items, kc, gap=12):
+    """Thứ tự đăng: xáo theo vòng, các câu na ná nhau (cùng chủ đề/mẫu câu) cách nhau ít nhất `gap` lượt. Trả về chỉ số mục cho lượt kc."""
+    import difflib
+    n = len(items); cyc, i = divmod(kc, n)
+    if (name, cyc) not in _SPREAD:
+        txt = [' '.join(_norm_txt(x[0]).split()) for x in items]
+        order = list(range(n)); random.Random(97 * 1000003 + cyc).shuffle(order)
+        out = []; left = order[:]
+        if cyc > 0:  # nối vòng: tránh na ná với 'gap' câu cuối vòng trước
+            out = [spread_idx(name, items, (cyc - 1) * n + j, gap) for j in range(max(0, n - gap), n)]
+        base = len(out)
+        while left:
+            pick = None
+            for c in left:
+                if all(difflib.SequenceMatcher(None, txt[c], txt[o]).ratio() < 0.6 and o != c for o in out[-gap:]): pick = c; break
+            if pick is None: pick = left[0]
+            out.append(pick); left.remove(pick)
+        _SPREAD[(name, cyc)] = out[base:]
+    return _SPREAD[(name, cyc)][i]
+
+
+def _ql_pool(k):
+    """Toàn bộ dãy số khác nhau của mức k (đã xáo cố định) để không lặp lại sớm."""
+    P = []
     if k == 0:
-        a, d = r.randint(2, 9), r.randint(2, 7); s = [a + d * i for i in range(5)]; return s[:4], s[4], f'cộng thêm {d} mỗi lần', 1
-    if k == 1:
-        a, q = r.randint(1, 4), r.choice([2, 3]); s = [a * q ** i for i in range(5)]; return s[:4], s[4], f'nhân với {q} mỗi lần', 2
-    if k == 2:
-        a = r.randint(1, 4); s = [(a + i) ** 2 for i in range(5)]; return s[:4], s[4], 'các số chính phương liên tiếp', 3
-    if k == 3:
-        x, y = r.randint(1, 4), r.randint(2, 6); s = [x, y]
-        while len(s) < 6: s.append(s[-1] + s[-2])
-        return s[:5], s[5], 'mỗi số bằng tổng hai số đứng trước', 4
-    a, d1, d2 = r.randint(3, 9), r.randint(2, 5), r.randint(1, 3); s = [a]
-    for i in range(5): s.append(s[-1] + (d1 if i % 2 == 0 else -d2))
-    return s[:5], s[5], f'lần lượt cộng {d1}, trừ {d2}', 5
+        for a in range(2, 10):
+            for d in range(2, 8): s = [a + d * i for i in range(5)]; P.append((s[:4], s[4], f'cộng thêm {d} mỗi lần', 1))
+    elif k == 1:
+        for a in range(1, 8):
+            for q in (2, 3, 4, 5):
+                s = [a * q ** i for i in range(5)]
+                if s[4] <= 1500: P.append((s[:4], s[4], f'nhân với {q} mỗi lần', 2))
+    elif k == 2:
+        for a in range(1, 11): s = [(a + i) ** 2 for i in range(5)]; P.append((s[:4], s[4], 'các số chính phương liên tiếp', 3))
+        for a in range(1, 6): s = [(a + i) ** 3 for i in range(5)]; P.append((s[:4], s[4], 'các số lập phương liên tiếp', 3))
+        for a in range(1, 7): s = [(a + i) * (a + i + 1) // 2 for i in range(5)]; P.append((s[:4], s[4], 'các số tam giác liên tiếp (1, 3, 6, 10...)', 3))
+    elif k == 3:
+        for x in range(1, 6):
+            for y in range(2, 10):
+                if x == y: continue
+                s = [x, y]
+                while len(s) < 6: s.append(s[-1] + s[-2])
+                P.append((s[:5], s[5], 'mỗi số bằng tổng hai số đứng trước', 4))
+    else:
+        for a in range(3, 10):
+            for d1 in range(2, 6):
+                for d2 in range(1, 4):
+                    s = [a]
+                    for i in range(5): s.append(s[-1] + (d1 if i % 2 == 0 else -d2))
+                    P.append((s[:5], s[5], f'lần lượt cộng {d1}, trừ {d2}', 5))
+    random.Random(1000 + k).shuffle(P)
+    return P
+
+
+def quyluat(seed):
+    """Dãy số theo quy luật, tự tính đáp án: (dãy hiển thị, đáp án, mô tả quy luật, mức khó). Mỗi mức duyệt hết kho dãy rồi mới lặp (≥ 100 ngày)."""
+    k = seed % 5; P = _ql_pool(k)
+    return P[(seed // 5) % len(P)]
 
 
 def _single(th, out, title, emoji, ask_text, qmain, qsub, amain, asub, a_vi, a_en, think, caption, cid, afg='#0B6B3A', header='ĐÁP ÁN · ANSWER', top=None, bot_slow=False):
@@ -784,7 +835,7 @@ def _vn_days():
 
 
 def make_dungsai(th, out, D):
-    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)) % len(DUNGSAI)
+    _k = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)); i = spread_idx('ds', DUNGSAI, _k) if not os.environ.get('RID') else _k % len(DUNGSAI)
     vi, en, ok, ev, ee = DUNGSAI[i]
     ans = 'ĐÚNG' if ok else 'SAI'; ae = 'TRUE' if ok else 'FALSE'
     cap = (f"🤔 Đúng hay Sai? {vi}\n🤔 True or False? {en}\n\n⏱️ Bạn đoán mấy giây? Gõ ĐÚNG hoặc SAI trong bình luận!\n\n"
@@ -794,7 +845,7 @@ def make_dungsai(th, out, D):
 
 
 def make_quyluat(th, out, D):
-    seq, ans, rule, lv = quyluat(int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)) + 11)
+    seq, ans, rule, lv = quyluat(int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)))
     shown = ',  '.join(str(x) for x in seq) + ',  ?'
     spoken = ', '.join(str(x) for x in seq)
     cap = (f"🔢 Quy luật nào đây? Mức {lv}/5\n{shown}\n\n⏱️ Số tiếp theo là gì? Gõ đáp án trong bình luận!\n\n"
@@ -804,7 +855,7 @@ def make_quyluat(th, out, D):
 
 
 def make_tienganh(th, out, D):
-    i = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)) % len(ANH10)
+    _k = int(os.environ.get('RID') or (_vn_days() // 3 if os.environ.get('ROT') else KC)); i = spread_idx('en', ANH10, _k) if not os.environ.get('RID') else _k % len(ANH10)
     vi, en, _ = ANH10[i]
     cap = (f"🗣️ 10 giây tiếng Anh: \"{vi}\" nói thế nào?\n\nĐáp án trong video, nói theo Robot Tây nhé! Bạn nhớ được câu này không?\n\n"
            "#SongVuiMoiNgay #TiengAnhMoiNgay #HocTiengAnh #EnglishInUse #Shorts")

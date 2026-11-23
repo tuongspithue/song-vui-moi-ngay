@@ -403,6 +403,9 @@ def save_state(st):
 def pick(lst, counter, salt):
     n = len(lst); cyc, i = divmod(counter, n)
     order = list(range(n)); random.Random(salt * 1000003 + cyc).shuffle(order)
+    if cyc > 0 and n > 1:  # câu đầu vòng mới không được trùng câu cuối vòng trước
+        prev = list(range(n)); random.Random(salt * 1000003 + cyc - 1).shuffle(prev)
+        if order[0] == prev[-1]: order[0], order[1] = order[1], order[0]
     return lst[order[i]]
 
 
