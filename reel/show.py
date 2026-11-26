@@ -35,7 +35,7 @@ ODD_PAIRS = [
 ]
 
 
-SCHEDULE = [(6, 30, 'odd'), (8, 30, 'tienganh'), (10, 15, 'emoji'), (11, 45, 'meo'), (14, 0, 'quyluat'), (16, 30, 'dungsai'), (19, 30, 'meo'), (21, 30, 'emoji')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
+SCHEDULE = [(6, 30, 'odd'), (8, 30, 'tienganh'), (11, 45, 'meo'), (14, 0, 'quyluat'), (16, 30, 'dungsai'), (19, 30, 'emoji')]  # giờ VN, khớp CFG.TIMES/KINDS trong Apps Script
 KIND_VI = {'thu': 'Thử thách mới', 'odd': 'Tìm emoji khác biệt', 'meo': 'Mèo đố', 'emoji': 'Đuổi hình bắt chữ', 'tienganh': '10 giây tiếng Anh', 'quyluat': 'Quy luật nào đây', 'dungsai': 'Đúng hay sai'}
 
 
