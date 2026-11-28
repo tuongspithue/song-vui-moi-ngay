@@ -4977,7 +4977,7 @@
   },
   {
    "id": "E207",
-   "emoji": "🪓 🛤️ 🔄",
+   "emoji": "🪓 🚜 🛤️",
    "kind": "TN",
    "vi": "Đẽo cày giữa đường",
    "en": "Carving a plow in the middle of the road",
@@ -4988,7 +4988,7 @@
   },
   {
    "id": "E208",
-   "emoji": "😮 🌳 🍈",
+   "emoji": "😮 🌳 ⏳",
    "kind": "TN",
    "vi": "Há miệng chờ sung",
    "en": "Open your mouth and wait for figs",
@@ -5017,17 +5017,6 @@
    "mean": "Meaning: speaking very bluntly",
    "g_en": "A pig doing karaoke?",
    "g_vi": "Chú heo đang hát karaoke hả?",
-   "season": ""
-  },
-  {
-   "id": "E211",
-   "emoji": "🍊 🍋 😢",
-   "kind": "TN",
-   "vi": "Quýt làm cam chịu",
-   "en": "The tangerine did it, the orange takes the blame",
-   "mean": "Meaning: an innocent person gets blamed",
-   "g_en": "A fruit bowl drama?",
-   "g_vi": "Phim truyền hình của bát trái cây hả?",
    "season": ""
   },
   {
@@ -5215,17 +5204,6 @@
    "mean": "Meaning: rushing leads to failure",
    "g_en": "A very fast missed arrow?",
    "g_vi": "Mũi tên bay nhanh bị trượt hả?",
-   "season": ""
-  },
-  {
-   "id": "E229",
-   "emoji": "🏠 🤝 🏠",
-   "kind": "TU",
-   "vi": "Bán anh em xa mua láng giềng gần",
-   "en": "Sell distant relatives, buy near neighbors",
-   "mean": "Meaning: good neighbors matter a lot",
-   "g_en": "A house sale with hugs?",
-   "g_vi": "Phiên chợ nhà có ôm nhau hả?",
    "season": ""
   },
   {
@@ -5494,7 +5472,7 @@
   },
   {
    "id": "E254",
-   "emoji": "🌊 🇻🇳 ⛰️",
+   "emoji": "💦 ⛰️ 🇻🇳",
    "kind": "DD",
    "vi": "Thác Bản Giốc",
    "en": "Ban Gioc Waterfall",
@@ -5570,28 +5548,6 @@
    "season": ""
   },
   {
-   "id": "E261",
-   "emoji": "🏛️ 🇻🇳",
-   "kind": "DD",
-   "vi": "Dinh Độc Lập",
-   "en": "Independence Palace",
-   "mean": "A historic landmark in Ho Chi Minh City",
-   "g_en": "A very big white house?",
-   "g_vi": "Ngôi nhà trắng siêu to hả?",
-   "season": ""
-  },
-  {
-   "id": "E262",
-   "emoji": "⛪ 🏙️",
-   "kind": "DD",
-   "vi": "Nhà thờ Đức Bà",
-   "en": "Notre-Dame Cathedral",
-   "mean": "The red-brick cathedral in Ho Chi Minh City",
-   "g_en": "A castle of bricks?",
-   "g_vi": "Lâu đài bằng gạch đỏ hả?",
-   "season": ""
-  },
-  {
    "id": "E263",
    "emoji": "🛍️ 🕰️ 🏪",
    "kind": "DD",
@@ -5633,39 +5589,6 @@
    "mean": "Giant wind turbines standing in the sea",
    "g_en": "Giant fans for the ocean?",
    "g_vi": "Quạt khổng lồ cho đại dương hả?",
-   "season": ""
-  },
-  {
-   "id": "E267",
-   "emoji": "🏖️ 🌅",
-   "kind": "DD",
-   "vi": "Biển Mỹ Khê",
-   "en": "My Khe Beach",
-   "mean": "A beautiful beach in Đà Nẵng",
-   "g_en": "A sandy sunrise?",
-   "g_vi": "Bình minh đầy cát hả?",
-   "season": ""
-  },
-  {
-   "id": "E268",
-   "emoji": "🛕 🌊",
-   "kind": "DD",
-   "vi": "Chùa Thiên Mụ",
-   "en": "Thien Mu Pagoda",
-   "mean": "A seven-story pagoda by the Perfume River in Huế",
-   "g_en": "A tall tower by the river?",
-   "g_vi": "Tòa tháp cao bên sông hả?",
-   "season": ""
-  },
-  {
-   "id": "E269",
-   "emoji": "🏞️ 🛶 ⛰️",
-   "kind": "DD",
-   "vi": "Hồ Ba Bể",
-   "en": "Ba Be Lake",
-   "mean": "One of the biggest natural freshwater lakes in Vietnam",
-   "g_en": "A very big puddle?",
-   "g_vi": "Vũng nước siêu to hả?",
    "season": ""
   },
   {
@@ -5735,17 +5658,6 @@
    "season": ""
   },
   {
-   "id": "E276",
-   "emoji": "🪨 🪨 🪨 🏁",
-   "kind": "VH",
-   "vi": "Ô ăn quan",
-   "en": "O an quan",
-   "mean": "A traditional board game played with pebbles",
-   "g_en": "A pebble race?",
-   "g_vi": "Cuộc đua của sỏi hả?",
-   "season": ""
-  },
-  {
    "id": "E277",
    "emoji": "🦵 🪶",
    "kind": "VH",
@@ -5801,17 +5713,6 @@
    "season": ""
   },
   {
-   "id": "E282",
-   "emoji": "🏮 🌙 🚣",
-   "kind": "VH",
-   "vi": "Đèn lồng Hội An",
-   "en": "Hoi An lanterns",
-   "mean": "Colorful lanterns light up the old town at night",
-   "g_en": "A night boat party?",
-   "g_vi": "Tiệc thuyền ban đêm hả?",
-   "season": ""
-  },
-  {
    "id": "E283",
    "emoji": "☕ 🪑 🛵",
    "kind": "VH",
@@ -5820,17 +5721,6 @@
    "mean": "Sitting on little stools and watching the street go by",
    "g_en": "A tiny chair party?",
    "g_vi": "Bữa tiệc ghế tí hon hả?",
-   "season": ""
-  },
-  {
-   "id": "E284",
-   "emoji": "🌸 🙏 🪷",
-   "kind": "VH",
-   "vi": "Lễ Vu Lan",
-   "en": "Vu Lan festival",
-   "mean": "A day to honor parents, on the 15th of the 7th lunar month",
-   "g_en": "A flower ceremony?",
-   "g_vi": "Lễ hội hoa hả?",
    "season": ""
   },
   {

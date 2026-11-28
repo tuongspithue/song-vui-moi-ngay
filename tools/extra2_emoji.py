@@ -12,11 +12,10 @@ K('TN', '''
 🦀 🏖️ 🌊|Dã tràng xe cát biển Đông|The crab rolls sand in the East Sea|Meaning: wasted effort|A crab building a sandcastle?|Chú cua xây lâu đài cát hả?
 🍂 🌳 ⬅️|Lá rụng về cội|Falling leaves return to the roots|Meaning: people return to their homeland|A tree cleaning day?|Ngày dọn dẹp của cái cây hả?
 🔔 👊 🔊|Chuông có đánh mới kêu|A bell rings only when struck|Meaning: you must act to get results|A very lazy bell?|Chiếc chuông lười biếng hả?
-🪓 🛤️ 🔄|Đẽo cày giữa đường|Carving a plow in the middle of the road|Meaning: changing your plan to follow every opinion|A carpenter on the highway?|Bác thợ mộc trên đường cao tốc hả?
-😮 🌳 🍈|Há miệng chờ sung|Open your mouth and wait for figs|Meaning: waiting for luck without effort|A hungry tree watcher?|Người ngắm cây đang đói bụng hả?
+🪓 🚜 🛤️|Đẽo cày giữa đường|Carving a plow in the middle of the road|Meaning: changing your plan to follow every opinion|A carpenter on the highway?|Bác thợ mộc trên đường cao tốc hả?
+😮 🌳 ⏳|Há miệng chờ sung|Open your mouth and wait for figs|Meaning: waiting for luck without effort|A hungry tree watcher?|Người ngắm cây đang đói bụng hả?
 👞 🫃|Đi guốc trong bụng|Wearing clogs inside someone's belly|Meaning: knowing exactly what someone thinks|A shoe in my tummy?|Chiếc giày trong bụng tôi hả?
 🗣️ 🐷 🦶|Nói toạc móng heo|Speak out the pig's hoof|Meaning: speaking very bluntly|A pig doing karaoke?|Chú heo đang hát karaoke hả?
-🍊 🍋 😢|Quýt làm cam chịu|The tangerine did it, the orange takes the blame|Meaning: an innocent person gets blamed|A fruit bowl drama?|Phim truyền hình của bát trái cây hả?
 🍋 ✊ 🗑️|Vắt chanh bỏ vỏ|Squeeze the lemon, throw away the peel|Meaning: using someone and then discarding them|Making lemonade?|Đang pha nước chanh hả?
 🙈 🦎|Giấu đầu hở đuôi|Hide the head, show the tail|Meaning: a poor attempt to hide a secret|A shy lizard?|Chú thằn lằn nhút nhát hả?
 💸 🤕|Tiền mất tật mang|Lose money and get hurt too|Meaning: losing twice over|A very expensive doctor?|Ông bác sĩ siêu đắt tiền hả?
@@ -37,7 +36,6 @@ K('TU', '''
 💪 🎯 ✅|Có chí thì nên|Where there is a will, there is a way|Meaning: determination leads to success|A strong archer?|Cung thủ khỏe mạnh hả?
 🍚 🧼 👕 🌸|Đói cho sạch, rách cho thơm|Hungry but clean, tattered but fragrant|Meaning: keep your dignity even in hard times|A laundry soap song?|Bài hát về xà phòng giặt hả?
 🏃 💨 ❌ 🎯|Dục tốc bất đạt|Haste does not reach the goal|Meaning: rushing leads to failure|A very fast missed arrow?|Mũi tên bay nhanh bị trượt hả?
-🏠 🤝 🏠|Bán anh em xa mua láng giềng gần|Sell distant relatives, buy near neighbors|Meaning: good neighbors matter a lot|A house sale with hugs?|Phiên chợ nhà có ôm nhau hả?
 🏮 🏠 ✨|Đèn nhà ai nấy rạng|Each house's lamp shines for itself|Meaning: everyone minds their own business|A lamp contest?|Cuộc thi đèn sáng hả?
 🤐 1️⃣ ➡️ 9️⃣ 😊|Một sự nhịn chín sự lành|One bit of patience brings nine goods|Meaning: staying calm avoids trouble|A math lesson?|Bài học toán hả?
 🌳 🌱 💧 ⛰️|Cây có cội nước có nguồn|Trees have roots, water has a source|Meaning: always remember where you come from|A gardening class?|Lớp học làm vườn hả?
@@ -68,22 +66,17 @@ K('MA', '''
 ''')
 
 K('DD', '''
-🌊 🇻🇳 ⛰️|Thác Bản Giốc|Ban Gioc Waterfall|A famous waterfall on the border in Cao Bằng|A giant shower?|Vòi sen khổng lồ hả?
+💦 ⛰️ 🇻🇳|Thác Bản Giốc|Ban Gioc Waterfall|A famous waterfall on the border in Cao Bằng|A giant shower?|Vòi sen khổng lồ hả?
 🦀 📍 🌊|Mũi Cà Mau|Ca Mau Cape|The southernmost point of mainland Vietnam|A crab's address?|Địa chỉ nhà của cua hả?
 🚩 ⛰️ 🇻🇳|Cột cờ Lũng Cú|Lung Cu Flag Tower|The northernmost point of Vietnam, in Hà Giang|A flag on a mountain?|Lá cờ trên đỉnh núi hả?
 🍵 🌱 ⛰️|Đồi chè Mộc Châu|Moc Chau tea hills|Rolling green tea hills in Sơn La|A green carpet?|Tấm thảm xanh hả?
 ☁️ ⛰️ 🛣️|Đèo Hải Vân|Hai Van Pass|The Pass of Ocean Clouds between Huế and Đà Nẵng|A road in the clouds?|Con đường trên mây hả?
 🛶 ⛰️ 🌿|Tràng An|Trang An Landscape Complex|A UNESCO site in Ninh Bình with boat rides through caves|A boat in a cave?|Chiếc thuyền trong hang hả?
 🛶 ⛩️ 🌸|Chùa Hương|Perfume Pagoda|A pilgrimage site reached by boat on the Yến River|A fragrant temple?|Ngôi chùa thơm phức hả?
-🏛️ 🇻🇳|Dinh Độc Lập|Independence Palace|A historic landmark in Ho Chi Minh City|A very big white house?|Ngôi nhà trắng siêu to hả?
-⛪ 🏙️|Nhà thờ Đức Bà|Notre-Dame Cathedral|The red-brick cathedral in Ho Chi Minh City|A castle of bricks?|Lâu đài bằng gạch đỏ hả?
 🛍️ 🕰️ 🏪|Chợ Bến Thành|Ben Thanh Market|A famous market with a clock tower|A giant shopping clock?|Cái đồng hồ mua sắm khổng lồ hả?
 🌉 🚂 🌅|Cầu Long Biên|Long Bien Bridge|An old iron bridge across the Red River in Hà Nội|A rusty rainbow?|Cầu vồng bị gỉ hả?
 🪨 ⛰️ 🌸|Cao nguyên đá Đồng Văn|Dong Van Karst Plateau|A UNESCO Global Geopark in Hà Giang|A garden of rocks?|Khu vườn toàn đá hả?
 💨 🌬️ ⚡|Cánh đồng quạt gió Bạc Liêu|Bac Lieu wind farm|Giant wind turbines standing in the sea|Giant fans for the ocean?|Quạt khổng lồ cho đại dương hả?
-🏖️ 🌅|Biển Mỹ Khê|My Khe Beach|A beautiful beach in Đà Nẵng|A sandy sunrise?|Bình minh đầy cát hả?
-🛕 🌊|Chùa Thiên Mụ|Thien Mu Pagoda|A seven-story pagoda by the Perfume River in Huế|A tall tower by the river?|Tòa tháp cao bên sông hả?
-🏞️ 🛶 ⛰️|Hồ Ba Bể|Ba Be Lake|One of the biggest natural freshwater lakes in Vietnam|A very big puddle?|Vũng nước siêu to hả?
 🏝️ 🐒|Đảo Cát Bà|Cat Ba Island|Home of the rare Cat Ba langur|A monkey vacation?|Kỳ nghỉ của chú khỉ hả?
 ''')
 
@@ -93,15 +86,12 @@ K('VH', '''
 🎸 🌙 🌾|Đờn ca tài tử|Don ca tai tu music|Amateur music of the south, a UNESCO heritage|A moonlight guitar?|Cây đàn dưới ánh trăng hả?
 🧧 🌸 🛍️|Chợ Tết|Tet market|A busy market before the Lunar New Year|A flower shop sale?|Cửa hàng hoa giảm giá hả?
 🐟 🔥 🏠|Ông Công ông Táo|Kitchen Gods Day|On the 23rd of the 12th lunar month, carp carry the gods to heaven|A fish fire drill?|Buổi diễn tập cháy của cá hả?
-🪨 🪨 🪨 🏁|Ô ăn quan|O an quan|A traditional board game played with pebbles|A pebble race?|Cuộc đua của sỏi hả?
 🦵 🪶|Đá cầu|Shuttlecock kicking|A game of keeping a feathered shuttlecock in the air|A foot playing with a feather?|Cái chân chơi với chiếc lông vũ hả?
 🛍️ 🦘 🏁|Nhảy bao bố|Sack race|A funny festival game|Kangaroos in sacks?|Chuột túi chui vào bao hả?
 🪢 👥 💪|Kéo co|Tug of war|A team game where both sides pull a rope|A rope battle?|Trận chiến của sợi dây hả?
 🙈 🐐 🏃|Bịt mắt bắt dê|Blind man's buff|A childhood game of catching a goat while blindfolded|A goat hide and seek?|Dê chơi trốn tìm hả?
 🐉 🐍 ☁️|Rồng rắn lên mây|Dragon-snake climbs the clouds|A childhood game with a line of children chasing the tail|A dragon in a line?|Con rồng xếp hàng hả?
-🏮 🌙 🚣|Đèn lồng Hội An|Hoi An lanterns|Colorful lanterns light up the old town at night|A night boat party?|Tiệc thuyền ban đêm hả?
 ☕ 🪑 🛵|Cà phê vỉa hè|Sidewalk coffee|Sitting on little stools and watching the street go by|A tiny chair party?|Bữa tiệc ghế tí hon hả?
-🌸 🙏 🪷|Lễ Vu Lan|Vu Lan festival|A day to honor parents, on the 15th of the 7th lunar month|A flower ceremony?|Lễ hội hoa hả?
 🪷 🕯️ 🌊|Thả hoa đăng|Floating flower lanterns|People float lanterns on the water to make wishes|Candles taking a swim?|Những cây nến đi bơi hả?
 💃 🥁 ⛰️|Múa xòe Thái|Thai xoe dance|A circle dance of the Thai people, a UNESCO heritage|A mountain disco?|Vũ trường trên núi hả?
 🌴 😴|Nằm võng|Lying in a hammock|A cool way to nap on a hot afternoon|Sleeping on a palm tree?|Ngủ trên cây dừa hả?
