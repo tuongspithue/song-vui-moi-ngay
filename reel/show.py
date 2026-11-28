@@ -23,6 +23,15 @@ KINDS = {  # mã: (tên Việt, tên Anh, câu Mèo hỏi)
     'TN': ('Thành ngữ', 'Vietnamese idiom', 'Đây là thành ngữ gì?'), 'TU': ('Tục ngữ', 'Vietnamese proverb', 'Đây là câu tục ngữ nào?'),
     'MA': ('Món ăn', 'Vietnamese food', 'Đây là món gì?'), 'DD': ('Địa danh', 'Place in Vietnam', 'Đây là nơi nào?'),
     'VH': ('Văn hoá', 'Vietnamese culture', 'Đây là gì?'), 'GC': ('Ghép chữ', 'Word puzzle', 'Ghép lại thành từ gì?'),
+    # bộ cho trẻ em
+    'CV': ('Con vật', 'Animal', 'Đây là con gì nhỉ?'), 'QU': ('Trái cây & rau củ', 'Fruit and veggie', 'Đây là quả hay củ gì nhỉ?'),
+    'DV': ('Đồ vật', 'Everyday object', 'Đây là đồ vật gì nhỉ?'), 'NN': ('Nghề nghiệp', 'Job', 'Đây là nghề gì nhỉ?'),
+    'PT': ('Phương tiện', 'Vehicle', 'Đây là phương tiện gì nhỉ?'), 'AT': ('Tiếng kêu', 'Animal sound', 'Con vật này kêu thế nào nhỉ?'),
+    'MS': ('Màu sắc', 'Color', 'Đây là màu gì nhỉ?'), 'PM': ('Pha màu', 'Mixing colors', 'Trộn hai màu này ra màu gì nhỉ?'),
+    'DE': ('Đếm số', 'Counting', 'Có bao nhiêu nào? Đếm cùng Mèo nhé!'), 'CX': ('Cảm xúc', 'Feeling', 'Bạn nhỏ này đang thế nào nhỉ?'),
+    'HD': ('Hoạt động', 'Action', 'Bạn nhỏ đang làm gì nhỉ?'), 'TT': ('Thiên nhiên', 'Nature', 'Đây là gì nhỉ?'),
+    'AV': ('Đồ ăn vặt', 'Snack', 'Đây là món gì nhỉ?'), 'CT': ('Cơ thể', 'Body part', 'Đây là bộ phận nào nhỉ?'),
+    'DC': ('Đồ chơi', 'Toy', 'Đây là đồ chơi gì nhỉ?'),
 }
 KIND_BY_NAME = {v[0].lower(): k for k, v in KINDS.items()}
 ODD_PAIRS = [
@@ -910,7 +919,7 @@ def make_emoji(th, out, D):
         lines.append(cur)
         if len(lines) <= 2: break
     BH = len(lines) * bh + (len(lines) - 1) * 14 + 26
-    hint_n = max(1, len(words) // 4)
+    hint_n = 0 if len(words) <= 1 else max(1, len(words) // 4)  # đáp án 1 tiếng thì không gợi ý (tránh lộ đáp án)
 
     def boxes(reveal):  # reveal: số tiếng đã mở
         im = Image.new('RGBA', (960, BH), (0, 0, 0, 0)); d = ImageDraw.Draw(im); y = 8
