@@ -4745,28 +4745,6 @@
    "season": ""
   },
   {
-   "id": "E201",
-   "emoji": "🐱",
-   "kind": "Con vật",
-   "vi": "Con mèo",
-   "en": "A cat",
-   "mean": "Cats say meow!",
-   "g_en": "A tiny fluffy tiger?",
-   "g_vi": "Chú hổ con lông xù hả?",
-   "season": ""
-  },
-  {
-   "id": "E202",
-   "emoji": "🐶",
-   "kind": "Con vật",
-   "vi": "Con chó",
-   "en": "A dog",
-   "mean": "Dogs love to play fetch!",
-   "g_en": "A wolf in pajamas?",
-   "g_vi": "Sói mặc đồ ngủ hả?",
-   "season": ""
-  },
-  {
    "id": "E203",
    "emoji": "🐘",
    "kind": "Con vật",
@@ -4789,28 +4767,6 @@
    "season": ""
   },
   {
-   "id": "E205",
-   "emoji": "🐒",
-   "kind": "Con vật",
-   "vi": "Con khỉ",
-   "en": "A monkey",
-   "mean": "Monkeys love to climb trees!",
-   "g_en": "A hairy little person?",
-   "g_vi": "Một bạn nhỏ đầy lông hả?",
-   "season": ""
-  },
-  {
-   "id": "E206",
-   "emoji": "🐸",
-   "kind": "Con vật",
-   "vi": "Con ếch",
-   "en": "A frog",
-   "mean": "Frogs can jump very far!",
-   "g_en": "A green tennis ball?",
-   "g_vi": "Quả bóng tennis xanh hả?",
-   "season": ""
-  },
-  {
    "id": "E207",
    "emoji": "🐢",
    "kind": "Con vật",
@@ -4819,17 +4775,6 @@
    "mean": "A turtle carries its house on its back!",
    "g_en": "A walking rock?",
    "g_vi": "Hòn đá biết đi hả?",
-   "season": ""
-  },
-  {
-   "id": "E208",
-   "emoji": "🦁",
-   "kind": "Con vật",
-   "vi": "Sư tử",
-   "en": "A lion",
-   "mean": "The lion is called the king of the jungle!",
-   "g_en": "A cat with a big hairdo?",
-   "g_vi": "Chú mèo có kiểu tóc siêu to hả?",
    "season": ""
   },
   {
@@ -4844,61 +4789,6 @@
    "season": ""
   },
   {
-   "id": "E210",
-   "emoji": "🐝",
-   "kind": "Con vật",
-   "vi": "Con ong",
-   "en": "A bee",
-   "mean": "Bees make sweet honey!",
-   "g_en": "A tiny flying tiger?",
-   "g_vi": "Hổ con xíu biết bay hả?",
-   "season": ""
-  },
-  {
-   "id": "E211",
-   "emoji": "🐓",
-   "kind": "Con vật",
-   "vi": "Gà trống",
-   "en": "A rooster",
-   "mean": "Roosters crow in the morning!",
-   "g_en": "A bird alarm clock?",
-   "g_vi": "Chiếc đồng hồ báo thức có lông hả?",
-   "season": ""
-  },
-  {
-   "id": "E212",
-   "emoji": "🐄",
-   "kind": "Con vật",
-   "vi": "Con bò",
-   "en": "A cow",
-   "mean": "Cows give us milk!",
-   "g_en": "A horse with spots?",
-   "g_vi": "Con ngựa có đốm hả?",
-   "season": ""
-  },
-  {
-   "id": "E213",
-   "emoji": "🐰",
-   "kind": "Con vật",
-   "vi": "Con thỏ",
-   "en": "A rabbit",
-   "mean": "Rabbits love to eat carrots!",
-   "g_en": "A cat with very long ears?",
-   "g_vi": "Chú mèo tai siêu dài hả?",
-   "season": ""
-  },
-  {
-   "id": "E214",
-   "emoji": "🦆",
-   "kind": "Con vật",
-   "vi": "Con vịt",
-   "en": "A duck",
-   "mean": "Ducks can swim and fly!",
-   "g_en": "A yellow bath toy?",
-   "g_vi": "Món đồ chơi tắm màu vàng hả?",
-   "season": ""
-  },
-  {
    "id": "E215",
    "emoji": "🐊",
    "kind": "Con vật",
@@ -4907,61 +4797,6 @@
    "mean": "Crocodiles have lots of sharp teeth!",
    "g_en": "A log with a big smile?",
    "g_vi": "Khúc gỗ đang cười toe hả?",
-   "season": ""
-  },
-  {
-   "id": "E216",
-   "emoji": "🍎",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả táo",
-   "en": "An apple",
-   "mean": "An apple is crunchy and sweet!",
-   "g_en": "A red bouncy ball?",
-   "g_vi": "Quả bóng nảy màu đỏ hả?",
-   "season": ""
-  },
-  {
-   "id": "E217",
-   "emoji": "🍌",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả chuối",
-   "en": "A banana",
-   "mean": "A banana is yellow when it is ripe!",
-   "g_en": "A yellow moon?",
-   "g_vi": "Mặt trăng màu vàng hả?",
-   "season": ""
-  },
-  {
-   "id": "E218",
-   "emoji": "🍇",
-   "kind": "Trái cây & rau củ",
-   "vi": "Chùm nho",
-   "en": "Grapes",
-   "mean": "Grapes grow in bunches!",
-   "g_en": "Purple bubbles?",
-   "g_vi": "Bong bóng màu tím hả?",
-   "season": ""
-  },
-  {
-   "id": "E219",
-   "emoji": "🍓",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả dâu tây",
-   "en": "A strawberry",
-   "mean": "A strawberry has tiny seeds on the outside!",
-   "g_en": "A red heart with freckles?",
-   "g_vi": "Trái tim đỏ có tàn nhang hả?",
-   "season": ""
-  },
-  {
-   "id": "E220",
-   "emoji": "🥕",
-   "kind": "Trái cây & rau củ",
-   "vi": "Củ cà rốt",
-   "en": "A carrot",
-   "mean": "Carrots are crunchy and healthy!",
-   "g_en": "An orange rocket?",
-   "g_vi": "Tên lửa màu cam hả?",
    "season": ""
   },
   {
@@ -4976,17 +4811,6 @@
    "season": ""
   },
   {
-   "id": "E222",
-   "emoji": "🍊",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả cam",
-   "en": "An orange",
-   "mean": "Oranges are full of juice!",
-   "g_en": "A small sun?",
-   "g_vi": "Mặt trời bé xíu hả?",
-   "season": ""
-  },
-  {
    "id": "E223",
    "emoji": "🥭",
    "kind": "Trái cây & rau củ",
@@ -4998,39 +4822,6 @@
    "season": ""
   },
   {
-   "id": "E224",
-   "emoji": "🍋",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả chanh",
-   "en": "A lemon",
-   "mean": "A lemon is very sour!",
-   "g_en": "A tiny yellow football?",
-   "g_vi": "Quả bóng đá vàng bé xíu hả?",
-   "season": ""
-  },
-  {
-   "id": "E225",
-   "emoji": "🍑",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả đào",
-   "en": "A peach",
-   "mean": "A peach is soft and fuzzy!",
-   "g_en": "A baby's cheek?",
-   "g_vi": "Má của em bé hả?",
-   "season": ""
-  },
-  {
-   "id": "E226",
-   "emoji": "🥒",
-   "kind": "Trái cây & rau củ",
-   "vi": "Quả dưa leo",
-   "en": "A cucumber",
-   "mean": "A cucumber is cool and crunchy!",
-   "g_en": "A green submarine?",
-   "g_vi": "Tàu ngầm màu xanh hả?",
-   "season": ""
-  },
-  {
    "id": "E227",
    "emoji": "🍒",
    "kind": "Trái cây & rau củ",
@@ -5039,17 +4830,6 @@
    "mean": "Cherries often grow in pairs!",
    "g_en": "Two red earrings?",
    "g_vi": "Hai chiếc khuyên tai đỏ hả?",
-   "season": ""
-  },
-  {
-   "id": "E228",
-   "emoji": "🎒",
-   "kind": "Đồ vật",
-   "vi": "Cặp sách",
-   "en": "A school bag",
-   "mean": "You carry your books in a school bag!",
-   "g_en": "A turtle shell?",
-   "g_vi": "Mai rùa hả?",
    "season": ""
   },
   {
@@ -5075,39 +4855,6 @@
    "season": ""
   },
   {
-   "id": "E231",
-   "emoji": "📚",
-   "kind": "Đồ vật",
-   "vi": "Quyển sách",
-   "en": "A book",
-   "mean": "Books are full of stories!",
-   "g_en": "A box of pictures?",
-   "g_vi": "Cái hộp đầy hình hả?",
-   "season": ""
-  },
-  {
-   "id": "E232",
-   "emoji": "🧦",
-   "kind": "Đồ vật",
-   "vi": "Đôi tất",
-   "en": "Socks",
-   "mean": "Socks keep your feet warm!",
-   "g_en": "Foot pajamas?",
-   "g_vi": "Đồ ngủ cho bàn chân hả?",
-   "season": ""
-  },
-  {
-   "id": "E233",
-   "emoji": "🧢",
-   "kind": "Đồ vật",
-   "vi": "Chiếc mũ lưỡi trai",
-   "en": "A cap",
-   "mean": "A cap keeps the sun off your face!",
-   "g_en": "A flat bird nest?",
-   "g_vi": "Cái tổ chim dẹt hả?",
-   "season": ""
-  },
-  {
    "id": "E234",
    "emoji": "🕶️",
    "kind": "Đồ vật",
@@ -5116,17 +4863,6 @@
    "mean": "Sunglasses make the sun less bright!",
    "g_en": "Two black pancakes?",
    "g_vi": "Hai cái bánh kếp đen hả?",
-   "season": ""
-  },
-  {
-   "id": "E235",
-   "emoji": "🥄",
-   "kind": "Đồ vật",
-   "vi": "Cái thìa",
-   "en": "A spoon",
-   "mean": "We eat soup with a spoon!",
-   "g_en": "A tiny shovel?",
-   "g_vi": "Cái xẻng bé xíu hả?",
    "season": ""
   },
   {
@@ -5306,17 +5042,6 @@
    "season": ""
   },
   {
-   "id": "E252",
-   "emoji": "🚌",
-   "kind": "Phương tiện",
-   "vi": "Xe buýt",
-   "en": "A bus",
-   "mean": "A bus carries many people!",
-   "g_en": "A long yellow caterpillar?",
-   "g_vi": "Con sâu vàng siêu dài hả?",
-   "season": ""
-  },
-  {
    "id": "E253",
    "emoji": "🚁",
    "kind": "Phương tiện",
@@ -5391,50 +5116,6 @@
    "mean": "You push a scooter with one foot!",
    "g_en": "A skateboard with a steering wheel?",
    "g_vi": "Ván trượt có tay lái hả?",
-   "season": ""
-  },
-  {
-   "id": "E260",
-   "emoji": "🚕",
-   "kind": "Phương tiện",
-   "vi": "Xe taxi",
-   "en": "A taxi",
-   "mean": "A taxi takes you where you want to go!",
-   "g_en": "A yellow car for lemons?",
-   "g_vi": "Chiếc xe vàng chở chanh hả?",
-   "season": ""
-  },
-  {
-   "id": "E261",
-   "emoji": "🚛",
-   "kind": "Phương tiện",
-   "vi": "Xe tải",
-   "en": "A truck",
-   "mean": "A truck carries heavy things!",
-   "g_en": "A very big box with wheels?",
-   "g_vi": "Cái hộp khổng lồ có bánh xe hả?",
-   "season": ""
-  },
-  {
-   "id": "E262",
-   "emoji": "🐶 🔊",
-   "kind": "Tiếng kêu",
-   "vi": "Gâu gâu",
-   "en": "Woof woof",
-   "mean": "A dog says woof woof!",
-   "g_en": "A cat clearing its throat?",
-   "g_vi": "Con mèo đang hắng giọng hả?",
-   "season": ""
-  },
-  {
-   "id": "E263",
-   "emoji": "🐱 🔊",
-   "kind": "Tiếng kêu",
-   "vi": "Meo meo",
-   "en": "Meow meow",
-   "mean": "A cat says meow meow!",
-   "g_en": "A barking mouse?",
-   "g_vi": "Con chuột biết sủa hả?",
    "season": ""
   },
   {
@@ -5559,50 +5240,6 @@
    "season": ""
   },
   {
-   "id": "E275",
-   "emoji": "🟡",
-   "kind": "Màu sắc",
-   "vi": "Màu vàng",
-   "en": "Yellow",
-   "mean": "The sun and bananas are yellow!",
-   "g_en": "The color of a lemon moon?",
-   "g_vi": "Màu của mặt trăng chanh hả?",
-   "season": ""
-  },
-  {
-   "id": "E276",
-   "emoji": "🔵",
-   "kind": "Màu sắc",
-   "vi": "Màu xanh dương",
-   "en": "Blue",
-   "mean": "The sky and the sea are blue!",
-   "g_en": "The color of a sleepy ocean?",
-   "g_vi": "Màu của đại dương đang buồn ngủ hả?",
-   "season": ""
-  },
-  {
-   "id": "E277",
-   "emoji": "⚪",
-   "kind": "Màu sắc",
-   "vi": "Màu trắng",
-   "en": "White",
-   "mean": "Snow and milk are white!",
-   "g_en": "The color of a cloud's pillow?",
-   "g_vi": "Màu cái gối của đám mây hả?",
-   "season": ""
-  },
-  {
-   "id": "E278",
-   "emoji": "🟤",
-   "kind": "Màu sắc",
-   "vi": "Màu nâu",
-   "en": "Brown",
-   "mean": "Chocolate and tree trunks are brown!",
-   "g_en": "The color of a muddy puddle?",
-   "g_vi": "Màu vũng nước bùn hả?",
-   "season": ""
-  },
-  {
    "id": "E279",
    "emoji": "🔵 🟡",
    "kind": "Pha màu",
@@ -5622,17 +5259,6 @@
    "mean": "Red and white make pink!",
    "g_en": "Red and white make a strawberry milk?",
    "g_vi": "Đỏ với trắng ra sữa dâu hả?",
-   "season": ""
-  },
-  {
-   "id": "E281",
-   "emoji": "🐟 🐟",
-   "kind": "Đếm số",
-   "vi": "Hai con cá",
-   "en": "Two fish",
-   "mean": "One, two! Two fish!",
-   "g_en": "Twenty fish?",
-   "g_vi": "Hai mươi con cá hả?",
    "season": ""
   },
   {
@@ -5658,17 +5284,6 @@
    "season": ""
   },
   {
-   "id": "E284",
-   "emoji": "🍓 🍓 🍓 🍓",
-   "kind": "Đếm số",
-   "vi": "Bốn quả dâu",
-   "en": "Four strawberries",
-   "mean": "One, two, three, four! Four strawberries!",
-   "g_en": "Seven strawberries?",
-   "g_vi": "Bảy quả dâu hả?",
-   "season": ""
-  },
-  {
    "id": "E285",
    "emoji": "🐥 🐥 🐥",
    "kind": "Đếm số",
@@ -5677,17 +5292,6 @@
    "mean": "One, two, three! Three little chicks!",
    "g_en": "Two and a half chicks?",
    "g_vi": "Hai chú gà rưỡi hả?",
-   "season": ""
-  },
-  {
-   "id": "E286",
-   "emoji": "🚗 🚗",
-   "kind": "Đếm số",
-   "vi": "Hai chiếc xe",
-   "en": "Two cars",
-   "mean": "One, two! Two cars!",
-   "g_en": "A whole car parade?",
-   "g_vi": "Cả đoàn diễu hành xe hả?",
    "season": ""
   },
   {
@@ -5710,17 +5314,6 @@
    "mean": "One, two, three, four! Four cookies!",
    "g_en": "Zero cookies? I ate them!",
    "g_vi": "Không có chiếc nào? Robot ăn hết rồi!",
-   "season": ""
-  },
-  {
-   "id": "E289",
-   "emoji": "🦋 🦋",
-   "kind": "Đếm số",
-   "vi": "Hai con bướm",
-   "en": "Two butterflies",
-   "mean": "One, two! Two butterflies!",
-   "g_en": "Three and a half butterflies?",
-   "g_vi": "Ba con bướm rưỡi hả?",
    "season": ""
   },
   {
@@ -5754,28 +5347,6 @@
    "mean": "One, two, three, four! Four gifts!",
    "g_en": "A million gifts?",
    "g_vi": "Một triệu hộp quà hả?",
-   "season": ""
-  },
-  {
-   "id": "E293",
-   "emoji": "😀",
-   "kind": "Cảm xúc",
-   "vi": "Vui vẻ",
-   "en": "Happy",
-   "mean": "A smile shows we are happy!",
-   "g_en": "Eating a banana?",
-   "g_vi": "Đang ăn chuối hả?",
-   "season": ""
-  },
-  {
-   "id": "E294",
-   "emoji": "😢",
-   "kind": "Cảm xúc",
-   "vi": "Buồn bã",
-   "en": "Sad",
-   "mean": "When we are sad, a hug can help!",
-   "g_en": "Lost a sock?",
-   "g_vi": "Bị mất một chiếc tất hả?",
    "season": ""
   },
   {
@@ -5867,17 +5438,6 @@
    "season": ""
   },
   {
-   "id": "E303",
-   "emoji": "🪥",
-   "kind": "Hoạt động",
-   "vi": "Đánh răng",
-   "en": "Brushing teeth",
-   "mean": "Brush your teeth morning and night!",
-   "g_en": "Painting my teeth?",
-   "g_vi": "Đang sơn răng hả?",
-   "season": ""
-  },
-  {
    "id": "E304",
    "emoji": "🏃",
    "kind": "Hoạt động",
@@ -5933,17 +5493,6 @@
    "season": ""
   },
   {
-   "id": "E309",
-   "emoji": "🎤",
-   "kind": "Hoạt động",
-   "vi": "Hát",
-   "en": "Singing",
-   "mean": "Singing makes us happy!",
-   "g_en": "Eating a microphone?",
-   "g_vi": "Đang ăn cái micro hả?",
-   "season": ""
-  },
-  {
    "id": "E310",
    "emoji": "💃",
    "kind": "Hoạt động",
@@ -5952,28 +5501,6 @@
    "mean": "Dancing is fun with music!",
    "g_en": "Shaking off the bees?",
    "g_vi": "Đang rũ đàn ong hả?",
-   "season": ""
-  },
-  {
-   "id": "E311",
-   "emoji": "🛌",
-   "kind": "Hoạt động",
-   "vi": "Đi ngủ",
-   "en": "Going to bed",
-   "mean": "A good sleep helps us grow!",
-   "g_en": "Hiding from the sun?",
-   "g_vi": "Đang trốn mặt trời hả?",
-   "season": ""
-  },
-  {
-   "id": "E312",
-   "emoji": "🧹",
-   "kind": "Hoạt động",
-   "vi": "Quét nhà",
-   "en": "Sweeping the floor",
-   "mean": "Sweeping keeps our home clean!",
-   "g_en": "Riding a witch's broom?",
-   "g_vi": "Cưỡi chổi phù thủy hả?",
    "season": ""
   },
   {
@@ -5988,17 +5515,6 @@
    "season": ""
   },
   {
-   "id": "E314",
-   "emoji": "☔",
-   "kind": "Thiên nhiên",
-   "vi": "Trời mưa",
-   "en": "Rain",
-   "mean": "Rain helps plants grow!",
-   "g_en": "The clouds are crying?",
-   "g_vi": "Mây đang khóc hả?",
-   "season": ""
-  },
-  {
    "id": "E315",
    "emoji": "⛈️",
    "kind": "Thiên nhiên",
@@ -6007,17 +5523,6 @@
    "mean": "Thunder is a loud sound in the sky!",
    "g_en": "Clouds playing drums?",
    "g_vi": "Mây đang chơi trống hả?",
-   "season": ""
-  },
-  {
-   "id": "E316",
-   "emoji": "☀️",
-   "kind": "Thiên nhiên",
-   "vi": "Mặt trời",
-   "en": "The sun",
-   "mean": "The sun gives us light and warmth!",
-   "g_en": "A giant lemon lamp?",
-   "g_vi": "Cái đèn chanh khổng lồ hả?",
    "season": ""
   },
   {
@@ -6054,39 +5559,6 @@
    "season": ""
   },
   {
-   "id": "E320",
-   "emoji": "🍕",
-   "kind": "Đồ ăn vặt",
-   "vi": "Bánh pizza",
-   "en": "A pizza",
-   "mean": "Pizza is round and cheesy!",
-   "g_en": "A triangle puzzle?",
-   "g_vi": "Trò xếp hình tam giác hả?",
-   "season": ""
-  },
-  {
-   "id": "E321",
-   "emoji": "🍔",
-   "kind": "Đồ ăn vặt",
-   "vi": "Bánh hamburger",
-   "en": "A hamburger",
-   "mean": "A hamburger has many layers!",
-   "g_en": "A bun sandwich tower?",
-   "g_vi": "Tòa tháp bánh mì hả?",
-   "season": ""
-  },
-  {
-   "id": "E322",
-   "emoji": "🍟",
-   "kind": "Đồ ăn vặt",
-   "vi": "Khoai tây chiên",
-   "en": "French fries",
-   "mean": "French fries are crispy!",
-   "g_en": "Yellow sticks?",
-   "g_vi": "Những cây gậy vàng hả?",
-   "season": ""
-  },
-  {
    "id": "E323",
    "emoji": "🍩",
    "kind": "Đồ ăn vặt",
@@ -6095,17 +5567,6 @@
    "mean": "A donut has a hole in the middle!",
    "g_en": "A tasty tire?",
    "g_vi": "Cái lốp xe ăn được hả?",
-   "season": ""
-  },
-  {
-   "id": "E324",
-   "emoji": "🍪",
-   "kind": "Đồ ăn vặt",
-   "vi": "Bánh quy",
-   "en": "A cookie",
-   "mean": "Cookies are crunchy and yummy!",
-   "g_en": "A flat round rock?",
-   "g_vi": "Hòn đá dẹt hả?",
    "season": ""
   },
   {
@@ -6120,17 +5581,6 @@
    "season": ""
   },
   {
-   "id": "E326",
-   "emoji": "🍫",
-   "kind": "Đồ ăn vặt",
-   "vi": "Thanh sô-cô-la",
-   "en": "A chocolate bar",
-   "mean": "Chocolate is made from cocoa beans!",
-   "g_en": "A brown ruler?",
-   "g_vi": "Cây thước màu nâu hả?",
-   "season": ""
-  },
-  {
    "id": "E327",
    "emoji": "🍿",
    "kind": "Đồ ăn vặt",
@@ -6139,28 +5589,6 @@
    "mean": "Popcorn pops when it is hot!",
    "g_en": "Tiny white clouds?",
    "g_vi": "Những đám mây trắng xíu hả?",
-   "season": ""
-  },
-  {
-   "id": "E328",
-   "emoji": "🥛",
-   "kind": "Đồ ăn vặt",
-   "vi": "Ly sữa",
-   "en": "A glass of milk",
-   "mean": "Milk helps our bones grow strong!",
-   "g_en": "White water?",
-   "g_vi": "Nước màu trắng hả?",
-   "season": ""
-  },
-  {
-   "id": "E329",
-   "emoji": "🍭",
-   "kind": "Đồ ăn vặt",
-   "vi": "Kẹo mút",
-   "en": "A lollipop",
-   "mean": "A lollipop is a sweet candy on a stick!",
-   "g_en": "A candy flower?",
-   "g_vi": "Bông hoa kẹo hả?",
    "season": ""
   },
   {
@@ -6175,39 +5603,6 @@
    "season": ""
   },
   {
-   "id": "E331",
-   "emoji": "👂",
-   "kind": "Cơ thể",
-   "vi": "Cái tai",
-   "en": "An ear",
-   "mean": "We hear with our ears!",
-   "g_en": "A curly shell?",
-   "g_vi": "Vỏ ốc cuộn hả?",
-   "season": ""
-  },
-  {
-   "id": "E332",
-   "emoji": "👃",
-   "kind": "Cơ thể",
-   "vi": "Cái mũi",
-   "en": "A nose",
-   "mean": "We smell with our nose!",
-   "g_en": "A little hill on my face?",
-   "g_vi": "Ngọn đồi nhỏ trên mặt hả?",
-   "season": ""
-  },
-  {
-   "id": "E333",
-   "emoji": "👄",
-   "kind": "Cơ thể",
-   "vi": "Cái miệng",
-   "en": "A mouth",
-   "mean": "We eat and talk with our mouth!",
-   "g_en": "A red banana?",
-   "g_vi": "Quả chuối đỏ hả?",
-   "season": ""
-  },
-  {
    "id": "E334",
    "emoji": "🦷",
    "kind": "Cơ thể",
@@ -6216,17 +5611,6 @@
    "mean": "Teeth help us chew our food!",
    "g_en": "A tiny white rock?",
    "g_vi": "Hòn đá trắng xíu hả?",
-   "season": ""
-  },
-  {
-   "id": "E335",
-   "emoji": "✋",
-   "kind": "Cơ thể",
-   "vi": "Bàn tay",
-   "en": "A hand",
-   "mean": "We have five fingers on each hand!",
-   "g_en": "A five-legged spider?",
-   "g_vi": "Con nhện năm chân hả?",
    "season": ""
   },
   {
@@ -6249,17 +5633,6 @@
    "mean": "The heart pumps blood around our body!",
    "g_en": "A red balloon?",
    "g_vi": "Quả bóng bay đỏ hả?",
-   "season": ""
-  },
-  {
-   "id": "E338",
-   "emoji": "🧸",
-   "kind": "Đồ chơi",
-   "vi": "Gấu bông",
-   "en": "A teddy bear",
-   "mean": "A teddy bear is soft to hug!",
-   "g_en": "A sleepy real bear?",
-   "g_vi": "Chú gấu thật đang ngủ hả?",
    "season": ""
   },
   {
@@ -6307,17 +5680,6 @@
    "season": ""
   },
   {
-   "id": "E343",
-   "emoji": "🛝",
-   "kind": "Đồ chơi",
-   "vi": "Cầu trượt",
-   "en": "A slide",
-   "mean": "You go wheee on a slide!",
-   "g_en": "A slippery stairway?",
-   "g_vi": "Cầu thang trơn tuột hả?",
-   "season": ""
-  },
-  {
    "id": "E344",
    "emoji": "🎠",
    "kind": "Đồ chơi",
@@ -6326,17 +5688,6 @@
    "mean": "A carousel goes round and round!",
    "g_en": "Horses on a merry-go-round?",
    "g_vi": "Ngựa chạy vòng vòng hả?",
-   "season": ""
-  },
-  {
-   "id": "E345",
-   "emoji": "🎮",
-   "kind": "Đồ chơi",
-   "vi": "Máy chơi game",
-   "en": "A game controller",
-   "mean": "A game controller helps us play video games!",
-   "g_en": "A plastic butterfly?",
-   "g_vi": "Con bướm nhựa hả?",
    "season": ""
   },
   {
@@ -6370,6 +5721,17 @@
    "mean": "A trumpet is loud and shiny!",
    "g_en": "An elephant's golden nose?",
    "g_vi": "Cái mũi vàng của voi hả?",
+   "season": ""
+  },
+  {
+   "id": "E349",
+   "emoji": "🔴 🟡",
+   "kind": "Pha màu",
+   "vi": "Màu cam",
+   "en": "Orange",
+   "mean": "Red and yellow make orange!",
+   "g_en": "Red and yellow make a banana?",
+   "g_vi": "Đỏ với vàng ra quả chuối hả?",
    "season": ""
   }
  ]

@@ -8,6 +8,8 @@ def nz(s):
     w = re.sub(r'[^a-z0-9 ]', ' ', s).split()
     while len(w) > 1 and w[0] in CLS: w = w[1:]
     return ' '.join(w)
+REMOVED = ['Con mèo', 'Con chó', 'Con khỉ', 'Con ếch', 'Sư tử', 'Con ong', 'Gà trống', 'Con bò', 'Con thỏ', 'Con vịt', 'Quả táo', 'Quả chuối', 'Chùm nho', 'Quả dâu tây', 'Củ cà rốt', 'Quả cam', 'Quả chanh', 'Quả đào', 'Quả dưa leo', 'Cặp sách', 'Quyển sách', 'Đôi tất', 'Chiếc mũ lưỡi trai', 'Cái thìa', 'Xe buýt', 'Xe taxi', 'Xe tải', 'Gâu gâu', 'Meo meo', 'Màu vàng', 'Màu xanh dương', 'Màu trắng', 'Màu nâu', 'Hai con cá', 'Bốn quả dâu', 'Hai chiếc xe', 'Hai con bướm', 'Vui vẻ', 'Buồn bã', 'Đánh răng', 'Hát', 'Đi ngủ', 'Quét nhà', 'Trời mưa', 'Mặt trời', 'Bánh pizza', 'Bánh hamburger', 'Khoai tây chiên', 'Bánh quy', 'Thanh sô-cô-la', 'Ly sữa', 'Kẹo mút', 'Cái tai', 'Cái mũi', 'Cái miệng', 'Bàn tay', 'Gấu bông', 'Cầu trượt', 'Máy chơi game']  # đã rà soát: quá đơn giản / trùng ý, không thêm lại
+KID_NEW = [x for x in KID_NEW if x[2] not in REMOVED]
 p = 'data/content_v2.json'
 d = json.load(open(p, encoding='utf8'))
 seen = {nz(e['vi']): e['id'] for e in d['emoji']}
