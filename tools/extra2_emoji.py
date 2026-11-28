@@ -67,7 +67,7 @@ K('MA', '''
 
 K('DD', '''
 💦 ⛰️ 🇻🇳|Thác Bản Giốc|Ban Gioc Waterfall|A famous waterfall on the border in Cao Bằng|A giant shower?|Vòi sen khổng lồ hả?
-🦀 📍 🌊|Mũi Cà Mau|Ca Mau Cape|The southernmost point of mainland Vietnam|A crab's address?|Địa chỉ nhà của cua hả?
+🍆 ⚡ 📍|Mũi Cà Mau|Ca Mau Cape|Cà = eggplant, mau = quick: the southernmost point of mainland Vietnam|A crab's address?|Địa chỉ nhà của cua hả?
 🚩 ⛰️ 🇻🇳|Cột cờ Lũng Cú|Lung Cu Flag Tower|The northernmost point of Vietnam, in Hà Giang|A flag on a mountain?|Lá cờ trên đỉnh núi hả?
 🍵 🌱 ⛰️|Đồi chè Mộc Châu|Moc Chau tea hills|Rolling green tea hills in Sơn La|A green carpet?|Tấm thảm xanh hả?
 ☁️ ⛰️ 🛣️|Đèo Hải Vân|Hai Van Pass|The Pass of Ocean Clouds between Huế and Đà Nẵng|A road in the clouds?|Con đường trên mây hả?
@@ -105,4 +105,33 @@ K('GC', '''
 🐄 🥛|Bò sữa|Dairy cow|In Vietnamese: a milk cow|A cow who loves milk?|Con bò thích uống sữa hả?
 🌧️ 🧊|Mưa đá|Hail|In Vietnamese: ice rain|A cold shower?|Vòi sen lạnh hả?
 🚗 ♨️|Xe hơi|Car|In Vietnamese: a steam vehicle|A hot car?|Chiếc xe nóng hổi hả?
+''')
+
+# ---- Đợt 3: đuổi hình bắt chữ theo âm/nghĩa từng tiếng (ví dụ: Ô ăn quan = ☂️ + 🍴 + 🤴)
+K('VH', '''
+☂️ 🍴 🤴|Ô ăn quan|O an quan|Ô = umbrella, ăn = eat, quan = mandarin: a traditional pebble board game|A picnic under an umbrella?|Buổi dã ngoại dưới chiếc ô hả?
+''')
+K('DD', '''
+🏯 ☠️ 🧍|Dinh Độc Lập|Independence Palace|Dinh = palace, độc = poison, lập = stand: a landmark in Ho Chi Minh City|A palace with a scary ghost?|Cung điện có con ma đáng sợ hả?
+🏠 🙏 🇩🇪 👵|Nhà thờ Đức Bà|Notre-Dame Cathedral|Nhà = house, thờ = pray, Đức = Germany, bà = lady: the red-brick cathedral in Saigon|A German grandma's church?|Nhà thờ của bà ngoại người Đức hả?
+🛕 ☁️ 👵|Chùa Thiên Mụ|Thien Mu Pagoda|Chùa = pagoda, thiên = sky, mụ = old lady: a famous pagoda in Huế|A temple in the clouds with grandma?|Ngôi chùa trên mây có bà ngoại hả?
+🎣 📜|Cần Thơ|Can Tho|Cần = fishing rod, thơ = poem: the heart of the Mekong Delta|A poet who loves fishing?|Nhà thơ thích câu cá hả?
+🖌️ 🎶|Sơn La|Son La|Sơn = paint, la = la-la-la: a mountain province in the northwest|Painting while singing?|Vừa vẽ vừa hát hả?
+🦒 ⚖️|Cao Bằng|Cao Bang|Cao = tall, bằng = equal: a border province in the north|A giraffe on a scale?|Hươu cao cổ đứng trên cái cân hả?
+🌊 🛏️|Hải Phòng|Hai Phong|Hải = sea, phòng = room: the famous port city of the north|A hotel room with a sea view?|Phòng khách sạn nhìn ra biển hả?
+♾️ 🐉|Vĩnh Long|Vinh Long|Vĩnh = forever, long = dragon: a green province in the Mekong Delta|A forever dragon?|Con rồng sống mãi hả?
+🪙 🦌|Đồng Nai|Dong Nai|Đồng = copper coin, nai = deer: a province in the southeast|A rich deer?|Chú nai giàu có hả?
+''')
+K('MA', '''
+🍢 🍋|Nem chua|Nem chua|Nem = skewered roll, chua = sour: a sour fermented pork roll|A lemon on a stick?|Quả chanh xiên que hả?
+🦆 🔄|Vịt quay|Roast duck|Vịt = duck, quay = turn or roast: a duck roasted until golden|A dizzy duck?|Chú vịt bị chóng mặt hả?
+🐟 🔎|Cá tra|Tra fish|Cá = fish, tra = look up: a freshwater fish from the Mekong Delta|A fish searching Google?|Chú cá đang tìm trên Google hả?
+🍰 🌿 💧|Bánh bèo|Banh beo|Bánh = cake, bèo = water fern: little steamed rice cakes from central Vietnam|A cake floating on a pond?|Cái bánh nổi trên ao hả?
+🍜 🦐|Mì tôm|Instant noodles|Mì = noodles, tôm = shrimp: the famous instant noodle|A shrimp eating noodles?|Chú tôm đang ăn mì hả?
+''')
+K('GC', '''
+☂️ 🥣|Ô tô|Car|Ô = umbrella, tô = bowl: in Vietnamese, this is a car|An umbrella soup?|Món súp cái ô hả?
+😢 🧍|Sầu riêng|Durian|Sầu = sad, riêng = alone: the king of fruits|A lonely crying man?|Người đàn ông cô đơn đang khóc hả?
+🚩 🫡|Cờ tướng|Chinese chess|Cờ = flag, tướng = general: a classic board game|A soldier waving a flag?|Anh lính đang vẫy cờ hả?
+🥒 🐭|Dưa chuột|Cucumber|Dưa = melon, chuột = mouse: in the north, this is a cucumber|A mouse eating a melon?|Chú chuột ăn dưa hả?
 ''')
